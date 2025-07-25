@@ -51,7 +51,7 @@ What is RobusTest?
 
 RobusTest is a unified platform that brings together real devices, advanced testing capabilities, and insightful reporting into a single, intuitive environment. It empowers teams to achieve higher mobile app quality with greater efficiency and collaboration.
 
-.. grid:: 2 2 1 1
+.. grid:: 2 2 2 2
 
    .. grid-item-card:: 🏢 Enterprise Ready
       :class-header: bg-secondary text-white
@@ -169,7 +169,7 @@ Key Capabilities of RobusTest
 
 RobusTest is built on a foundation of powerful features designed to streamline your testing efforts:
 
-.. grid:: 2 2 1 1
+.. grid:: 2 2 2 2
 
    .. grid-item-card:: 📱 Real Device Testing
       :class-header: bg-primary text-white
@@ -248,7 +248,7 @@ Getting Started
 
 Ready to elevate your mobile app quality? Choose your path to get started with RobusTest:
 
-.. grid:: 3 3 2 1
+.. grid:: 3 3 3 3
 
    .. grid-item-card:: 🚀 Quick Start Guide
       :class-header: bg-primary text-white
