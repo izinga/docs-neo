@@ -74,11 +74,11 @@ Who is RobusTest For?
 
 RobusTest caters to a wide range of roles within the mobile app development lifecycle:
 
-.. tab-set::
+.. tabs::
 
-   .. tab-item:: Business Stakeholders
+   .. tab:: Business Stakeholders
       
-      .. grid:: 2 2 1 1
+      .. grid:: 2 2 2 2
       
          .. grid-item::
             
@@ -98,9 +98,9 @@ RobusTest caters to a wide range of roles within the mobile app development life
             * Assess app readiness for release
             * Make informed decisions based on quality data
 
-   .. tab-item:: Developers
+   .. tab:: Developers
       
-      .. grid:: 2 2 1 1
+      .. grid:: 2 2 2 2
       
          .. grid-item::
             
@@ -120,9 +120,9 @@ RobusTest caters to a wide range of roles within the mobile app development life
             * Monitor app performance metrics
             * Validate fixes before deployment
 
-   .. tab-item:: QA Teams
+   .. tab:: QA Teams
       
-      .. grid:: 2 2 1 1
+      .. grid:: 2 2 2 2
       
          .. grid-item::
             
@@ -142,9 +142,9 @@ RobusTest caters to a wide range of roles within the mobile app development life
             * Generate comprehensive test reports
             * Identify and track defects
 
-   .. tab-item:: Project Managers
+   .. tab:: Project Managers
       
-      .. grid:: 2 2 1 1
+      .. grid:: 2 2 2 2
       
          .. grid-item::
             
