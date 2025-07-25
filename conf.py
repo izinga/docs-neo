@@ -28,7 +28,8 @@ html_context = {
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
 extensions = [
-    'sphinx_design',              # For grid, tabs, cards
+    'sphinx_tabs.tabs',           # For tabs directive
+    'sphinx_design',              # For grid, cards (not tabs)
     'sphinx.ext.autosectionlabel', # Auto-generate section labels
     'sphinx.ext.intersphinx',     # Link to external docs
     'sphinx.ext.viewcode',        # Source code links
