@@ -1,0 +1,381 @@
+/* =================================================================
+   Navigation Menu - Enhanced Visual Appeal
+   ================================================================= */
+
+/* FORCE NAVIGATION TO BE VISIBLE */
+.wy-nav-side,
+.wy-menu-vertical,
+.wy-menu-vertical > ul,
+.wy-menu-vertical > ul > li,
+.wy-menu-vertical > ul > li > a {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* Modern Navigation Container */
+.wy-nav-side {
+  background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%) !important;
+  border-right: 3px solid #3b82f6 !important;
+}
+
+/* Navigation Header */
+.wy-nav-side .wy-side-nav-search {
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%) !important;
+  border-bottom: 2px solid #1e40af !important;
+}
+
+.wy-nav-side .wy-side-nav-search input[type="text"] {
+  border: 1px solid #475569 !important;
+  border-radius: 6px !important;
+  background-color: #334155 !important;
+  color: #e2e8f0 !important;
+}
+
+.wy-nav-side .wy-side-nav-search input[type="text"]:focus {
+  border-color: #60a5fa !important;
+  box-shadow: 0 0 0 2px rgba(96, 165, 250, 0.2) !important;
+}
+
+/* Main Navigation Menu */
+.wy-menu-vertical {
+  background: transparent !important;
+}
+
+/* Navigation Items */
+.wy-menu-vertical a {
+  color: #cbd5e1 !important;
+  border-bottom: 1px solid rgba(71, 85, 105, 0.3) !important;
+  padding: 0.8rem 1.618rem !important;
+  font-weight: 500 !important;
+  transition: all 0.3s ease !important;
+  position: relative !important;
+}
+
+.wy-menu-vertical a:hover {
+  background: linear-gradient(90deg, #374151 0%, #4b5563 100%) !important;
+  color: #fbbf24 !important;
+  border-left: 4px solid #fbbf24 !important;
+  padding-left: 1.418rem !important;
+  transform: translateX(2px) !important;
+}
+
+/* Active/Current Page */
+.wy-menu-vertical a.current {
+  background: linear-gradient(90deg, #1e40af 0%, #3b82f6 100%) !important;
+  color: #ffffff !important;
+  border-left: 4px solid #60a5fa !important;
+  padding-left: 1.418rem !important;
+  font-weight: 600 !important;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.2) !important;
+}
+
+/* Nested Navigation Hierarchy - Enhanced Visual Distinction */
+
+/* Level 1 - Main Topics */
+.wy-menu-vertical li.toctree-l1 > a {
+  font-weight: 600 !important;
+  font-size: 1rem !important;
+  border-bottom: 1px solid rgba(71, 85, 105, 0.4) !important;
+}
+
+/* Level 2 - Sub-topics (Properly Indented and Visible) */
+.wy-menu-vertical li.toctree-l2 {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  position: relative !important;
+  background: rgba(15, 23, 42, 0.4) !important;
+  border-radius: 0 6px 6px 0 !important;
+  margin: 2px 0 !important;
+}
+
+.wy-menu-vertical li.toctree-l2 a {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  padding: 0.6rem 1rem 0.6rem 3rem !important;
+  color: #e2e8f0 !important;
+  font-size: 0.875rem !important;
+  font-weight: 400 !important;
+  border-left: 3px solid #475569 !important;
+  border-bottom: none !important;
+  margin-left: 1.5rem !important;
+  position: relative !important;
+  background: transparent !important;
+  transition: all 0.3s ease !important;
+}
+
+.wy-menu-vertical li.toctree-l2 a::before {
+  content: "└─" !important;
+  position: absolute !important;
+  left: -1.8rem !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  color: #94a3b8 !important;
+  font-size: 0.9rem !important;
+  font-weight: normal !important;
+}
+
+.wy-menu-vertical li.toctree-l2 a:hover {
+  color: #ffffff !important;
+  background: rgba(59, 130, 246, 0.15) !important;
+  border-left: 3px solid #3b82f6 !important;
+  padding-left: 3rem !important;
+  margin-left: 1.5rem !important;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.3) !important;
+}
+
+.wy-menu-vertical li.toctree-l2 a:hover::before {
+  color: #3b82f6 !important;
+}
+
+.wy-menu-vertical li.toctree-l2 a.current {
+  color: #ffffff !important;
+  background: rgba(59, 130, 246, 0.25) !important;
+  border-left: 4px solid #3b82f6 !important;
+  padding-left: 2.9rem !important;
+  margin-left: 1.5rem !important;
+  font-weight: 500 !important;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.3) !important;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.2) !important;
+}
+
+.wy-menu-vertical li.toctree-l2 a.current::before {
+  color: #60a5fa !important;
+  font-weight: bold !important;
+}
+
+/* Level 3 - Sub-sub-topics (Even More Indented and Visible) */
+.wy-menu-vertical li.toctree-l3 {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  position: relative !important;
+  background: rgba(15, 23, 42, 0.3) !important;
+  border-radius: 0 4px 4px 0 !important;
+  margin: 1px 0 !important;
+}
+
+.wy-menu-vertical li.toctree-l3 a {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  padding: 0.5rem 1rem 0.5rem 4.5rem !important;
+  color: #cbd5e1 !important;
+  font-size: 0.8rem !important;
+  font-weight: 300 !important;
+  border-left: 2px solid #64748b !important;
+  margin-left: 2.5rem !important;
+  position: relative !important;
+  background: transparent !important;
+  transition: all 0.3s ease !important;
+}
+
+.wy-menu-vertical li.toctree-l3 a::before {
+  content: "└──" !important;
+  position: absolute !important;
+  left: -2.2rem !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  color: #64748b !important;
+  font-size: 0.8rem !important;
+}
+
+.wy-menu-vertical li.toctree-l3 a:hover {
+  color: #ffffff !important;
+  background: rgba(34, 197, 94, 0.15) !important;
+  border-left: 2px solid #22c55e !important;
+  padding-left: 4.5rem !important;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.3) !important;
+}
+
+.wy-menu-vertical li.toctree-l3 a:hover::before {
+  color: #22c55e !important;
+}
+
+.wy-menu-vertical li.toctree-l3 a.current {
+  color: #ffffff !important;
+  background: rgba(34, 197, 94, 0.2) !important;
+  border-left: 3px solid #22c55e !important;
+  font-weight: 400 !important;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.3) !important;
+}
+
+.wy-menu-vertical li.toctree-l3 a.current::before {
+  color: #4ade80 !important;
+  font-weight: bold !important;
+}
+
+/* Navigation Section Headers */
+.wy-menu-vertical .caption {
+  color: #fbbf24 !important;
+  font-weight: 700 !important;
+  font-size: 0.85rem !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+  padding: 1rem 1.618rem 0.5rem !important;
+  margin-top: 1rem !important;
+  border-bottom: 2px solid #374151 !important;
+  background: rgba(251, 191, 36, 0.1) !important;
+}
+
+/* Enhanced Expandable Menu System */
+
+/* Main Level Expand/Collapse Icons */
+.wy-menu-vertical li.toctree-l1 > a span.toctree-expand {
+  display: inline-block !important;
+  width: 1.2rem !important;
+  height: 1.2rem !important;
+  line-height: 1.2rem !important;
+  text-align: center !important;
+  color: #94a3b8 !important;
+  font-size: 0.9rem !important;
+  margin-right: 0.5rem !important;
+  border-radius: 3px !important;
+  background: rgba(148, 163, 184, 0.1) !important;
+  transition: all 0.3s ease !important;
+}
+
+.wy-menu-vertical li.toctree-l1 > a:hover span.toctree-expand {
+  color: #fbbf24 !important;
+  background: rgba(251, 191, 36, 0.2) !important;
+  transform: scale(1.1) !important;
+}
+
+.wy-menu-vertical li.toctree-l1.current > a span.toctree-expand {
+  color: #60a5fa !important;
+  background: rgba(96, 165, 250, 0.2) !important;
+}
+
+/* Enhanced Visual Hierarchy Separators */
+.wy-menu-vertical li.toctree-l1 {
+  position: relative !important;
+  margin-bottom: 0.25rem !important;
+}
+
+.wy-menu-vertical li.toctree-l1:not(:last-child)::after {
+  content: '' !important;
+  position: absolute !important;
+  bottom: 0 !important;
+  left: 1.618rem !important;
+  right: 1.618rem !important;
+  height: 1px !important;
+  background: rgba(71, 85, 105, 0.2) !important;
+}
+
+/* Navigation Visibility - Fixed */
+
+/* ALWAYS show the main navigation container and top-level items */
+.wy-menu-vertical,
+.wy-menu-vertical > ul,
+.wy-menu-vertical > ul > li,
+.wy-menu-vertical > ul > li > a {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  max-height: none !important;
+  overflow: visible !important;
+}
+
+/* Hide only nested sub-items by default (level 2 and 3) */
+.wy-menu-vertical li li {
+  display: none !important;
+}
+
+.wy-menu-vertical li ul {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  max-height: 0 !important;
+  overflow: hidden !important;
+  transition: all 0.3s ease !important;
+}
+
+/* Show nested items only when parent is expanded */
+.wy-menu-vertical li.current > ul,
+.wy-menu-vertical li.toctree-expand-open > ul {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  max-height: none !important;
+  overflow: visible !important;
+}
+
+.wy-menu-vertical li.current > ul > li,
+.wy-menu-vertical li.toctree-expand-open > ul > li {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* Nested items visibility controlled by parent state */
+.wy-menu-vertical li.toctree-l2,
+.wy-menu-vertical li.toctree-l3 {
+  position: relative !important;
+  transition: all 0.3s ease !important;
+}
+
+/* Smooth expand/collapse animations */
+.wy-menu-vertical li ul {
+  transition: max-height 0.3s ease, opacity 0.3s ease !important;
+}
+
+/* Proper grouping */
+.wy-menu-vertical li.toctree-l1 {
+  margin-bottom: 0.25rem !important;
+}
+
+.wy-menu-vertical li.toctree-l2:first-child {
+  margin-top: 0.25rem !important;
+}
+
+.wy-menu-vertical li.toctree-l2:last-child {
+  margin-bottom: 0.5rem !important;
+}
+
+/* Scrollbar Styling for Navigation */
+.wy-nav-side::-webkit-scrollbar {
+  width: 6px !important;
+}
+
+.wy-nav-side::-webkit-scrollbar-track {
+  background: #0f172a !important;
+}
+
+.wy-nav-side::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #475569 0%, #334155 100%) !important;
+  border-radius: 3px !important;
+}
+
+.wy-nav-side::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #64748b 0%, #475569 100%) !important;
+}
+
+/* Logo/Brand Area Enhancement */
+.wy-side-nav-search .wy-dropdown > a {
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  font-size: 1.1rem !important;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.3) !important;
+}
+
+.wy-side-nav-search .wy-dropdown > a:hover {
+  background: rgba(255,255,255,0.1) !important;
+}
+
+/* =================================================================
+   Table Width Overrides (Original)
+   ================================================================= */
+
+@media screen and (min-width: 767px) {
+   .wy-table-responsive table td {
+      /* !important prevents the common CSS stylesheets from overriding
+         this as on RTD they are loaded after this stylesheet */
+      white-space: normal !important;
+   }
+
+   .wy-table-responsive {
+      overflow: visible !important;
+   }
+}

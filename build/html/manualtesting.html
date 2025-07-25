@@ -1,0 +1,581 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Manual Testing &mdash; RobusTest Documentation 2025 2025.1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="_static/navigation-visual-fix.css?v=6b3f9075" />
+      <link rel="stylesheet" type="text/css" href="_static/mycustom.css?v=c05073c6" />
+      <link rel="stylesheet" type="text/css" href="_static/theme_overrides.css?v=901e38fe" />
+      <link rel="stylesheet" type="text/css" href="_static/responsive-grids.css?v=ce0b3436" />
+      <link rel="stylesheet" type="text/css" href="_static/search-optimization.css?v=c04af2c9" />
+      <link rel="stylesheet" type="text/css" href="_static/interactive-elements.css?v=e2a6f529" />
+      <link rel="stylesheet" type="text/css" href="_static/version-info.css?v=5aa665d1" />
+      <link rel="stylesheet" type="text/css" href="_static/feedback-system.css?v=b1867106" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=65f7d7c4"></script>
+      <script src="_static/doctools.js?v=9a2dae69"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/design-tabs.js?v=f930bc37"></script>
+      <script src="_static/navigation-complete-override.js?v=23ba6672"></script>
+      <script src="_static/interactive-elements.js?v=e1aa8583"></script>
+      <script src="_static/version-info.js?v=f2427329"></script>
+      <script src="_static/feedback-system.js?v=5ba1e50a"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Device Configuration Menu" href="deviceconfigmenumanual.html" />
+    <link rel="prev" title="Adding new devices to RobusTest - Roku" href="addnewdeviceroku.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            RobusTest Documentation 2025
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction to RobusTest: Your Mobile App Testing Platform</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#what-is-robustest">What is RobusTest?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#who-is-robustest-for">Who is RobusTest For?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#key-capabilities-of-robustest">Key Capabilities of RobusTest</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#getting-started">Getting Started</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="gettingstarted.html">Getting Started with RobusTest</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="gettingstarted.html#accessing-robustest">Accessing RobusTest</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="gettingstarted.html#option-1-starting-with-the-public-cloud-instance">Option 1: Starting with the Public Cloud Instance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gettingstarted.html#option-2-accessing-an-on-premise-enterprise-instance">Option 2: Accessing an On-Premise Enterprise Instance</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="gettingstarted.html#what-s-next">What’s Next?</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="createproject.html">Creating Projects</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="createproject.html#creating-a-new-project">Creating a New Project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="createproject.html#uploading-your-application-build">Uploading Your Application Build</a></li>
+<li class="toctree-l2"><a class="reference internal" href="createproject.html#next-steps">Next Steps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="createproject.html#project-best-practices">Project Best Practices</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="projecttypes.html">Project Types</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="projecttypes.html#android-app-project">Android App Project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="projecttypes.html#ios-app-project">iOS App Project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="projecttypes.html#mobile-web-app-project">Mobile Web App Project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="projecttypes.html#device-only-project">Device Only Project</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="otherusefulinfo.html">Adding New Devices</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="addnewdeviceandroid.html">Adding new devices to RobusTest - Android</a></li>
+<li class="toctree-l2"><a class="reference internal" href="addnewdeviceios.html">Adding new devices to RobusTest - iOS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="addnewdeviceroku.html">Adding new devices to RobusTest - Roku</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Manual Testing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="deviceconfigmenumanual.html">Device Configuration Menu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sessionconfigmenumanual.html">Session Configuration Menu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="multidevicetesting.html">Multi-device testing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="testvideomanualtesting.html">Test Embedded Video</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="liveview.html">Live View</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="liveview.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="liveview.html#active-session-information">Active Session Information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="liveview.html#session-control-options">Session Control Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="liveview.html#multi-device-monitoring">Multi-Device Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="liveview.html#best-practices">Best Practices</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="runsettings.html">Run Settings</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="runsettings.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="runsettings.html#run-settings-types">Run Settings Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="runsettings.html#run-setting-attributes-reference">Run Setting Attributes Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="runsettings.html#configuring-run-settings">Configuring Run Settings</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="performancetesting.html">Performance Testing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="performancetesting.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="performancetesting.html#performance-first-approach">Performance-First Approach</a></li>
+<li class="toctree-l2"><a class="reference internal" href="performancetesting.html#performance-monitoring-during-testing">Performance Monitoring During Testing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="performancetesting.html#memory-usage-monitoring">Memory Usage Monitoring</a></li>
+<li class="toctree-l3"><a class="reference internal" href="performancetesting.html#cpu-usage-monitoring">CPU Usage Monitoring</a></li>
+<li class="toctree-l3"><a class="reference internal" href="performancetesting.html#network-usage-monitoring">Network Usage Monitoring</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="robustesthub.html">RobusTest Hub</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="robustesthub.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="robustesthub.html#real-time-test-monitoring">Real-time Test Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="robustesthub.html#detailed-test-reports">Detailed Test Reports</a></li>
+<li class="toctree-l2"><a class="reference internal" href="robustesthub.html#supported-testing-frameworks">Supported Testing Frameworks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="robustesthub.html#getting-started">Getting Started</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="hub_api.html">Hub API &amp; Integration</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="hubjobpayload.html">Job Payload API Reference</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="hubjobpayload.html#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hubjobpayload.html#core-job-attributes">Core Job Attributes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hubjobpayload.html#build-configuration">Build Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hubjobpayload.html#device-configuration">Device Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hubjobpayload.html#device-groups-configuration">Device Groups Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hubjobpayload.html#example-job-payload">Example Job Payload</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hubjobpayload.html#framework-specific-considerations">Framework-Specific Considerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hubjobpayload.html#job-execution-workflow">Job Execution Workflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hubjobpayload.html#best-practices">Best Practices</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hubjobpayload.html#troubleshooting">Troubleshooting</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="adbEspressoAPI.html">ADB Commands API Reference</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="adbEspressoAPI.html#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="adbEspressoAPI.html#api-specification">API Specification</a></li>
+<li class="toctree-l3"><a class="reference internal" href="adbEspressoAPI.html#parameters-reference">Parameters Reference</a></li>
+<li class="toctree-l3"><a class="reference internal" href="adbEspressoAPI.html#device-id-retrieval">Device ID Retrieval</a></li>
+<li class="toctree-l3"><a class="reference internal" href="adbEspressoAPI.html#sample-implementation">Sample Implementation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="adbEspressoAPI.html#common-adb-commands">Common ADB Commands</a></li>
+<li class="toctree-l3"><a class="reference internal" href="adbEspressoAPI.html#best-practices">Best Practices</a></li>
+<li class="toctree-l3"><a class="reference internal" href="adbEspressoAPI.html#error-handling">Error Handling</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="adbespressoapi_test.html">API to execute ADB commands from within an Espresso test</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="hub_frameworks.html">Framework Integration</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="hubappium_master.html">Appium Hub</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="hubappium_new.html">Run Appium Tests</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="hubappium_organize.html">Organize Sessions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hubappium_data.html">Test Data Management</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hubappium_development.html">Locator Development</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hubappium_unity.html">Unity App Testing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hubappium_master.html#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hubappium_master.html#hub-appium-features">Hub Appium Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hubappium_master.html#getting-started">Getting Started</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hubappium_master.html#best-practices">Best Practices</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="hubespresso.html">Espresso Testing Hub</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="hubespresso.html#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hubespresso.html#espresso-job-execution-workflow">Espresso Job Execution Workflow</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="hubxcuitest.html">XCUITest Testing Hub</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="hubxcuitest.html#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hubxcuitest.html#prerequisites">Prerequisites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hubxcuitest.html#setup-process">Setup Process</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="hubselenium.html">Selenium Testing Hub</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="hubselenium.html#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hubselenium.html#setup-process">Setup Process</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hubselenium.html#example-implementation">Example Implementation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hubselenium.html#best-practices">Best Practices</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hubselenium.html#troubleshooting">Troubleshooting</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="hubseleniumrandombrowser.html">Randomize the browser selection process</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hubroku.html">Roku Testing Hub</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="hubroku.html#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hubroku.html#setup-process">Setup Process</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hubroku.html#test-case-implementation">Test Case Implementation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hubroku.html#best-practices">Best Practices</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hubroku.html#troubleshooting">Troubleshooting</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="device_setup.html">Adding New Devices</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="addnewdeviceandroid.html">Android Devices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="addnewdeviceios.html">iOS Devices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="addnewdeviceroku.html">Roku Devices</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="projectdashboard.html">Project Dashboard</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="projectdashboard.html#dashboard-sections-overview">Dashboard Sections Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="projectdashboard.html#builds-section">Builds Section</a></li>
+<li class="toctree-l2"><a class="reference internal" href="projectdashboard.html#build-information-display">Build Information Display</a></li>
+<li class="toctree-l2"><a class="reference internal" href="projectdashboard.html#multiple-build-management">Multiple Build Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="projectdashboard.html#available-actions">Available Actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="projectdashboard.html#team-management">Team Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="projectdashboard.html#team-member-capabilities">Team Member Capabilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="projectdashboard.html#member-roles-and-permissions">Member Roles and Permissions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="projectdashboard.html#remote-build-upload-api">Remote Build Upload (API)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="projectdashboard.html#api-command-structure">API Command Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="projectdashboard.html#command-parameters-explained">Command Parameters Explained</a></li>
+<li class="toctree-l2"><a class="reference internal" href="projectdashboard.html#sample-implementation">Sample Implementation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="projectdashboard.html#ci-cd-integration-examples">CI/CD Integration Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="projectdashboard.html#best-practices">Best Practices</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="automationreports.html">Automation Reports</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="debuggingfailures.html">Debugging Test Case Failures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="automationreports.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="automationreports.html#report-organization">Report Organization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="automationreports.html#report-types">Report Types</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="automationreports.html#slideshow-report">Slideshow Report</a></li>
+<li class="toctree-l3"><a class="reference internal" href="automationreports.html#analytics-report">Analytics Report</a></li>
+<li class="toctree-l3"><a class="reference internal" href="automationreports.html#functional-report">Functional Report</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="continuousintegration.html">Continuous Integration</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="continuousintegration.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="continuousintegration.html#ci-cd-integration-workflow">CI/CD Integration Workflow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="continuousintegration.html#remote-build-upload">Remote Build Upload</a></li>
+<li class="toctree-l2"><a class="reference internal" href="continuousintegration.html#test-run-triggering">Test Run Triggering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="continuousintegration.html#test-run-monitoring">Test Run Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="continuousintegration.html#results-access-and-analysis">Results Access and Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="continuousintegration.html#best-practices-for-ci-integration">Best Practices for CI Integration</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="bugtrackerintegration.html">Bug Tracker Integration</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="bugtrackerintegration.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bugtrackerintegration.html#supported-bug-tracking-systems">Supported Bug Tracking Systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bugtrackerintegration.html#setting-up-bug-tracker-integration">Setting Up Bug Tracker Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bugtrackerintegration.html#using-bug-tracker-integration">Using Bug Tracker Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bugtrackerintegration.html#integration-benefits">Integration Benefits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bugtrackerintegration.html#advanced-features">Advanced Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bugtrackerintegration.html#best-practices">Best Practices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bugtrackerintegration.html#troubleshooting">Troubleshooting</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="scheduling.html">Scheduling Automated Tests</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="scheduling.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scheduling.html#setting-up-scheduled-tests">Setting Up Scheduled Tests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scheduling.html#advanced-scheduling-features">Advanced Scheduling Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scheduling.html#best-practices-for-test-scheduling">Best Practices for Test Scheduling</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="robustestconnect.html">RobusTest Connect - Run local, test global</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tunnelClientConfig.html">Setting Up Tunneling</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="adminconsole.html">Admin Console</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="adminconsole.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="adminconsole.html#admin-console-sections">Admin Console Sections</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="userprofile.html">User Profile</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="userprofile.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="userprofile.html#accessing-your-profile">Accessing Your Profile</a></li>
+<li class="toctree-l2"><a class="reference internal" href="userprofile.html#profile-settings">Profile Settings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="userprofile.html#help-and-documentation">Help and Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="userprofile.html#technical-support">Technical Support</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="healthpage.html">Health Page</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="healthpage.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="healthpage.html#health-page-sections">Health Page Sections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="healthpage.html#device-monitoring">Device Monitoring</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="settings.html">Settings &amp; Configuration</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="settingsnotification.html">Notification Settings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="settingsmail.html">Mail Settings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="settingsnetworkshaping.html">Network Shaping Settings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="settingsneuron.html">Neuron Settings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="settingsrobustestserver.html">RobusTest Server Settings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="settingstestsession.html">Test Session Settings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="settingsauthentication.html">Authentication Settings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="settingscloudstorage.html">Cloud Storage Settings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="settings.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="settings.html#platform-configuration-categories">Platform Configuration Categories</a></li>
+<li class="toctree-l2"><a class="reference internal" href="settings.html#getting-started-with-settings">Getting Started with Settings</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="installation_guides.html">Installation &amp; Setup Guides</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="installandroid.html">Android Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installjava.html">Java Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installpython.html">Python Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installnodejsappium.html">Node.js &amp; Appium</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installxcode.html">Xcode Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installhomebrew.html">Homebrew Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installidevicelocation.html">IDE &amp; Location Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installpythonvirtualenv.html">Python Virtual Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="elevatedpowershell.html">Elevated PowerShell</a></li>
+<li class="toctree-l2"><a class="reference internal" href="setup_https.html">HTTPS Setup</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">Troubleshooting</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="unabletoaccessRobusTestserver.html">Unable to access RobusTest Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#common-issues-and-solutions">Common Issues and Solutions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="troubleshooting.html#performance-issues">Performance Issues</a></li>
+<li class="toctree-l3"><a class="reference internal" href="troubleshooting.html#device-connection-issues">Device Connection Issues</a></li>
+<li class="toctree-l3"><a class="reference internal" href="troubleshooting.html#test-execution-failures">Test Execution Failures</a></li>
+<li class="toctree-l3"><a class="reference internal" href="troubleshooting.html#best-practices-for-troubleshooting">Best Practices for Troubleshooting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="troubleshooting.html#getting-help">Getting Help</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="unabletoaccessRobusTestserver.html">Unable to access RobusTest Server</a></li>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting_espresso.html">Troubleshooting your Espresso job</a></li>
+<li class="toctree-l1"><a class="reference internal" href="downloads.html">Downloads &amp; Resources</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="downloads.html#quick-start-guides">Quick Start Guides</a></li>
+<li class="toctree-l2"><a class="reference internal" href="downloads.html#configuration-templates">Configuration Templates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="downloads.html#api-reference-materials">API Reference Materials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="downloads.html#cheat-sheets-quick-references">Cheat Sheets &amp; Quick References</a></li>
+<li class="toctree-l2"><a class="reference internal" href="downloads.html#mobile-apps-tools">Mobile Apps &amp; Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="downloads.html#sample-projects">Sample Projects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="downloads.html#custom-resources-generator">Custom Resources Generator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="downloads.html#license-usage-terms">License &amp; Usage Terms</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CHANGELOG.html">Changelog</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CHANGELOG.html#version-2025-1-0-current">Version 2025.1.0 (Current)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CHANGELOG.html#version-2024-12-0-previous">Version 2024.12.0 (Previous)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CHANGELOG.html#future-releases">Future Releases</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="CHANGELOG.html#version-2025-2-0-planned">Version 2025.2.0 (Planned)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="CHANGELOG.html#version-2025-3-0-planned">Version 2025.3.0 (Planned)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="CHANGELOG.html#contributing-to-documentation">Contributing to Documentation</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">RobusTest Documentation 2025</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Manual Testing</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/manualtesting.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="manual-testing">
+<h1>Manual Testing<a class="headerlink" href="#manual-testing" title="Link to this heading"></a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="deviceconfigmenumanual.html">Device Configuration Menu</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sessionconfigmenumanual.html">Session Configuration Menu</a></li>
+<li class="toctree-l1"><a class="reference internal" href="multidevicetesting.html">Multi-device testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="testvideomanualtesting.html">Test Embedded Video</a></li>
+</ul>
+</div>
+<p>Now that you have created a project and selected a build to test, you may want to get right into it and perform some manual testing on your app.</p>
+<p>To start a Manual test session:</p>
+<ol class="arabic">
+<li><p>Click on the ‘Manual’ icon on the Project Dashboard</p>
+<p>A device selection screen now pops up. You may search for a device on the ‘Device selection screen’ based on device name, platform version, screen size, hardware configuration (e.g. Memory and CPU),  node name, node IP, etc.</p>
+</li>
+<li><p>Select the device you wish to test on by clicking on the ‘Select’ button under the device</p>
+<p><em>Note:</em> RobusTest provides you a way to select multiple devices in parallel to perform your manual testing. To know more go to the page on <a class="reference internal" href="multidevicetesting.html#multi-device-testing"><span class="std std-ref">Multi-device testing</span></a></p>
+</li>
+<li><p>Once you have selected the device, click on the ‘Play’ button on the top right corner.</p>
+<p>The device screen now comes up and you can see that your app is installed on the device.</p>
+</li>
+</ol>
+<p>Congratualtions! You have succesfully begun a Manual test session</p>
+<p>Now let’s see how RobusTest helps you to test better</p>
+<p>The Manual Test Session, consists of 2 parts:</p>
+<ol class="arabic simple">
+<li><p>Device screen</p></li>
+<li><p>Test Configuration section</p></li>
+</ol>
+<p><strong>1. Device screen</strong></p>
+<blockquote>
+<div><p>The device screen is where you perform your testing. You can perform various gestures like tap, swipe, scroll and entering text with the help of mouse/trackpad and keyboard. The buttons at the bottom of the screen are available for use as Android navigation buttons.</p>
+</div></blockquote>
+<p><strong>2. Test Configuration section</strong></p>
+<blockquote>
+<div><p>The ‘Test Configuration’ section enables you to test better and easier by providing various add-on features</p>
+<p>Thse features are available across 2 menus:</p>
+<ol class="loweralpha simple">
+<li><p>Device Configuration menu or the Horizontal menu</p></li>
+<li><p>Vertical menu</p></li>
+</ol>
+<p><strong>a. Horizontal menu</strong></p>
+<p>This menu provides you options to perform various configurations related to the device. Let’s have a look at each of them</p>
+<blockquote>
+<div><p><strong>1. Location Simulation</strong></p>
+<p>This feature allows you to test as if the device is present at a different location than where it actually is. This is done by  simulating the location on the device.</p>
+<p><em>Pre-requisites</em>:</p>
+<p>On the device:</p>
+<ol class="arabic simple">
+<li><p>in Developer options:
+* enable ‘Mock Locations’
+* set the Nizedha app as your mock location app</p></li>
+<li><p>in ‘Locations’, set the ‘Location Mode’ to ‘Device only’</p></li>
+</ol>
+<p>Once the pre-requisites have been met, you can simulate any location as follows:</p>
+<ol class="arabic simple">
+<li><p>Click on the ‘Simulate Location’ button</p></li>
+<li><p>Type the name of the location in the ‘Search location here’ field and select from the drop down. Alternatively, you can manually pin the location of your choice on the map</p></li>
+<li><p>Once your location has been pinned, click on the ‘Set Location’ button</p></li>
+</ol>
+<p>Your device will now behave as if it is situated at the location chosen by you</p>
+<p><strong>2. Run ADB commands on device</strong></p>
+<p>Sometimes, as part of your testing, you may want to run a few ADB commands on the device under testing. You can do so by clicking on the ‘Run ADB commands on device’ button.</p>
+<p>This brings up the Command Line Interfce from where you can execute adb commands directly on the device.</p>
+<p><strong>3. Enable/Disable Navigation menu on device</strong></p>
+<p>This button enables/disables the Android navigation menu bar at the botton of the device screen.</p>
+<p><strong>4. Device screen size configuration</strong></p>
+<p>These buttons enable you to increase the screen size, decrease the screen size and to reset the device screen size to its default setting. This is useful in case you want to look at the app in more detail and want to verify the rendering of various objects on the screen.</p>
+<p><strong>5. Device screen ratio configuration</strong></p>
+<p>These buttons enable you to increase or decrease the screen ratio.</p>
+<p>This feature is helpful in scenarios, where the network bandwidth is low and the user would still like to test.</p>
+<p>Increasing the screen ratio decreases the resolution of the device screen and enables the user to continue testing at a lower bandwidth.</p>
+<p>Decreasing the screen ratio enables the user to test on the device screen at higher reslution.</p>
+<p><strong>6. Device screen rotation</strong></p>
+<p>You can test the device in Landscape and Portrait modes by rotating the device screen using these buttons</p>
+</div></blockquote>
+<p><strong>b. Vertical menu</strong></p>
+<p>This menu provides the user information that would aid in the testing process. Let’s go through each of them.</p>
+<blockquote>
+<div><p><strong>1. Session Information</strong></p>
+<p>Clicking on this button provides you all details regarding the manual test session in progress. This includes information about:-</p>
+<ol class="loweralpha simple">
+<li><p>the build - App name, build version, last uploaded, etc</p></li>
+<li><p>the device - Device name, ADB ID, OS version, etc,</p></li>
+<li><p>the project - Project name, Last build uploaded, etc</p></li>
+</ol>
+<p><strong>2. Focused View</strong></p>
+<p>Clicking on this button provides you a distraction-free view of the device screen so that you can focus solely on your testing</p>
+<p><strong>3. Create &amp; View Contacts</strong></p>
+<p>The ‘Contacts’ feature is useful in use cases where you need to make calls or send SMSs to specific contacts or phone numbers.</p>
+<p>You can add names to the contact list and specify their contact numbers. Now you can call or send an SMS to these contacts from the device on which you are testing.</p>
+<p><strong>4. Create &amp; View Notes</strong></p>
+<p>The ‘Notes’ feature enables you to save tidbits of information that may be of use to you at a later point in time or perhaps information which you may want to share with your project members. The notes you create are available to any project member even after the end of the test session in which the note was created.</p>
+<p><strong>5. Execute Deeplink</strong></p>
+<p>This feature enables you to test deeplinks being used in your app. Provide the deeplink and, if required, the package name. Then click on ‘Execute’. You can now see the deeplink being executed on the device</p>
+<p><strong>6. Copy from device clipboard</strong></p>
+<p>Sometimes the need arises where you may want to copy data from the device screen, say, - maybe a text in an app page or a URL opened on a browser on the device - to your own computer or laptop.</p>
+<p>In such cases, do the following:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Copy the text you want to retrieve onto the device’s clipboard by selecting and long pressing it</p></li>
+<li><p>Now click on the ‘Copy from device clipboard’ button in your Manual test session. This data is now available on the clipboard of your computer.</p></li>
+<li><p>Paste (Ctrl+V) the text anywhere on your computer</p></li>
+</ol>
+</div></blockquote>
+<p><strong>7. Device Screenshot</strong></p>
+<p>This feature enables you to take capture the device screen at any point during testing. You can use this to highlight an issue and share it with your colleagues</p>
+<p><strong>8. Burst Mode Screenshot</strong></p>
+<blockquote>
+<div><p>Burst Mode is an advanced mode of taking screenshots. On clicking on this button, for a period of 30 seconds, a screenshot is automatically taken everytime there is a change on the device screen. At the end of this period, you can individually edit and download each screenshot.</p>
+<p>This feature proves very helpful in cases where you would like to capture an entire flow in your testing scenario.</p>
+</div></blockquote>
+<p><strong>9. Device Log</strong></p>
+<p>You can view the logcat report in a tabular format with options to filter by the log level. You also have the option to download the log in CSV format.</p>
+<p><strong>10. ANR Log</strong></p>
+<p>The ANR log or the ‘Application Not Responding’ report is generated in the event that your app crashes. This log gives you significant information in determining the casue of the crash and is also availble for download.</p>
+<p><strong>11. Share Test Session</strong></p>
+<p>If you encounter a situation where you find a specific scenario in your app flows that you would like to cross-check with or show to your colleagues but they aren’t nearby, don;t worry, we got your back.</p>
+<p>The ‘Share Test Session’ featuer enables you to collaborate with colleagues by sharing your device screen with them.</p>
+<p>You can share your device screen in two ways:-
+a. by sending them a link to your device link by clicking on the ‘Copy Share-Link to Clipboard’ button
+b. by scanning the QR code displayed with a mobile phone</p>
+<p>Once your colleagues click on the link you shared or fininsh scanning the QR code, not only can they see you perform various actions on the device screen, they can also interact with the same device screen through their computer or mobile device.</p>
+<p><strong>12. Connecting to ADB remotely</strong></p>
+<p>This feature was developed with the intention to help your dev team.</p>
+<p>Let’s say you find an issue while testing and reach out to a developer for support. If this developer would like to access the ADB on the same device for further investigation, she or he can do so remotely by running the command displayed on your screen.</p>
+<p>They can now work on the device as if it is connected directly to their own computer.</p>
+<p>This feature is also of use to developers who may want to test their code while developing on Android Studio</p>
+<p><strong>13. Switch to multiplexing</strong></p>
+<p>You can toggle between multi-device testing and testing in a single device using this button.</p>
+<p><strong>14. Log bug</strong></p>
+<p>Use this feature to directly logs bugs that you encounter while testing into your bug tracking system, without moving away from your test session.</p>
+<p>RobusTest supports API integration with a host of third-party bug tracking software such as JIRA, Bugzilla, etc.</p>
+<p>Once integration with the bug tracking software is enabled from the Admin Console, you can start logging bugs.</p>
+<p>While logging the bug, you can choose the the Assignee, the reporter, the type of issue, a summary of the issue and a detailed description. You also have the option to attach the device logs, the ANR log and screenshots as well.</p>
+<p>At the time of logging of the bug, in addition to the above details, RobusTest will add more information to the ticket pertaining to the app, app version, OS version, device details, project details, etc</p>
+<p><strong>15. Change Wifi</strong></p>
+<p>Sometimes you may want your test device to connect to a diffefrent Wifi network. In such cases, you can use this feature to select the Wifi network of your choice by providing the SSID and Password.</p>
+<p><strong>16. Install Build</strong></p>
+<p>This option enables you to select and install a build of your choice from the options provided in the drop down. Only builds previously uploaded to your project will be avilable for selection</p>
+<p><strong>17. Network Shaping</strong></p>
+<p>Network Shaping enables you to select a specific kind of network to test your app on. E.g. 2G, 3G, 4G, etc. You are enabled to create an ATC Network profile which simulates charcteristics of the kind of network you choose. You can knowmore about creating ATC profiles in the Admin Console section.</p>
+</div></blockquote>
+</div></blockquote>
+<p>Once your testing is complete, you can click on ‘End Session’ button to exit the Manual test session.</p>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="addnewdeviceroku.html" class="btn btn-neutral float-left" title="Adding new devices to RobusTest - Roku" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="deviceconfigmenumanual.html" class="btn btn-neutral float-right" title="Device Configuration Menu" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, RobusTest.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

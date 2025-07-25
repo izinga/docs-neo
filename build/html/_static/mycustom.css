@@ -1,0 +1,276 @@
+/* =================================================================
+   RobusTest Documentation - Consistent Styling Enhancements
+   ================================================================= */
+
+/* Legacy custom styles */
+.bolditalic {
+  font-weight: bold;
+  font-style: italic;
+}
+.underline {
+  text-decoration: underline;
+}
+.red { 
+  color: red; 
+}
+
+/* =================================================================
+   Typography Consistency
+   ================================================================= */
+
+/* Consistent heading styles */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Roboto Slab", "ff-tisa-web-pro", "Georgia", Arial, sans-serif;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  color: #2c3e50;
+}
+
+/* Consistent paragraph spacing */
+p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+/* Consistent list styling */
+ul, ol {
+  margin-bottom: 1rem;
+}
+
+li {
+  margin-bottom: 0.25rem;
+  line-height: 1.5;
+}
+
+/* =================================================================
+   Card Styling Consistency
+   ================================================================= */
+
+/* Enhanced card appearance */
+.sd-card {
+  border: 1px solid #e1e8ed !important;
+  border-radius: 8px !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1) !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+  overflow: hidden !important;
+}
+
+.sd-card:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15) !important;
+}
+
+/* Consistent card header styling */
+.sd-card-header {
+  font-weight: 600 !important;
+  font-size: 1.1rem !important;
+  padding: 1rem !important;
+  border-bottom: 1px solid rgba(255,255,255,0.2) !important;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.1) !important;
+}
+
+/* Consistent card body styling */
+.sd-card-body {
+  padding: 1.25rem !important;
+}
+
+/* =================================================================
+   Color Scheme Consistency
+   ================================================================= */
+
+/* Standardized header colors with better contrast */
+.bg-primary {
+  background-color: #2563eb !important;
+  border-color: #1d4ed8 !important;
+}
+
+.bg-success {
+  background-color: #059669 !important;
+  border-color: #047857 !important;
+}
+
+.bg-info {
+  background-color: #0891b2 !important;
+  border-color: #0e7490 !important;
+}
+
+.bg-warning {
+  background-color: #d97706 !important;
+  border-color: #b45309 !important;
+}
+
+.bg-danger {
+  background-color: #dc2626 !important;
+  border-color: #b91c1c !important;
+}
+
+.bg-secondary {
+  background-color: #6b7280 !important;
+  border-color: #4b5563 !important;
+}
+
+.bg-dark {
+  background-color: #1f2937 !important;
+  border-color: #111827 !important;
+}
+
+/* =================================================================
+   Admonition Consistency
+   ================================================================= */
+
+/* Enhanced admonition styling */
+.admonition {
+  padding: 1rem !important;
+  margin: 1.5rem 0 !important;
+  border-left: 4px solid #2563eb !important;
+  border-radius: 0 6px 6px 0 !important;
+  background-color: #f8fafc !important;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1) !important;
+}
+
+.admonition.tip {
+  border-left-color: #059669 !important;
+  background-color: #f0fdf4 !important;
+}
+
+.admonition.warning {
+  border-left-color: #d97706 !important;
+  background-color: #fffbeb !important;
+}
+
+.admonition.note {
+  border-left-color: #0891b2 !important;
+  background-color: #f0f9ff !important;
+}
+
+.admonition.danger {
+  border-left-color: #dc2626 !important;
+  background-color: #fef2f2 !important;
+}
+
+/* Admonition title styling */
+.admonition-title {
+  font-weight: 600 !important;
+  margin-bottom: 0.5rem !important;
+  color: inherit !important;
+}
+
+/* =================================================================
+   Code Block Consistency
+   ================================================================= */
+
+/* Enhanced code block styling */
+.highlight {
+  margin: 1rem 0 !important;
+  border-radius: 6px !important;
+  overflow: hidden !important;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1) !important;
+}
+
+/* Inline code styling */
+code {
+  background-color: #f1f5f9 !important;
+  color: #475569 !important;
+  padding: 0.125rem 0.25rem !important;
+  border-radius: 3px !important;
+  font-size: 0.875em !important;
+}
+
+/* =================================================================
+   Link Styling Consistency
+   ================================================================= */
+
+/* Consistent link styling */
+a {
+  color: #2563eb !important;
+  text-decoration: none !important;
+  transition: color 0.2s ease !important;
+}
+
+a:hover {
+  color: #1d4ed8 !important;
+  text-decoration: underline !important;
+}
+
+/* Card links styling */
+.sd-card a {
+  color: inherit !important;
+  text-decoration: none !important;
+}
+
+.sd-card:hover a {
+  color: inherit !important;
+}
+
+/* =================================================================
+   Table Consistency
+   ================================================================= */
+
+/* Enhanced table styling */
+.wy-table-responsive table {
+  border-collapse: separate !important;
+  border-spacing: 0 !important;
+  border-radius: 6px !important;
+  overflow: hidden !important;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1) !important;
+}
+
+.wy-table-responsive table th {
+  background-color: #f8fafc !important;
+  font-weight: 600 !important;
+  border-bottom: 2px solid #e2e8f0 !important;
+}
+
+.wy-table-responsive table td {
+  border-bottom: 1px solid #e2e8f0 !important;
+}
+
+/* =================================================================
+   Figure and Image Consistency
+   ================================================================= */
+
+/* Enhanced figure styling */
+.figure {
+  margin: 1.5rem 0 !important;
+  text-align: center !important;
+}
+
+.figure img {
+  border-radius: 6px !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15) !important;
+}
+
+.figure .caption {
+  margin-top: 0.75rem !important;
+  font-style: italic !important;
+  color: #6b7280 !important;
+  font-size: 0.9em !important;
+}
+
+/* Screenshot border class */
+.screenshot-border {
+  border: 1px solid #e2e8f0 !important;
+  border-radius: 6px !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1) !important;
+}
+
+/* =================================================================
+   Responsive Typography
+   ================================================================= */
+
+@media (max-width: 768px) {
+  h1 { font-size: 1.75rem !important; }
+  h2 { font-size: 1.5rem !important; }
+  h3 { font-size: 1.25rem !important; }
+  h4 { font-size: 1.125rem !important; }
+  
+  .sd-card-header {
+    font-size: 1rem !important;
+    padding: 0.75rem !important;
+  }
+  
+  .sd-card-body {
+    padding: 1rem !important;
+  }
+}

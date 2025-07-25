@@ -1,0 +1,828 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Job Payload API Reference &mdash; RobusTest Documentation 2025 2025.1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="_static/navigation-visual-fix.css?v=6b3f9075" />
+      <link rel="stylesheet" type="text/css" href="_static/mycustom.css?v=c05073c6" />
+      <link rel="stylesheet" type="text/css" href="_static/theme_overrides.css?v=901e38fe" />
+      <link rel="stylesheet" type="text/css" href="_static/responsive-grids.css?v=ce0b3436" />
+      <link rel="stylesheet" type="text/css" href="_static/search-optimization.css?v=c04af2c9" />
+      <link rel="stylesheet" type="text/css" href="_static/interactive-elements.css?v=e2a6f529" />
+      <link rel="stylesheet" type="text/css" href="_static/version-info.css?v=5aa665d1" />
+      <link rel="stylesheet" type="text/css" href="_static/feedback-system.css?v=b1867106" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=65f7d7c4"></script>
+      <script src="_static/doctools.js?v=9a2dae69"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/design-tabs.js?v=f930bc37"></script>
+      <script src="_static/navigation-complete-override.js?v=23ba6672"></script>
+      <script src="_static/interactive-elements.js?v=e1aa8583"></script>
+      <script src="_static/version-info.js?v=f2427329"></script>
+      <script src="_static/feedback-system.js?v=5ba1e50a"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="ADB Commands API Reference" href="adbEspressoAPI.html" />
+    <link rel="prev" title="Hub API &amp; Integration" href="hub_api.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            RobusTest Documentation 2025
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction to RobusTest: Your Mobile App Testing Platform</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#what-is-robustest">What is RobusTest?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#who-is-robustest-for">Who is RobusTest For?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#key-capabilities-of-robustest">Key Capabilities of RobusTest</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#getting-started">Getting Started</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="gettingstarted.html">Getting Started with RobusTest</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="gettingstarted.html#accessing-robustest">Accessing RobusTest</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="gettingstarted.html#option-1-starting-with-the-public-cloud-instance">Option 1: Starting with the Public Cloud Instance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gettingstarted.html#option-2-accessing-an-on-premise-enterprise-instance">Option 2: Accessing an On-Premise Enterprise Instance</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="gettingstarted.html#what-s-next">What’s Next?</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="createproject.html">Creating Projects</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="createproject.html#creating-a-new-project">Creating a New Project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="createproject.html#uploading-your-application-build">Uploading Your Application Build</a></li>
+<li class="toctree-l2"><a class="reference internal" href="createproject.html#next-steps">Next Steps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="createproject.html#project-best-practices">Project Best Practices</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="projecttypes.html">Project Types</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="projecttypes.html#android-app-project">Android App Project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="projecttypes.html#ios-app-project">iOS App Project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="projecttypes.html#mobile-web-app-project">Mobile Web App Project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="projecttypes.html#device-only-project">Device Only Project</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="otherusefulinfo.html">Adding New Devices</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="addnewdeviceandroid.html">Adding new devices to RobusTest - Android</a></li>
+<li class="toctree-l2"><a class="reference internal" href="addnewdeviceios.html">Adding new devices to RobusTest - iOS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="addnewdeviceroku.html">Adding new devices to RobusTest - Roku</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="manualtesting.html">Manual Testing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="deviceconfigmenumanual.html">Device Configuration Menu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sessionconfigmenumanual.html">Session Configuration Menu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="multidevicetesting.html">Multi-device testing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="testvideomanualtesting.html">Test Embedded Video</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="liveview.html">Live View</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="liveview.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="liveview.html#active-session-information">Active Session Information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="liveview.html#session-control-options">Session Control Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="liveview.html#multi-device-monitoring">Multi-Device Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="liveview.html#best-practices">Best Practices</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="runsettings.html">Run Settings</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="runsettings.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="runsettings.html#run-settings-types">Run Settings Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="runsettings.html#run-setting-attributes-reference">Run Setting Attributes Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="runsettings.html#configuring-run-settings">Configuring Run Settings</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="performancetesting.html">Performance Testing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="performancetesting.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="performancetesting.html#performance-first-approach">Performance-First Approach</a></li>
+<li class="toctree-l2"><a class="reference internal" href="performancetesting.html#performance-monitoring-during-testing">Performance Monitoring During Testing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="performancetesting.html#memory-usage-monitoring">Memory Usage Monitoring</a></li>
+<li class="toctree-l3"><a class="reference internal" href="performancetesting.html#cpu-usage-monitoring">CPU Usage Monitoring</a></li>
+<li class="toctree-l3"><a class="reference internal" href="performancetesting.html#network-usage-monitoring">Network Usage Monitoring</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="robustesthub.html">RobusTest Hub</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="robustesthub.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="robustesthub.html#real-time-test-monitoring">Real-time Test Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="robustesthub.html#detailed-test-reports">Detailed Test Reports</a></li>
+<li class="toctree-l2"><a class="reference internal" href="robustesthub.html#supported-testing-frameworks">Supported Testing Frameworks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="robustesthub.html#getting-started">Getting Started</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="hub_api.html">Hub API &amp; Integration</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Job Payload API Reference</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#core-job-attributes">Core Job Attributes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#build-configuration">Build Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#device-configuration">Device Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#device-groups-configuration">Device Groups Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#example-job-payload">Example Job Payload</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#framework-specific-considerations">Framework-Specific Considerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#job-execution-workflow">Job Execution Workflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#best-practices">Best Practices</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#troubleshooting">Troubleshooting</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="adbEspressoAPI.html">ADB Commands API Reference</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="adbEspressoAPI.html#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="adbEspressoAPI.html#api-specification">API Specification</a></li>
+<li class="toctree-l3"><a class="reference internal" href="adbEspressoAPI.html#parameters-reference">Parameters Reference</a></li>
+<li class="toctree-l3"><a class="reference internal" href="adbEspressoAPI.html#device-id-retrieval">Device ID Retrieval</a></li>
+<li class="toctree-l3"><a class="reference internal" href="adbEspressoAPI.html#sample-implementation">Sample Implementation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="adbEspressoAPI.html#common-adb-commands">Common ADB Commands</a></li>
+<li class="toctree-l3"><a class="reference internal" href="adbEspressoAPI.html#best-practices">Best Practices</a></li>
+<li class="toctree-l3"><a class="reference internal" href="adbEspressoAPI.html#error-handling">Error Handling</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="adbespressoapi_test.html">API to execute ADB commands from within an Espresso test</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="hub_frameworks.html">Framework Integration</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="hubappium_master.html">Appium Hub</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="hubappium_new.html">Run Appium Tests</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="hubappium_organize.html">Organize Sessions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hubappium_data.html">Test Data Management</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hubappium_development.html">Locator Development</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hubappium_unity.html">Unity App Testing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hubappium_master.html#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hubappium_master.html#hub-appium-features">Hub Appium Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hubappium_master.html#getting-started">Getting Started</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hubappium_master.html#best-practices">Best Practices</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="hubespresso.html">Espresso Testing Hub</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="hubespresso.html#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hubespresso.html#espresso-job-execution-workflow">Espresso Job Execution Workflow</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="hubxcuitest.html">XCUITest Testing Hub</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="hubxcuitest.html#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hubxcuitest.html#prerequisites">Prerequisites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hubxcuitest.html#setup-process">Setup Process</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="hubselenium.html">Selenium Testing Hub</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="hubselenium.html#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hubselenium.html#setup-process">Setup Process</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hubselenium.html#example-implementation">Example Implementation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hubselenium.html#best-practices">Best Practices</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hubselenium.html#troubleshooting">Troubleshooting</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="hubseleniumrandombrowser.html">Randomize the browser selection process</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hubroku.html">Roku Testing Hub</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="hubroku.html#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hubroku.html#setup-process">Setup Process</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hubroku.html#test-case-implementation">Test Case Implementation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hubroku.html#best-practices">Best Practices</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hubroku.html#troubleshooting">Troubleshooting</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="device_setup.html">Adding New Devices</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="addnewdeviceandroid.html">Android Devices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="addnewdeviceios.html">iOS Devices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="addnewdeviceroku.html">Roku Devices</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="projectdashboard.html">Project Dashboard</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="projectdashboard.html#dashboard-sections-overview">Dashboard Sections Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="projectdashboard.html#builds-section">Builds Section</a></li>
+<li class="toctree-l2"><a class="reference internal" href="projectdashboard.html#build-information-display">Build Information Display</a></li>
+<li class="toctree-l2"><a class="reference internal" href="projectdashboard.html#multiple-build-management">Multiple Build Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="projectdashboard.html#available-actions">Available Actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="projectdashboard.html#team-management">Team Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="projectdashboard.html#team-member-capabilities">Team Member Capabilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="projectdashboard.html#member-roles-and-permissions">Member Roles and Permissions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="projectdashboard.html#remote-build-upload-api">Remote Build Upload (API)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="projectdashboard.html#api-command-structure">API Command Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="projectdashboard.html#command-parameters-explained">Command Parameters Explained</a></li>
+<li class="toctree-l2"><a class="reference internal" href="projectdashboard.html#sample-implementation">Sample Implementation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="projectdashboard.html#ci-cd-integration-examples">CI/CD Integration Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="projectdashboard.html#best-practices">Best Practices</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="automationreports.html">Automation Reports</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="debuggingfailures.html">Debugging Test Case Failures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="automationreports.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="automationreports.html#report-organization">Report Organization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="automationreports.html#report-types">Report Types</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="automationreports.html#slideshow-report">Slideshow Report</a></li>
+<li class="toctree-l3"><a class="reference internal" href="automationreports.html#analytics-report">Analytics Report</a></li>
+<li class="toctree-l3"><a class="reference internal" href="automationreports.html#functional-report">Functional Report</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="continuousintegration.html">Continuous Integration</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="continuousintegration.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="continuousintegration.html#ci-cd-integration-workflow">CI/CD Integration Workflow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="continuousintegration.html#remote-build-upload">Remote Build Upload</a></li>
+<li class="toctree-l2"><a class="reference internal" href="continuousintegration.html#test-run-triggering">Test Run Triggering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="continuousintegration.html#test-run-monitoring">Test Run Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="continuousintegration.html#results-access-and-analysis">Results Access and Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="continuousintegration.html#best-practices-for-ci-integration">Best Practices for CI Integration</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="bugtrackerintegration.html">Bug Tracker Integration</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="bugtrackerintegration.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bugtrackerintegration.html#supported-bug-tracking-systems">Supported Bug Tracking Systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bugtrackerintegration.html#setting-up-bug-tracker-integration">Setting Up Bug Tracker Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bugtrackerintegration.html#using-bug-tracker-integration">Using Bug Tracker Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bugtrackerintegration.html#integration-benefits">Integration Benefits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bugtrackerintegration.html#advanced-features">Advanced Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bugtrackerintegration.html#best-practices">Best Practices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bugtrackerintegration.html#troubleshooting">Troubleshooting</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="scheduling.html">Scheduling Automated Tests</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="scheduling.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scheduling.html#setting-up-scheduled-tests">Setting Up Scheduled Tests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scheduling.html#advanced-scheduling-features">Advanced Scheduling Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scheduling.html#best-practices-for-test-scheduling">Best Practices for Test Scheduling</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="robustestconnect.html">RobusTest Connect - Run local, test global</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tunnelClientConfig.html">Setting Up Tunneling</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="adminconsole.html">Admin Console</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="adminconsole.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="adminconsole.html#admin-console-sections">Admin Console Sections</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="userprofile.html">User Profile</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="userprofile.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="userprofile.html#accessing-your-profile">Accessing Your Profile</a></li>
+<li class="toctree-l2"><a class="reference internal" href="userprofile.html#profile-settings">Profile Settings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="userprofile.html#help-and-documentation">Help and Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="userprofile.html#technical-support">Technical Support</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="healthpage.html">Health Page</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="healthpage.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="healthpage.html#health-page-sections">Health Page Sections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="healthpage.html#device-monitoring">Device Monitoring</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="settings.html">Settings &amp; Configuration</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="settingsnotification.html">Notification Settings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="settingsmail.html">Mail Settings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="settingsnetworkshaping.html">Network Shaping Settings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="settingsneuron.html">Neuron Settings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="settingsrobustestserver.html">RobusTest Server Settings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="settingstestsession.html">Test Session Settings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="settingsauthentication.html">Authentication Settings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="settingscloudstorage.html">Cloud Storage Settings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="settings.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="settings.html#platform-configuration-categories">Platform Configuration Categories</a></li>
+<li class="toctree-l2"><a class="reference internal" href="settings.html#getting-started-with-settings">Getting Started with Settings</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="installation_guides.html">Installation &amp; Setup Guides</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="installandroid.html">Android Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installjava.html">Java Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installpython.html">Python Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installnodejsappium.html">Node.js &amp; Appium</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installxcode.html">Xcode Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installhomebrew.html">Homebrew Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installidevicelocation.html">IDE &amp; Location Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installpythonvirtualenv.html">Python Virtual Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="elevatedpowershell.html">Elevated PowerShell</a></li>
+<li class="toctree-l2"><a class="reference internal" href="setup_https.html">HTTPS Setup</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">Troubleshooting</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="unabletoaccessRobusTestserver.html">Unable to access RobusTest Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#common-issues-and-solutions">Common Issues and Solutions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="troubleshooting.html#performance-issues">Performance Issues</a></li>
+<li class="toctree-l3"><a class="reference internal" href="troubleshooting.html#device-connection-issues">Device Connection Issues</a></li>
+<li class="toctree-l3"><a class="reference internal" href="troubleshooting.html#test-execution-failures">Test Execution Failures</a></li>
+<li class="toctree-l3"><a class="reference internal" href="troubleshooting.html#best-practices-for-troubleshooting">Best Practices for Troubleshooting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="troubleshooting.html#getting-help">Getting Help</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="unabletoaccessRobusTestserver.html">Unable to access RobusTest Server</a></li>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting_espresso.html">Troubleshooting your Espresso job</a></li>
+<li class="toctree-l1"><a class="reference internal" href="downloads.html">Downloads &amp; Resources</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="downloads.html#quick-start-guides">Quick Start Guides</a></li>
+<li class="toctree-l2"><a class="reference internal" href="downloads.html#configuration-templates">Configuration Templates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="downloads.html#api-reference-materials">API Reference Materials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="downloads.html#cheat-sheets-quick-references">Cheat Sheets &amp; Quick References</a></li>
+<li class="toctree-l2"><a class="reference internal" href="downloads.html#mobile-apps-tools">Mobile Apps &amp; Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="downloads.html#sample-projects">Sample Projects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="downloads.html#custom-resources-generator">Custom Resources Generator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="downloads.html#license-usage-terms">License &amp; Usage Terms</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CHANGELOG.html">Changelog</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CHANGELOG.html#version-2025-1-0-current">Version 2025.1.0 (Current)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CHANGELOG.html#version-2024-12-0-previous">Version 2024.12.0 (Previous)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CHANGELOG.html#future-releases">Future Releases</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="CHANGELOG.html#version-2025-2-0-planned">Version 2025.2.0 (Planned)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="CHANGELOG.html#version-2025-3-0-planned">Version 2025.3.0 (Planned)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="CHANGELOG.html#contributing-to-documentation">Contributing to Documentation</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">RobusTest Documentation 2025</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="hub_api.html">Hub API &amp; Integration</a></li>
+      <li class="breadcrumb-item active">Job Payload API Reference</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/hubjobpayload.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="job-payload-api-reference">
+<span id="hub-job-payload"></span><h1>Job Payload API Reference<a class="headerlink" href="#job-payload-api-reference" title="Link to this heading"></a></h1>
+<nav class="contents local" id="in-this-section">
+<p class="topic-title">In this section</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#overview" id="id4">Overview</a></p></li>
+<li><p><a class="reference internal" href="#core-job-attributes" id="id5">Core Job Attributes</a></p></li>
+<li><p><a class="reference internal" href="#build-configuration" id="id6">Build Configuration</a></p></li>
+<li><p><a class="reference internal" href="#device-configuration" id="id7">Device Configuration</a></p></li>
+<li><p><a class="reference internal" href="#device-groups-configuration" id="id8">Device Groups Configuration</a></p></li>
+<li><p><a class="reference internal" href="#example-job-payload" id="id9">Example Job Payload</a></p></li>
+<li><p><a class="reference internal" href="#framework-specific-considerations" id="id10">Framework-Specific Considerations</a></p></li>
+<li><p><a class="reference internal" href="#job-execution-workflow" id="id11">Job Execution Workflow</a></p></li>
+<li><p><a class="reference internal" href="#best-practices" id="id12">Best Practices</a></p></li>
+<li><p><a class="reference internal" href="#troubleshooting" id="id13">Troubleshooting</a></p></li>
+</ul>
+</nav>
+<section id="overview">
+<h2><a class="toc-backref" href="#id4" role="doc-backlink">Overview</a><a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
+<p>The Job Payload API allows you to programmatically create and execute automated test jobs on RobusTest Hub. This API is essential for CI/CD integration and enables you to trigger test execution remotely using structured JSON payloads.</p>
+<div class="config-generator-placeholder" data-type="api-payload"></div><p><strong>Key Benefits:</strong></p>
+<ul class="simple">
+<li><p><strong>Automated Test Execution</strong>: Trigger tests programmatically from your CI/CD pipeline</p></li>
+<li><p><strong>Flexible Configuration</strong>: Comprehensive job configuration options</p></li>
+<li><p><strong>Scalable Testing</strong>: Execute tests across multiple devices simultaneously</p></li>
+<li><p><strong>Framework Support</strong>: Compatible with Espresso, XCUITest, and Appium frameworks</p></li>
+<li><p><strong>Priority Management</strong>: Control job execution priority and retry behavior</p></li>
+</ul>
+<p><strong>API Endpoint:</strong></p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>POST /v3/job/new?accesskey=&lt;ACCESS_KEY&gt;
+</pre></div>
+</div>
+<p>For complete API documentation, visit: <a class="reference external" href="http://api.robustest.com/#tag/job/paths/~1v3~1job~1new/post">RobusTest API Documentation</a></p>
+</section>
+<section id="core-job-attributes">
+<h2><a class="toc-backref" href="#id5" role="doc-backlink">Core Job Attributes</a><a class="headerlink" href="#core-job-attributes" title="Link to this heading"></a></h2>
+<p>The following table describes the essential attributes for job creation:</p>
+<table class="docutils align-default" id="id1">
+<caption><span class="caption-text">Job Payload Attributes</span><a class="headerlink" href="#id1" title="Link to this table"></a></caption>
+<colgroup>
+<col style="width: 20.0%" />
+<col style="width: 25.0%" />
+<col style="width: 20.0%" />
+<col style="width: 20.0%" />
+<col style="width: 10.0%" />
+<col style="width: 5.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Attribute Name</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Usage</p></th>
+<th class="head"><p>Example</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Mandatory</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>project</strong></p></td>
+<td><p>Project ID of the project in which you are executing the job. Alphanumerical string obtained from Project Home page URL.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">&quot;project&quot;:</span> <span class="pre">&quot;&lt;Project</span> <span class="pre">ID&gt;&quot;</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">&quot;project&quot;:</span> <span class="pre">&quot;63bc5697baec733123456820&quot;</span></code></p></td>
+<td><p>String</p></td>
+<td><p>Yes</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>type</strong></p></td>
+<td><p>Type of job being executed (testing framework being used).</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">&quot;type&quot;:</span> <span class="pre">&quot;&lt;Type</span> <span class="pre">of</span> <span class="pre">the</span> <span class="pre">Job&gt;&quot;</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">&quot;type&quot;:</span> <span class="pre">&quot;Espresso&quot;</span></code></p></td>
+<td><p>String (Espresso, XCUITest, appium)</p></td>
+<td><p>Yes</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>identifier</strong></p></td>
+<td><p>Custom alphanumeric string to identify a job. Can be viewed in deployment → jobs section and project jobs section.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">&quot;identifier&quot;:</span> <span class="pre">&quot;&lt;Job</span> <span class="pre">Identifier&gt;&quot;</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">&quot;identifier&quot;:</span> <span class="pre">&quot;Smoke</span> <span class="pre">testing-</span> <span class="pre">payment</span> <span class="pre">module&quot;</span></code></p></td>
+<td><p>String</p></td>
+<td><p>No</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>desc</strong></p></td>
+<td><p>Brief description of the job. Can include alphanumeric characters and special characters.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">&quot;desc&quot;:</span> <span class="pre">&quot;&lt;Description</span> <span class="pre">of</span> <span class="pre">the</span> <span class="pre">Job&gt;&quot;</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">&quot;desc&quot;:</span> <span class="pre">&quot;Testing</span> <span class="pre">Security</span> <span class="pre">Token</span> <span class="pre">for</span> <span class="pre">Triggers&quot;</span></code></p></td>
+<td><p>String</p></td>
+<td><p>No</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>priority</strong></p></td>
+<td><p>Priority of job execution. Higher value = higher priority, lower value = lower priority.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">&quot;priority&quot;:</span> <span class="pre">&lt;Job</span> <span class="pre">Priority&gt;</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">&quot;priority&quot;:</span> <span class="pre">10</span></code></p></td>
+<td><p>Number</p></td>
+<td><p>No</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>runMode</strong></p></td>
+<td><p>Specifies the order/method in which tests should be executed.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">&quot;runMode&quot;:</span> <span class="pre">&quot;&lt;Enter</span> <span class="pre">runMode&gt;&quot;</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">&quot;runMode&quot;:</span> <span class="pre">&quot;distributed&quot;</span></code></p></td>
+<td><p>String (parallel, distributed)</p></td>
+<td><p>Yes</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>jobCategories</strong></p></td>
+<td><p>Helps classify jobs with tags/categories for job analysis.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">&quot;jobCategories&quot;:</span> <span class="pre">[&quot;category1&quot;,&quot;category2&quot;]</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">&quot;jobCategories&quot;:</span> <span class="pre">[&quot;Functional&quot;,&quot;smoke&quot;,&quot;iOS&quot;]</span></code></p></td>
+<td><p>Array of Strings</p></td>
+<td><p>No</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>maxJobAttempts</strong></p></td>
+<td><p>Number of times a job can retry execution if sent back to queue.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">&quot;maxJobAttempts&quot;:</span> <span class="pre">&lt;Enter</span> <span class="pre">job</span> <span class="pre">attempts&gt;</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">&quot;maxJobAttempts&quot;:</span> <span class="pre">2</span></code></p></td>
+<td><p>Number</p></td>
+<td><p>No</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>runSetting</strong></p></td>
+<td><p>Run Setting ID that can be updated in Project → Run Settings page. Includes notifications, timeouts, integrations, etc.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">&quot;runSetting&quot;:</span> <span class="pre">&quot;&lt;run</span> <span class="pre">setting&gt;&quot;</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">&quot;runSetting&quot;:</span> <span class="pre">&quot;64745b50baec73ad0214dc53&quot;</span></code></p></td>
+<td><p>String</p></td>
+<td><p>No</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>jobScope</strong></p></td>
+<td><p>Job visibility setting for team collaboration.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">&quot;jobScope&quot;:</span> <span class="pre">&quot;&lt;scope&gt;&quot;</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">&quot;jobScope&quot;:</span> <span class="pre">&quot;public&quot;</span></code></p></td>
+<td><p>String</p></td>
+<td><p>No</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>attributes</strong></p></td>
+<td><p>Custom key-value attributes for job metadata.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">&quot;attributes&quot;:</span> <span class="pre">{&quot;key&quot;:</span> <span class="pre">&quot;value&quot;}</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">&quot;attributes&quot;:</span> <span class="pre">{&quot;COUNTRY&quot;:&quot;in&quot;,</span> <span class="pre">&quot;ENV&quot;:&quot;prod&quot;}</span></code></p></td>
+<td><p>Object</p></td>
+<td><p>No</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="build-configuration">
+<h2><a class="toc-backref" href="#id6" role="doc-backlink">Build Configuration</a><a class="headerlink" href="#build-configuration" title="Link to this heading"></a></h2>
+<p>The build section specifies the application and test files to be used:</p>
+<table class="docutils align-default" id="id2">
+<caption><span class="caption-text">Build Attributes</span><a class="headerlink" href="#id2" title="Link to this table"></a></caption>
+<colgroup>
+<col style="width: 20.0%" />
+<col style="width: 30.0%" />
+<col style="width: 25.0%" />
+<col style="width: 20.0%" />
+<col style="width: 5.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Attribute Name</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Usage</p></th>
+<th class="head"><p>Example</p></th>
+<th class="head"><p>Mandatory</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>build.aut</strong></p></td>
+<td><p>The AUT (Application Under Test) is the test app that needs to be tested. View AUT ID on Project Home Page.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">&quot;aut&quot;:</span> <span class="pre">&quot;&lt;AUT</span> <span class="pre">ID&gt;&quot;</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">&quot;aut&quot;:</span> <span class="pre">&quot;67bd4baa0bc67b454f32b054&quot;</span></code></p></td>
+<td><p>Yes</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>build.test</strong></p></td>
+<td><p>APK or ZIP file containing the test cases. View Test Build ID on Project Home Page.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">&quot;test&quot;:</span> <span class="pre">&quot;&lt;test</span> <span class="pre">ID&gt;&quot;</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">&quot;test&quot;:</span> <span class="pre">&quot;67bd4baa0bc67b454f32b054&quot;</span></code></p></td>
+<td><p>Yes</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="device-configuration">
+<h2><a class="toc-backref" href="#id7" role="doc-backlink">Device Configuration</a><a class="headerlink" href="#device-configuration" title="Link to this heading"></a></h2>
+<p>Configure device selection and targeting for your test execution:</p>
+<table class="docutils align-default" id="id3">
+<caption><span class="caption-text">Device Configuration Attributes</span><a class="headerlink" href="#id3" title="Link to this table"></a></caption>
+<colgroup>
+<col style="width: 20.0%" />
+<col style="width: 30.0%" />
+<col style="width: 25.0%" />
+<col style="width: 20.0%" />
+<col style="width: 5.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Attribute Name</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Usage</p></th>
+<th class="head"><p>Example</p></th>
+<th class="head"><p>Mandatory</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>deviceQueries</strong></p></td>
+<td><p>Device filters and selection criteria for test execution.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">&quot;deviceQueries&quot;:</span> <span class="pre">[&lt;device</span> <span class="pre">criteria&gt;]</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">&quot;deviceQueries&quot;:</span> <span class="pre">[{&quot;osVersion&quot;:</span> <span class="pre">&quot;10.0&quot;,</span> <span class="pre">&quot;deviceType&quot;:</span> <span class="pre">&quot;phone&quot;}]</span></code></p></td>
+<td><p>Yes</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>deviceGroupsIDs</strong></p></td>
+<td><p>Array of device group IDs to specify which device groups to use for test execution.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">&quot;deviceGroupsIDs&quot;:</span> <span class="pre">[&quot;&lt;group_id&gt;&quot;]</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">&quot;deviceGroupsIDs&quot;:</span> <span class="pre">[&quot;60a1b2c3d4e5f6789012345&quot;]</span></code></p></td>
+<td><p>No</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>minDeviceCount</strong></p></td>
+<td><p>Minimum number of devices required to run the job.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">&quot;minDeviceCount&quot;:</span> <span class="pre">&lt;number&gt;</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">&quot;minDeviceCount&quot;:</span> <span class="pre">2</span></code></p></td>
+<td><p>No</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>maxDeviceCount</strong></p></td>
+<td><p>Maximum number of devices to use for test execution.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">&quot;maxDeviceCount&quot;:</span> <span class="pre">&lt;number&gt;</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">&quot;maxDeviceCount&quot;:</span> <span class="pre">5</span></code></p></td>
+<td><p>No</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="device-groups-configuration">
+<h2><a class="toc-backref" href="#id8" role="doc-backlink">Device Groups Configuration</a><a class="headerlink" href="#device-groups-configuration" title="Link to this heading"></a></h2>
+<p>You can use the Device Groups feature to enable selection of devices from specific sets of devices. This provides better control over device allocation and test execution.</p>
+<p><strong>Prerequisites:</strong>
+* At least one device group must be created
+* Your project and desired devices must be part of that group</p>
+<p><strong>deviceGroupsIDs Attribute Options:</strong></p>
+<ol class="arabic">
+<li><p><strong>Specific Group IDs</strong>: Array with one or more group IDs</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;deviceGroupsIDs&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;60a1b2c3d4e5f6789012345&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;60a1b2c3d4e5f6789012346&quot;</span><span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>This directs the system to pick devices only from the specified group(s).</p>
+</li>
+<li><p><strong>Any Available Group</strong>: Array with “any” value</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;deviceGroupsIDs&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;any&quot;</span><span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>This directs the system to pick devices from any group that the project is part of.</p>
+</li>
+<li><p><strong>No Group Restriction</strong>: Empty array</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;deviceGroupsIDs&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>This directs the system to pick any eligible and available device, regardless of group membership.</p>
+</li>
+</ol>
+</section>
+<section id="example-job-payload">
+<h2><a class="toc-backref" href="#id9" role="doc-backlink">Example Job Payload</a><a class="headerlink" href="#example-job-payload" title="Link to this heading"></a></h2>
+<p>Here’s a complete example of a job payload for running Espresso tests:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;project&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;63bc5697baec733123456820&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Espresso&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;identifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Smoke Test - Payment Module&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;desc&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Automated smoke tests for payment functionality&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;priority&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;runMode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;distributed&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;jobCategories&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;Functional&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Smoke&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Payment&quot;</span><span class="p">],</span>
+<span class="w">  </span><span class="nt">&quot;maxJobAttempts&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;runSetting&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;64745b50baec73ad0214dc53&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;jobScope&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;public&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;attributes&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;COUNTRY&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;US&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;ENV&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;staging&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;BUILD_NUMBER&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1.2.3&quot;</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">&quot;build&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;aut&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;67bd4baa0bc67b454f32b054&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;test&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;67bd4bd30bc67b454f32b055&quot;</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">&quot;deviceQueries&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;osVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;11.0&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;deviceType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;phone&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;manufacturer&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Samsung&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">],</span>
+<span class="w">  </span><span class="nt">&quot;deviceGroupsIDs&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;60a1b2c3d4e5f6789012345&quot;</span><span class="p">],</span>
+<span class="w">  </span><span class="nt">&quot;minDeviceCount&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;maxDeviceCount&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="framework-specific-considerations">
+<h2><a class="toc-backref" href="#id10" role="doc-backlink">Framework-Specific Considerations</a><a class="headerlink" href="#framework-specific-considerations" title="Link to this heading"></a></h2>
+<p><strong>Espresso Jobs:</strong></p>
+<ul class="simple">
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">&quot;type&quot;:</span> <span class="pre">&quot;Espresso&quot;</span></code> for Android Espresso tests</p></li>
+<li><p>Ensure your test APK is properly uploaded and referenced in <code class="docutils literal notranslate"><span class="pre">build.test</span></code></p></li>
+<li><p>Consider using <code class="docutils literal notranslate"><span class="pre">&quot;runMode&quot;:</span> <span class="pre">&quot;distributed&quot;</span></code> for faster execution</p></li>
+</ul>
+<p><strong>XCUITest Jobs:</strong></p>
+<ul class="simple">
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">&quot;type&quot;:</span> <span class="pre">&quot;XCUITest&quot;</span></code> for iOS XCUITest tests</p></li>
+<li><p>Ensure your test bundle is properly zipped and uploaded</p></li>
+<li><p>Include appropriate iOS version targeting in device queries</p></li>
+</ul>
+<p><strong>Appium Jobs:</strong></p>
+<ul class="simple">
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">&quot;type&quot;:</span> <span class="pre">&quot;appium&quot;</span></code> for cross-platform Appium tests</p></li>
+<li><p>Configure device queries for both Android and iOS as needed</p></li>
+<li><p>Consider parallel execution for cross-platform testing</p></li>
+</ul>
+</section>
+<section id="job-execution-workflow">
+<h2><a class="toc-backref" href="#id11" role="doc-backlink">Job Execution Workflow</a><a class="headerlink" href="#job-execution-workflow" title="Link to this heading"></a></h2>
+<p>When you submit a job via the API, it follows this workflow:</p>
+<ol class="arabic simple">
+<li><p><strong>Job Submission</strong>: Job is created with the provided payload</p></li>
+<li><p><strong>Validation</strong>: Payload is validated for required fields and format</p></li>
+<li><p><strong>Queuing</strong>: Job enters the pending state based on priority</p></li>
+<li><p><strong>Device Allocation</strong>: System reserves required devices based on criteria</p></li>
+<li><p><strong>Execution</strong>: Tests run on allocated devices</p></li>
+<li><p><strong>Reporting</strong>: Results are compiled and made available</p></li>
+</ol>
+<p><strong>Job Status Monitoring:</strong></p>
+<p>After job submission, you receive a job ID which can be used to monitor execution:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>GET /v3/job/&lt;job_id&gt;/status
+</pre></div>
+</div>
+<p><strong>Report Access:</strong></p>
+<p>Access detailed reports using the job ID:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>GET /v3/report/&lt;job_id&gt;/&lt;framework_type&gt;
+</pre></div>
+</div>
+</section>
+<section id="best-practices">
+<h2><a class="toc-backref" href="#id12" role="doc-backlink">Best Practices</a><a class="headerlink" href="#best-practices" title="Link to this heading"></a></h2>
+<p><strong>Job Configuration:</strong></p>
+<ul class="simple">
+<li><p><strong>Use Descriptive Identifiers</strong>: Choose meaningful job identifiers for easy tracking</p></li>
+<li><p><strong>Set Appropriate Priority</strong>: Balance job priority with team workflow requirements</p></li>
+<li><p><strong>Configure Retry Logic</strong>: Set reasonable <code class="docutils literal notranslate"><span class="pre">maxJobAttempts</span></code> for handling transient failures</p></li>
+<li><p><strong>Use Job Categories</strong>: Tag jobs with relevant categories for better organization</p></li>
+</ul>
+<p><strong>Device Management:</strong></p>
+<ul class="simple">
+<li><p><strong>Optimize Device Selection</strong>: Use specific device queries to target appropriate devices</p></li>
+<li><p><strong>Leverage Device Groups</strong>: Organize devices into groups for better resource management</p></li>
+<li><p><strong>Balance Device Count</strong>: Set appropriate min/max device counts based on test requirements</p></li>
+</ul>
+<p><strong>CI/CD Integration:</strong></p>
+<ul class="simple">
+<li><p><strong>Secure API Keys</strong>: Keep access keys secure and rotate them regularly</p></li>
+<li><p><strong>Handle API Responses</strong>: Implement proper error handling for API calls</p></li>
+<li><p><strong>Monitor Job Status</strong>: Track job execution and handle failures appropriately</p></li>
+<li><p><strong>Integrate with Build Pipeline</strong>: Trigger jobs based on build events and results</p></li>
+</ul>
+<p><strong>Performance Optimization:</strong></p>
+<ul class="simple">
+<li><p><strong>Use Parallel Execution</strong>: Leverage <code class="docutils literal notranslate"><span class="pre">runMode:</span> <span class="pre">&quot;parallel&quot;</span></code> for faster test execution</p></li>
+<li><p><strong>Optimize Test Selection</strong>: Use targeted test execution when possible</p></li>
+<li><p><strong>Monitor Resource Usage</strong>: Track device utilization and optimize allocation</p></li>
+</ul>
+</section>
+<section id="troubleshooting">
+<h2><a class="toc-backref" href="#id13" role="doc-backlink">Troubleshooting</a><a class="headerlink" href="#troubleshooting" title="Link to this heading"></a></h2>
+<p><strong>Common Issues:</strong></p>
+<ul class="simple">
+<li><p><strong>Invalid Project ID</strong>: Ensure project ID is correctly obtained from project URL</p></li>
+<li><p><strong>Missing Build IDs</strong>: Verify AUT and test build IDs are valid and accessible</p></li>
+<li><p><strong>Device Allocation Failures</strong>: Check device availability and group configurations</p></li>
+<li><p><strong>Authentication Errors</strong>: Verify access key validity and permissions</p></li>
+</ul>
+<p><strong>Debugging Tips:</strong></p>
+<ul class="simple">
+<li><p><strong>Validate Payload</strong>: Use JSON validators to ensure payload structure is correct</p></li>
+<li><p><strong>Check Device Status</strong>: Verify target devices are available and online</p></li>
+<li><p><strong>Monitor Job Logs</strong>: Review job execution logs for detailed error information</p></li>
+<li><p><strong>Test Configuration</strong>: Verify run settings and device queries are properly configured</p></li>
+</ul>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><strong>Related Topics:</strong></p>
+<ul class="simple">
+<li><p><a class="reference internal" href="hubappium_master.html"><span class="doc">Appium Hub</span></a> - Appium Hub integration</p></li>
+<li><p><a class="reference internal" href="hubespresso.html"><span class="doc">Espresso Testing Hub</span></a> - Espresso Hub integration</p></li>
+<li><p><a class="reference internal" href="hubxcuitest.html"><span class="doc">XCUITest Testing Hub</span></a> - XCUITest Hub integration</p></li>
+<li><p><a class="reference internal" href="continuousintegration.html"><span class="doc">Continuous Integration</span></a> - CI/CD integration strategies</p></li>
+<li><p><a class="reference internal" href="automationreports.html"><span class="doc">Automation Reports</span></a> - Understanding test reports and analytics</p></li>
+</ul>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="hub_api.html" class="btn btn-neutral float-left" title="Hub API &amp; Integration" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="adbEspressoAPI.html" class="btn btn-neutral float-right" title="ADB Commands API Reference" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, RobusTest.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

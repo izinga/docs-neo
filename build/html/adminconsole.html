@@ -1,0 +1,997 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Console &mdash; RobusTest Documentation 2025 2025.1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="_static/navigation-visual-fix.css?v=6b3f9075" />
+      <link rel="stylesheet" type="text/css" href="_static/mycustom.css?v=c05073c6" />
+      <link rel="stylesheet" type="text/css" href="_static/theme_overrides.css?v=901e38fe" />
+      <link rel="stylesheet" type="text/css" href="_static/responsive-grids.css?v=ce0b3436" />
+      <link rel="stylesheet" type="text/css" href="_static/search-optimization.css?v=c04af2c9" />
+      <link rel="stylesheet" type="text/css" href="_static/interactive-elements.css?v=e2a6f529" />
+      <link rel="stylesheet" type="text/css" href="_static/version-info.css?v=5aa665d1" />
+      <link rel="stylesheet" type="text/css" href="_static/feedback-system.css?v=b1867106" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=65f7d7c4"></script>
+      <script src="_static/doctools.js?v=9a2dae69"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/design-tabs.js?v=f930bc37"></script>
+      <script src="_static/navigation-complete-override.js?v=23ba6672"></script>
+      <script src="_static/interactive-elements.js?v=e1aa8583"></script>
+      <script src="_static/version-info.js?v=f2427329"></script>
+      <script src="_static/feedback-system.js?v=5ba1e50a"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="User Profile" href="userprofile.html" />
+    <link rel="prev" title="Setting Up Tunneling" href="tunnelClientConfig.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            RobusTest Documentation 2025
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction to RobusTest: Your Mobile App Testing Platform</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#what-is-robustest">What is RobusTest?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#who-is-robustest-for">Who is RobusTest For?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#key-capabilities-of-robustest">Key Capabilities of RobusTest</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#getting-started">Getting Started</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="gettingstarted.html">Getting Started with RobusTest</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="gettingstarted.html#accessing-robustest">Accessing RobusTest</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="gettingstarted.html#option-1-starting-with-the-public-cloud-instance">Option 1: Starting with the Public Cloud Instance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gettingstarted.html#option-2-accessing-an-on-premise-enterprise-instance">Option 2: Accessing an On-Premise Enterprise Instance</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="gettingstarted.html#what-s-next">What’s Next?</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="createproject.html">Creating Projects</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="createproject.html#creating-a-new-project">Creating a New Project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="createproject.html#uploading-your-application-build">Uploading Your Application Build</a></li>
+<li class="toctree-l2"><a class="reference internal" href="createproject.html#next-steps">Next Steps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="createproject.html#project-best-practices">Project Best Practices</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="projecttypes.html">Project Types</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="projecttypes.html#android-app-project">Android App Project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="projecttypes.html#ios-app-project">iOS App Project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="projecttypes.html#mobile-web-app-project">Mobile Web App Project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="projecttypes.html#device-only-project">Device Only Project</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="otherusefulinfo.html">Adding New Devices</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="addnewdeviceandroid.html">Adding new devices to RobusTest - Android</a></li>
+<li class="toctree-l2"><a class="reference internal" href="addnewdeviceios.html">Adding new devices to RobusTest - iOS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="addnewdeviceroku.html">Adding new devices to RobusTest - Roku</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="manualtesting.html">Manual Testing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="deviceconfigmenumanual.html">Device Configuration Menu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sessionconfigmenumanual.html">Session Configuration Menu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="multidevicetesting.html">Multi-device testing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="testvideomanualtesting.html">Test Embedded Video</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="liveview.html">Live View</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="liveview.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="liveview.html#active-session-information">Active Session Information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="liveview.html#session-control-options">Session Control Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="liveview.html#multi-device-monitoring">Multi-Device Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="liveview.html#best-practices">Best Practices</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="runsettings.html">Run Settings</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="runsettings.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="runsettings.html#run-settings-types">Run Settings Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="runsettings.html#run-setting-attributes-reference">Run Setting Attributes Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="runsettings.html#configuring-run-settings">Configuring Run Settings</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="performancetesting.html">Performance Testing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="performancetesting.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="performancetesting.html#performance-first-approach">Performance-First Approach</a></li>
+<li class="toctree-l2"><a class="reference internal" href="performancetesting.html#performance-monitoring-during-testing">Performance Monitoring During Testing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="performancetesting.html#memory-usage-monitoring">Memory Usage Monitoring</a></li>
+<li class="toctree-l3"><a class="reference internal" href="performancetesting.html#cpu-usage-monitoring">CPU Usage Monitoring</a></li>
+<li class="toctree-l3"><a class="reference internal" href="performancetesting.html#network-usage-monitoring">Network Usage Monitoring</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="robustesthub.html">RobusTest Hub</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="robustesthub.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="robustesthub.html#real-time-test-monitoring">Real-time Test Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="robustesthub.html#detailed-test-reports">Detailed Test Reports</a></li>
+<li class="toctree-l2"><a class="reference internal" href="robustesthub.html#supported-testing-frameworks">Supported Testing Frameworks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="robustesthub.html#getting-started">Getting Started</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="hub_api.html">Hub API &amp; Integration</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="hubjobpayload.html">Job Payload API Reference</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="hubjobpayload.html#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hubjobpayload.html#core-job-attributes">Core Job Attributes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hubjobpayload.html#build-configuration">Build Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hubjobpayload.html#device-configuration">Device Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hubjobpayload.html#device-groups-configuration">Device Groups Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hubjobpayload.html#example-job-payload">Example Job Payload</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hubjobpayload.html#framework-specific-considerations">Framework-Specific Considerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hubjobpayload.html#job-execution-workflow">Job Execution Workflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hubjobpayload.html#best-practices">Best Practices</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hubjobpayload.html#troubleshooting">Troubleshooting</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="adbEspressoAPI.html">ADB Commands API Reference</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="adbEspressoAPI.html#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="adbEspressoAPI.html#api-specification">API Specification</a></li>
+<li class="toctree-l3"><a class="reference internal" href="adbEspressoAPI.html#parameters-reference">Parameters Reference</a></li>
+<li class="toctree-l3"><a class="reference internal" href="adbEspressoAPI.html#device-id-retrieval">Device ID Retrieval</a></li>
+<li class="toctree-l3"><a class="reference internal" href="adbEspressoAPI.html#sample-implementation">Sample Implementation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="adbEspressoAPI.html#common-adb-commands">Common ADB Commands</a></li>
+<li class="toctree-l3"><a class="reference internal" href="adbEspressoAPI.html#best-practices">Best Practices</a></li>
+<li class="toctree-l3"><a class="reference internal" href="adbEspressoAPI.html#error-handling">Error Handling</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="adbespressoapi_test.html">API to execute ADB commands from within an Espresso test</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="hub_frameworks.html">Framework Integration</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="hubappium_master.html">Appium Hub</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="hubappium_new.html">Run Appium Tests</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="hubappium_organize.html">Organize Sessions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hubappium_data.html">Test Data Management</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hubappium_development.html">Locator Development</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hubappium_unity.html">Unity App Testing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hubappium_master.html#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hubappium_master.html#hub-appium-features">Hub Appium Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hubappium_master.html#getting-started">Getting Started</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hubappium_master.html#best-practices">Best Practices</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="hubespresso.html">Espresso Testing Hub</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="hubespresso.html#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hubespresso.html#espresso-job-execution-workflow">Espresso Job Execution Workflow</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="hubxcuitest.html">XCUITest Testing Hub</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="hubxcuitest.html#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hubxcuitest.html#prerequisites">Prerequisites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hubxcuitest.html#setup-process">Setup Process</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="hubselenium.html">Selenium Testing Hub</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="hubselenium.html#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hubselenium.html#setup-process">Setup Process</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hubselenium.html#example-implementation">Example Implementation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hubselenium.html#best-practices">Best Practices</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hubselenium.html#troubleshooting">Troubleshooting</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="hubseleniumrandombrowser.html">Randomize the browser selection process</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hubroku.html">Roku Testing Hub</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="hubroku.html#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hubroku.html#setup-process">Setup Process</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hubroku.html#test-case-implementation">Test Case Implementation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hubroku.html#best-practices">Best Practices</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hubroku.html#troubleshooting">Troubleshooting</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="device_setup.html">Adding New Devices</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="addnewdeviceandroid.html">Android Devices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="addnewdeviceios.html">iOS Devices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="addnewdeviceroku.html">Roku Devices</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="projectdashboard.html">Project Dashboard</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="projectdashboard.html#dashboard-sections-overview">Dashboard Sections Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="projectdashboard.html#builds-section">Builds Section</a></li>
+<li class="toctree-l2"><a class="reference internal" href="projectdashboard.html#build-information-display">Build Information Display</a></li>
+<li class="toctree-l2"><a class="reference internal" href="projectdashboard.html#multiple-build-management">Multiple Build Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="projectdashboard.html#available-actions">Available Actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="projectdashboard.html#team-management">Team Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="projectdashboard.html#team-member-capabilities">Team Member Capabilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="projectdashboard.html#member-roles-and-permissions">Member Roles and Permissions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="projectdashboard.html#remote-build-upload-api">Remote Build Upload (API)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="projectdashboard.html#api-command-structure">API Command Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="projectdashboard.html#command-parameters-explained">Command Parameters Explained</a></li>
+<li class="toctree-l2"><a class="reference internal" href="projectdashboard.html#sample-implementation">Sample Implementation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="projectdashboard.html#ci-cd-integration-examples">CI/CD Integration Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="projectdashboard.html#best-practices">Best Practices</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="automationreports.html">Automation Reports</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="debuggingfailures.html">Debugging Test Case Failures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="automationreports.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="automationreports.html#report-organization">Report Organization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="automationreports.html#report-types">Report Types</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="automationreports.html#slideshow-report">Slideshow Report</a></li>
+<li class="toctree-l3"><a class="reference internal" href="automationreports.html#analytics-report">Analytics Report</a></li>
+<li class="toctree-l3"><a class="reference internal" href="automationreports.html#functional-report">Functional Report</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="continuousintegration.html">Continuous Integration</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="continuousintegration.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="continuousintegration.html#ci-cd-integration-workflow">CI/CD Integration Workflow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="continuousintegration.html#remote-build-upload">Remote Build Upload</a></li>
+<li class="toctree-l2"><a class="reference internal" href="continuousintegration.html#test-run-triggering">Test Run Triggering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="continuousintegration.html#test-run-monitoring">Test Run Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="continuousintegration.html#results-access-and-analysis">Results Access and Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="continuousintegration.html#best-practices-for-ci-integration">Best Practices for CI Integration</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="bugtrackerintegration.html">Bug Tracker Integration</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="bugtrackerintegration.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bugtrackerintegration.html#supported-bug-tracking-systems">Supported Bug Tracking Systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bugtrackerintegration.html#setting-up-bug-tracker-integration">Setting Up Bug Tracker Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bugtrackerintegration.html#using-bug-tracker-integration">Using Bug Tracker Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bugtrackerintegration.html#integration-benefits">Integration Benefits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bugtrackerintegration.html#advanced-features">Advanced Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bugtrackerintegration.html#best-practices">Best Practices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bugtrackerintegration.html#troubleshooting">Troubleshooting</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="scheduling.html">Scheduling Automated Tests</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="scheduling.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scheduling.html#setting-up-scheduled-tests">Setting Up Scheduled Tests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scheduling.html#advanced-scheduling-features">Advanced Scheduling Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scheduling.html#best-practices-for-test-scheduling">Best Practices for Test Scheduling</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="robustestconnect.html">RobusTest Connect - Run local, test global</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tunnelClientConfig.html">Setting Up Tunneling</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Admin Console</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#admin-console-sections">Admin Console Sections</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="userprofile.html">User Profile</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="userprofile.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="userprofile.html#accessing-your-profile">Accessing Your Profile</a></li>
+<li class="toctree-l2"><a class="reference internal" href="userprofile.html#profile-settings">Profile Settings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="userprofile.html#help-and-documentation">Help and Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="userprofile.html#technical-support">Technical Support</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="healthpage.html">Health Page</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="healthpage.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="healthpage.html#health-page-sections">Health Page Sections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="healthpage.html#device-monitoring">Device Monitoring</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="settings.html">Settings &amp; Configuration</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="settingsnotification.html">Notification Settings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="settingsmail.html">Mail Settings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="settingsnetworkshaping.html">Network Shaping Settings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="settingsneuron.html">Neuron Settings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="settingsrobustestserver.html">RobusTest Server Settings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="settingstestsession.html">Test Session Settings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="settingsauthentication.html">Authentication Settings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="settingscloudstorage.html">Cloud Storage Settings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="settings.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="settings.html#platform-configuration-categories">Platform Configuration Categories</a></li>
+<li class="toctree-l2"><a class="reference internal" href="settings.html#getting-started-with-settings">Getting Started with Settings</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="installation_guides.html">Installation &amp; Setup Guides</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="installandroid.html">Android Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installjava.html">Java Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installpython.html">Python Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installnodejsappium.html">Node.js &amp; Appium</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installxcode.html">Xcode Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installhomebrew.html">Homebrew Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installidevicelocation.html">IDE &amp; Location Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installpythonvirtualenv.html">Python Virtual Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="elevatedpowershell.html">Elevated PowerShell</a></li>
+<li class="toctree-l2"><a class="reference internal" href="setup_https.html">HTTPS Setup</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">Troubleshooting</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="unabletoaccessRobusTestserver.html">Unable to access RobusTest Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#common-issues-and-solutions">Common Issues and Solutions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="troubleshooting.html#performance-issues">Performance Issues</a></li>
+<li class="toctree-l3"><a class="reference internal" href="troubleshooting.html#device-connection-issues">Device Connection Issues</a></li>
+<li class="toctree-l3"><a class="reference internal" href="troubleshooting.html#test-execution-failures">Test Execution Failures</a></li>
+<li class="toctree-l3"><a class="reference internal" href="troubleshooting.html#best-practices-for-troubleshooting">Best Practices for Troubleshooting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="troubleshooting.html#getting-help">Getting Help</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="unabletoaccessRobusTestserver.html">Unable to access RobusTest Server</a></li>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting_espresso.html">Troubleshooting your Espresso job</a></li>
+<li class="toctree-l1"><a class="reference internal" href="downloads.html">Downloads &amp; Resources</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="downloads.html#quick-start-guides">Quick Start Guides</a></li>
+<li class="toctree-l2"><a class="reference internal" href="downloads.html#configuration-templates">Configuration Templates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="downloads.html#api-reference-materials">API Reference Materials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="downloads.html#cheat-sheets-quick-references">Cheat Sheets &amp; Quick References</a></li>
+<li class="toctree-l2"><a class="reference internal" href="downloads.html#mobile-apps-tools">Mobile Apps &amp; Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="downloads.html#sample-projects">Sample Projects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="downloads.html#custom-resources-generator">Custom Resources Generator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="downloads.html#license-usage-terms">License &amp; Usage Terms</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CHANGELOG.html">Changelog</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CHANGELOG.html#version-2025-1-0-current">Version 2025.1.0 (Current)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CHANGELOG.html#version-2024-12-0-previous">Version 2024.12.0 (Previous)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CHANGELOG.html#future-releases">Future Releases</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="CHANGELOG.html#version-2025-2-0-planned">Version 2025.2.0 (Planned)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="CHANGELOG.html#version-2025-3-0-planned">Version 2025.3.0 (Planned)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="CHANGELOG.html#contributing-to-documentation">Contributing to Documentation</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">RobusTest Documentation 2025</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Admin Console</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/adminconsole.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="admin-console">
+<h1>Admin Console<a class="headerlink" href="#admin-console" title="Link to this heading"></a></h1>
+<nav class="contents local" id="in-this-section">
+<p class="topic-title">In this section</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#overview" id="id1">Overview</a></p></li>
+<li><p><a class="reference internal" href="#admin-console-sections" id="id2">Admin Console Sections</a></p></li>
+</ul>
+</nav>
+<section id="overview">
+<h2><a class="toc-backref" href="#id1" role="doc-backlink">Overview</a><a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
+<p>The Admin Console is a powerful administrative interface available to users with Admin privileges on the RobusTest platform. It provides comprehensive tools for platform management, user oversight, and usage monitoring.</p>
+<p><strong>Access Requirements:</strong></p>
+<ul class="simple">
+<li><p>Admin privileges on the RobusTest platform</p></li>
+<li><p>Access through the dedicated Admin Console icon in the platform header</p></li>
+</ul>
+<img alt="Admin Console access icon" class="align-center" src="_images/adminconsole.png" />
+<p><strong>Core Admin Console Functions:</strong></p>
+<ul class="simple">
+<li><p><strong>Administrative Management</strong>: Perform essential platform administration tasks</p></li>
+<li><p><strong>Usage Monitoring</strong>: Track and analyze platform usage patterns</p></li>
+<li><p><strong>User Management</strong>: Oversee user accounts and permissions</p></li>
+<li><p><strong>Resource Management</strong>: Monitor device groups and project resources</p></li>
+<li><p><strong>Activity Tracking</strong>: Comprehensive audit trail of platform activities</p></li>
+</ul>
+</section>
+<section id="admin-console-sections">
+<h2><a class="toc-backref" href="#id2" role="doc-backlink">Admin Console Sections</a><a class="headerlink" href="#admin-console-sections" title="Link to this heading"></a></h2>
+<p><strong>1. Activity Monitoring</strong></p>
+<p>The Activity section provides comprehensive tracking of device group-related activities:</p>
+<p><strong>Device Group Activities Tracked:</strong></p>
+<ul class="simple">
+<li><p><strong>Group Creation</strong>: Monitor when new device groups are created</p></li>
+<li><p><strong>Group Modifications</strong>: Track changes to existing device groups, including:</p>
+<ul>
+<li><p>Addition/removal of devices within groups</p></li>
+<li><p>Addition/removal of projects associated with groups</p></li>
+<li><p>Configuration changes and updates</p></li>
+</ul>
+</li>
+<li><p><strong>Group Deletion</strong>: Log when device groups are removed from the platform</p></li>
+</ul>
+<p><strong>Benefits:</strong></p>
+<ul class="simple">
+<li><p><strong>Audit Trail</strong>: Complete history of device group changes</p></li>
+<li><p><strong>Change Tracking</strong>: Understand who made what changes and when</p></li>
+<li><p><strong>Compliance</strong>: Maintain records for administrative compliance</p></li>
+</ul>
+<p><strong>2. Projects</strong></p>
+<p>The Projects section provides comprehensive oversight and management of all projects on the RobusTest platform:</p>
+<p><strong>Project Overview:</strong></p>
+<p>The main Projects page displays a comprehensive list of all projects with the following information:</p>
+<ul class="simple">
+<li><p><strong>Project List</strong>: Tabular view of all projects with key project details</p></li>
+<li><p><strong>Project Status</strong>: Active/Inactive status indicators</p></li>
+<li><p><strong>Project Type</strong>: Project type classification (Android App, iOS App, Web App, Device Only)</p></li>
+<li><p><strong>Creation Date</strong>: When each project was created</p></li>
+<li><p><strong>Last Activity</strong>: Most recent activity timestamp</p></li>
+<li><p><strong>Team Size</strong>: Number of team members per project</p></li>
+<li><p><strong>Resource Usage</strong>: Current resource allocation and usage metrics</p></li>
+</ul>
+<p><strong>Project Actions:</strong></p>
+<p>From the main Projects list, administrators can perform the following actions:</p>
+<ul class="simple">
+<li><p><strong>Create New Project</strong>: Launch project creation wizard</p></li>
+<li><p><strong>Search &amp; Filter</strong>: Find specific projects using search and filtering options</p></li>
+<li><p><strong>Bulk Operations</strong>: Perform operations on multiple projects simultaneously</p></li>
+<li><p><strong>Export Data</strong>: Export project information for reporting and analysis</p></li>
+<li><p><strong>Archive Projects</strong>: Archive inactive or completed projects</p></li>
+</ul>
+<p><strong>Detailed Project Information:</strong></p>
+<p>When you select a specific project, the following comprehensive tabs become available:</p>
+<p><strong>Project Details Tab Navigation:</strong></p>
+<p>When a project is selected from the main Projects list, the following comprehensive tabs become available for detailed project management:</p>
+<ul class="simple">
+<li><p><strong>SESSIONS</strong> - Session management and monitoring (see detailed documentation: <a class="reference internal" href="adminconsole_projects_sessions.html"><span class="doc">Admin Console - Project Sessions Management</span></a>)</p></li>
+<li><p><strong>BUILDS</strong> - Build management and history</p></li>
+<li><p><strong>GROUPS</strong> - Device group assignments</p></li>
+<li><p><strong>MEMBERS</strong> - Team member and permission management</p></li>
+<li><p><strong>DEVICES</strong> - Project-specific device allocations</p></li>
+<li><p><strong>SETTINGS</strong> - Project configuration and settings</p></li>
+</ul>
+<p><strong>a. Sessions Tab</strong></p>
+<p>Monitor comprehensive test session activity for the selected project:</p>
+<ul class="simple">
+<li><p><strong>Session Overview</strong>: Summary of all test sessions with filtering and search capabilities</p></li>
+<li><p><strong>Session Details</strong>: Detailed information for each session including:</p>
+<ul>
+<li><p><strong>Session Type</strong>: Manual, Automation, Run, or Hub testing sessions</p></li>
+<li><p><strong>Device Information</strong>: Complete device details used for each session</p></li>
+<li><p><strong>User Details</strong>: User who initiated the session with role information</p></li>
+<li><p><strong>Timeline</strong>: Detailed start and end times with duration calculations</p></li>
+<li><p><strong>Status</strong>: Session completion status and health indicators</p></li>
+<li><p><strong>Termination Reason</strong>: Comprehensive information about session endings</p></li>
+<li><p><strong>Performance Metrics</strong>: Session-level performance data and insights</p></li>
+</ul>
+</li>
+<li><p><strong>Session Analytics</strong>: Advanced analytics including session patterns, success rates, and trends</p></li>
+<li><p><strong>Export Options</strong>: Export session data for external analysis and reporting</p></li>
+</ul>
+<p>For comprehensive details on the Sessions tab functionality, see: <a class="reference internal" href="adminconsole_projects_sessions.html"><span class="doc">Admin Console - Project Sessions Management</span></a></p>
+<p><strong>b. Usage Tab</strong></p>
+<p>Comprehensive testing activity analysis and resource utilization:</p>
+<ul class="simple">
+<li><p><strong>Usage Dashboard</strong>: Visual dashboard showing project usage patterns</p></li>
+<li><p><strong>Session Type Breakdown</strong>: Detailed duration analysis by test type:</p>
+<ul>
+<li><p>Manual testing time and patterns</p></li>
+<li><p>Automation testing execution time</p></li>
+<li><p>Test run duration and frequency</p></li>
+<li><p>Hub testing utilization</p></li>
+</ul>
+</li>
+<li><p><strong>Resource Utilization</strong>: Detailed resource usage metrics:</p>
+<ul>
+<li><p>Device usage patterns and allocation</p></li>
+<li><p>Peak usage times and capacity planning</p></li>
+<li><p>Cost analysis and budget tracking</p></li>
+<li><p>Efficiency metrics and optimization recommendations</p></li>
+</ul>
+</li>
+<li><p><strong>Historical Trends</strong>: Long-term usage patterns and trend analysis</p></li>
+<li><p><strong>Comparative Analysis</strong>: Usage comparison with other projects and benchmarks</p></li>
+</ul>
+<p><strong>c. Builds Tab</strong></p>
+<p>Comprehensive application build management and tracking:</p>
+<ul class="simple">
+<li><p><strong>Build Repository</strong>: Complete inventory of all builds with detailed metadata</p></li>
+<li><p><strong>Build Information</strong>: Comprehensive build details including:</p>
+<ul>
+<li><p>Version information and build numbers</p></li>
+<li><p>Upload dates and user information</p></li>
+<li><p>Build size and technical specifications</p></li>
+<li><p>Testing status and coverage metrics</p></li>
+<li><p>Quality metrics and test results</p></li>
+</ul>
+</li>
+<li><p><strong>Build Management</strong>: Advanced build management capabilities:</p>
+<ul>
+<li><p>Build activation/deactivation</p></li>
+<li><p>Build comparison and diff analysis</p></li>
+<li><p>Build promotion workflows</p></li>
+<li><p>Automated testing integration</p></li>
+<li><p>Build retention policies</p></li>
+</ul>
+</li>
+<li><p><strong>Release Management</strong>: Integration with release management processes</p></li>
+</ul>
+<p><strong>d. Members Tab</strong></p>
+<p>Advanced team and permission management:</p>
+<ul class="simple">
+<li><p><strong>Team Overview</strong>: Complete team roster with role assignments</p></li>
+<li><p><strong>Member Management</strong>: Comprehensive member administration:</p>
+<ul>
+<li><p><strong>Add/Remove Members</strong>: Streamlined member onboarding and offboarding</p></li>
+<li><p><strong>Role Assignment</strong>: Flexible role-based access control</p></li>
+<li><p><strong>Permission Matrix</strong>: Detailed permission management and audit</p></li>
+<li><p><strong>Team Hierarchy</strong>: Support for team structures and reporting relationships</p></li>
+</ul>
+</li>
+<li><p><strong>Access Control</strong>: Granular access control features:</p>
+<ul>
+<li><p><strong>Project-Level Permissions</strong>: Control access to project features and data</p></li>
+<li><p><strong>Resource Permissions</strong>: Manage access to devices and testing resources</p></li>
+<li><p><strong>Admin Rights</strong>: Grant or revoke administrative privileges</p></li>
+<li><p><strong>Audit Trail</strong>: Complete audit trail of permission changes</p></li>
+</ul>
+</li>
+<li><p><strong>Team Analytics</strong>: Team performance metrics and collaboration insights</p></li>
+</ul>
+<p><strong>e. Devices Tab</strong></p>
+<p>Dedicated device management for the project:</p>
+<ul class="simple">
+<li><p><strong>Reserved Devices</strong>: Complete list of devices specifically allocated to the project</p></li>
+<li><p><strong>Device Allocation</strong>: Manage device reservations and assignments</p></li>
+<li><p><strong>Usage Patterns</strong>: Device-specific usage analytics and optimization</p></li>
+<li><p><strong>Maintenance Schedule</strong>: Coordinate device maintenance with project timelines</p></li>
+<li><p><strong>Performance Metrics</strong>: Device performance monitoring and health status</p></li>
+</ul>
+<p><strong>f. Settings Tab</strong></p>
+<p>Comprehensive project configuration and management:</p>
+<ul class="simple">
+<li><p><strong>Project Status Management</strong>:</p>
+<ul>
+<li><p><strong>Activate/Deactivate Project</strong>: Control project operational status</p></li>
+<li><p><strong>Archive Project</strong>: Archive completed or inactive projects</p></li>
+<li><p><strong>Delete Project</strong>: Permanent project removal with safeguards</p></li>
+</ul>
+</li>
+<li><p><strong>Project Configuration</strong>:</p>
+<ul>
+<li><p><strong>Universal Project Settings</strong>: Configure universal project access for new users</p></li>
+<li><p><strong>Resource Limits</strong>: Set project-specific resource allocation limits</p></li>
+<li><p><strong>Notification Settings</strong>: Configure project-specific notifications</p></li>
+<li><p><strong>Integration Settings</strong>: Manage third-party integrations and APIs</p></li>
+</ul>
+</li>
+<li><p><strong>Advanced Settings</strong>:</p>
+<ul>
+<li><p><strong>Security Configuration</strong>: Project-level security settings and policies</p></li>
+<li><p><strong>Backup Settings</strong>: Configure project data backup and retention</p></li>
+<li><p><strong>Compliance Settings</strong>: Ensure compliance with organizational policies</p></li>
+<li><p><strong>Custom Fields</strong>: Configure project-specific custom fields and metadata</p></li>
+</ul>
+</li>
+</ul>
+<p><strong>g. Reports Tab</strong></p>
+<p>Comprehensive project reporting and analytics:</p>
+<ul class="simple">
+<li><p><strong>Executive Dashboard</strong>: High-level project health and performance metrics</p></li>
+<li><p><strong>Quality Reports</strong>: Test quality and coverage analysis</p></li>
+<li><p><strong>Resource Reports</strong>: Resource utilization and cost analysis</p></li>
+<li><p><strong>Team Performance</strong>: Team productivity and efficiency metrics</p></li>
+<li><p><strong>Custom Reports</strong>: Configurable custom reports and dashboards</p></li>
+</ul>
+<p><strong>3. Users</strong></p>
+<p>This section provides details of all active and inactive users on RobusTest</p>
+<p>On selecting a user by clicking on their name, the following additional information pertaining to that user are available:</p>
+<ol class="loweralpha simple">
+<li><p><em>Sessions</em> - Details of the last 100 test sessions that were started by the user are visible.</p></li>
+<li><p><em>Usage</em> - This tab provides the breakup of the total duration spent on each type of test session by the user</p></li>
+<li><p><em>Projects</em> - This section provides a list of all projects that the user is a part of</p></li>
+<li><p><em>Settings</em> - This section enables you to:-</p></li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li><p>Activate/Deactivate a user on RobusTest</p></li>
+<li><p>Grant/Revoke admin privileges for a user on RobusTest</p></li>
+</ul>
+</div></blockquote>
+<p><strong>4. Device Models</strong></p>
+<p>This section provides details of all active and inactive mobile device <em>models</em> being used on RobusTest.</p>
+<p>A device model is a combination of the Model name (e.g. Mi A2, Samsung Galaxy S7, iPhone 7, etc.) and the Android/iOS version</p>
+<p>On selecting a model name, the following additional information pertaining to that device model are available:</p>
+<ol class="loweralpha simple">
+<li><p><em>Devices</em> - This provides a list of all devices on RobusTest that have the same model and OS version running on them</p></li>
+<li><p><em>Settings</em> - Under this section, you can:</p></li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li><p>provide various information pertaining to the model such as Model name, Model brand, Model manufacturer, CPU, RAM, Screen Ratio, Screen Size, Resolution, etc.</p></li>
+<li><p>enable the device navigation bar/menu to be displayed in the device screen. This is menu where you would have buttons such as Back, Home, History, etc.</p></li>
+<li><p>make available for automation all devices belonging to the model by enabling the ‘Support Automation’ checkbox. If this check box is not selected, all devices that fall under the model category will only be available for Manual testing</p></li>
+</ul>
+</div></blockquote>
+<p><strong>5. Devices</strong></p>
+<p>This section provides details of all devices available on RobusTest. You can view a list of devices that are connected, disconnected or in a busy (in-use) state.</p>
+<p>Android and iOS devices can be visually differentiated by the logo displayed on the left of the device name. The logo also helps determine the state of the device by the colour in which the logo is displayed</p>
+<ul class="simple">
+<li><p>Green colour - the device is connected and available for use</p></li>
+<li><p>Red colour - the device is in use</p></li>
+<li><p>Grey colour - the device is disconnected</p></li>
+<li><p>Blue colour - the device is in the state of being added to RobusTest. This is seen under the following circumstances:
+* when a device is being added for the first time
+* when an existing device is being restarted
+* when the RobusTest server to which the device is connected to is being restarted</p></li>
+</ul>
+<p>On selecting a device by clicking on its name, the following information are visible:</p>
+<ul class="simple">
+<li><p>device name</p></li>
+<li><p>OS version running on the device</p></li>
+<li><p>device model</p></li>
+<li><p>device ID</p></li>
+<li><p>ADB ID</p></li>
+<li><p>device IMEI number</p></li>
+<li><p>Node server name and IP to which the device is connected</p></li>
+<li><p>date and time when device was last used</p></li>
+</ul>
+<p>You can also perform the following actions using the buttons displayed on the top right:</p>
+<ul class="simple">
+<li><p><em>Free device</em> - This button is visible only if the device is in use in a test session. Clicking on it, releases the device from its current test session and makes it available for a new test session</p></li>
+<li><p><em>Restart device</em> - This button can be used to restart a connected device remotely</p></li>
+<li><p><em>Flash Screen</em> - On clicking on this button, a red screen appears on the device for a few seconds and then goes away. This button can be used for identifying a specific device when there are multiple devices of the same make and model. It can help with proper labelling of devices for later identification</p></li>
+</ul>
+<p>On selecting a device, a few more tabs become visble. These tabs provide the following additional information pertaining to that device:</p>
+<ol class="loweralpha simple">
+<li><p><em>Sessions</em> - Details of the last 100 test sessions that were started on the device are visible.</p></li>
+<li><p><em>Usage</em> - This tab provides the breakup of the total duration of each type of test session in which the device was used</p></li>
+<li><p><em>Apps</em> - This tab provides a list of apps that have been pre-installed on the device</p></li>
+<li><p><em>History</em> - This tab provides the history of the connection and disconnection events of the device with the RobusTest server along with the date &amp; time of these events as well as the reason for the same</p></li>
+<li><p><em>Contact</em> - Any contact provided here will receive notification emails in the event of the device getting disconnected from the RobusTest server. To add a contact to a device, first create a contact in the ‘Contacts’ section of the Admin Consle. Once the contact has been added in the ‘Contacts’ section, you can add the same to the device from the current tab</p></li>
+<li><p><em>Shell</em> - You can run adb commands on the device from here</p></li>
+<li><p><em>Settings</em> - This section enables you to:</p></li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li><p>provide a name for the device</p></li>
+<li><p>opt in or out of receiving a device disconnection email</p></li>
+<li><p>provide a mobile number associated with the device</p></li>
+<li><p>add device tags to identify the device</p></li>
+<li><p>identify the device groups to which the device belongs, if any</p></li>
+<li><p>identify the contacts associated with the device</p></li>
+</ul>
+</div></blockquote>
+<p><strong>6. Emulators</strong></p>
+<p>This section provides management and configuration capabilities for Android and iOS emulators/simulators in your RobusTest environment.</p>
+<p><strong>Emulator Management Features:</strong></p>
+<ul class="simple">
+<li><p><strong>Emulator Creation</strong>: Create new Android emulators and iOS simulators</p></li>
+<li><p><strong>Configuration Management</strong>: Configure emulator specifications including:</p>
+<ul>
+<li><p>Android API levels and system images</p></li>
+<li><p>Device profiles (screen size, resolution, RAM)</p></li>
+<li><p>Hardware acceleration settings</p></li>
+<li><p>Network configuration</p></li>
+</ul>
+</li>
+<li><p><strong>Emulator Status Monitoring</strong>: Track emulator availability and performance</p></li>
+<li><p><strong>Resource Allocation</strong>: Manage CPU and memory allocation for emulators</p></li>
+<li><p><strong>Snapshot Management</strong>: Create and restore emulator snapshots for consistent testing states</p></li>
+</ul>
+<p><strong>Benefits of Emulator Integration:</strong></p>
+<ul class="simple">
+<li><p><strong>Cost-Effective Testing</strong>: Reduce dependency on physical devices for basic testing</p></li>
+<li><p><strong>Rapid Provisioning</strong>: Quickly spin up test environments without hardware constraints</p></li>
+<li><p><strong>Consistent Environments</strong>: Ensure repeatable test conditions across test runs</p></li>
+<li><p><strong>Parallel Execution</strong>: Run multiple emulator instances simultaneously</p></li>
+</ul>
+<p><strong>7. Browsers</strong></p>
+<p>This section manages web browser configurations for web application testing within the RobusTest platform.</p>
+<p><strong>Browser Management Features:</strong></p>
+<ul class="simple">
+<li><p><strong>Browser Inventory</strong>: Manage available browser versions including:</p>
+<ul>
+<li><p>Chrome (various versions)</p></li>
+<li><p>Firefox (various versions)</p></li>
+<li><p>Safari</p></li>
+<li><p>Edge</p></li>
+<li><p>Mobile browsers</p></li>
+</ul>
+</li>
+<li><p><strong>Browser Configuration</strong>: Configure browser-specific settings:</p>
+<ul>
+<li><p>User agent strings</p></li>
+<li><p>Screen resolutions and viewport sizes</p></li>
+<li><p>Browser extensions and plugins</p></li>
+<li><p>Security and privacy settings</p></li>
+</ul>
+</li>
+<li><p><strong>Version Management</strong>: Maintain multiple browser versions for compatibility testing</p></li>
+<li><p><strong>Mobile Browser Support</strong>: Configure mobile browsers for responsive web testing</p></li>
+</ul>
+<p><strong>Use Cases:</strong></p>
+<ul class="simple">
+<li><p><strong>Cross-Browser Testing</strong>: Ensure web applications work across different browsers</p></li>
+<li><p><strong>Responsive Testing</strong>: Validate mobile web application behavior</p></li>
+<li><p><strong>Selenium Integration</strong>: Browser configurations for Selenium-based automation</p></li>
+<li><p><strong>Performance Testing</strong>: Browser-specific performance monitoring</p></li>
+</ul>
+<p><strong>8. Device Groups</strong></p>
+<p>A device group is a means by which you can restrict the usage of specific devices to specific projects.</p>
+<p>In other words, it is a binding between one or more devices and one or more projects.</p>
+<p>Devices that are part of a group can only be accessed by members of the projects that are part of the same group. These devices will <strong>NOT</strong> be available for members of other projects which are not part of the group.</p>
+<p>This functionality comes in handy when there are multiple teams accessing the same device cloud and each team has their own set of devices on the cloud. Grouping your devices helps you ensure that the devices that you need for testing your projects are always available to your team.</p>
+<p><strong>9. Session</strong></p>
+<p>This section displays details of the last 100 test sessions created by all users on RobusTest. It also displays the count of test sessions that are in progress at that moment of time.</p>
+<p><strong>10. Device Nodes</strong></p>
+<p>This section provides details of all device nodes available on RobusTest.</p>
+<p>Each device node is basically a RobusTest server to which physical devices are connected. The RobusTest device cloud is made up of a number of interconnected device nodes or servers with devices attached to one or more of them.</p>
+<p><strong>11. Test Nodes</strong></p>
+<p>This section manages the computational nodes dedicated to running automated tests and processing test execution workloads.</p>
+<p><strong>Test Node Management Features:</strong></p>
+<ul class="simple">
+<li><p><strong>Node Registration</strong>: Register and configure new test nodes for distributed testing</p></li>
+<li><p><strong>Capacity Management</strong>: Monitor and configure test execution capacity per node</p></li>
+<li><p><strong>Load Balancing</strong>: Distribute test workloads across available test nodes</p></li>
+<li><p><strong>Resource Monitoring</strong>: Track CPU, memory, and storage utilization on test nodes</p></li>
+</ul>
+<p><strong>Test Node Configuration:</strong></p>
+<ul class="simple">
+<li><p><strong>Execution Environments</strong>: Configure supported test frameworks per node</p></li>
+<li><p><strong>Parallel Execution Limits</strong>: Set maximum concurrent test executions per node</p></li>
+<li><p><strong>Node Specifications</strong>: Define hardware capabilities and limitations</p></li>
+<li><p><strong>Network Configuration</strong>: Configure network settings and connectivity</p></li>
+</ul>
+<p><strong>Benefits:</strong></p>
+<ul class="simple">
+<li><p><strong>Scalable Testing</strong>: Distribute test execution across multiple nodes for better performance</p></li>
+<li><p><strong>Resource Optimization</strong>: Efficiently utilize available computational resources</p></li>
+<li><p><strong>High Availability</strong>: Ensure test execution continuity with multiple test nodes</p></li>
+<li><p><strong>Performance Isolation</strong>: Isolate different types of tests on dedicated nodes</p></li>
+</ul>
+<p>On selecting a node by clicking on its name, the following information are visible:</p>
+<ul class="simple">
+<li><p>node name</p></li>
+<li><p>node IP</p></li>
+<li><p>date &amp; time the node was last updated</p></li>
+<li><p>date &amp; time till which the node will function (this is usually in sync with the RobusTest license period)</p></li>
+</ul>
+<p>You can also perform the following actions using the buttons displayed on the top right:</p>
+<ul class="simple">
+<li><p><em>Flash Screen</em> - On clicking on this button, a red screen appears for a few seconds on each device conected to the server/node and then goes away. This button can be used for identifying all Android devices connected to that node.</p></li>
+<li><p><em>Create Snapshot</em> - Clicking on this button captures details of all devices that are successfully connected to the server at that point in time. These details are now visible on the ‘Snapshot’ tab for each node. This can be used for comparison at a later point of time to identify the devices that are no longer seen connected to the server.</p></li>
+<li><p><em>Delete Node</em> - This button is to delete a node entry under the Node section for a node that is no longer valid.</p></li>
+</ul>
+<p>On selecting a node, a few more tabs become visble. These tabs provide the following additional information pertaining to that node:</p>
+<ol class="loweralpha simple">
+<li><p><em>Devices</em> - This provides a list and details of all devices that are connected to the RobusTest node</p></li>
+<li><p><em>History</em> - This tab provides the history of the connection and disconnection events of the RobusTest server along with the date &amp; time of these events as well as the reason for the same.</p></li>
+<li><p><em>Snapshot</em> - Clicking on the ‘Create Snapshot’ button captures details of all devices that are successfully connected to the server at that point in time. This can be used for comparison at a later point of time to identify the devices that are no longer seen connected to the server</p></li>
+<li><p><em>Contact</em> - Any contact provided here will receive notification emails in the event of the node getting disconnected (i.e, the machine is either switched off or is unreachable). To add a contact to a node, first create a contact in the ‘Contacts’ section of the Admin Consle. Once the contact has been added in the ‘Contacts’ section, you can add the same to the node from the current tab.</p></li>
+<li><p><em>Settings</em> - This section enables you to update the following information about the node:</p></li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li><p>Node Name</p></li>
+<li><p>Node Location</p></li>
+<li><p>Node Mac Address</p></li>
+<li><p>Node Machine Serial</p></li>
+</ul>
+</div></blockquote>
+<p><strong>12. Default Run Settings</strong></p>
+<p>This section allows administrators to configure default run settings that will be applied to new test sessions and automation runs across the platform.</p>
+<p><strong>Default Run Settings Configuration:</strong></p>
+<ul class="simple">
+<li><p><strong>Session Timeouts</strong>: Set default timeout values for manual and automation sessions</p></li>
+<li><p><strong>Recording Settings</strong>: Configure default video and screenshot capture settings</p></li>
+<li><p><strong>Performance Monitoring</strong>: Enable default performance data collection</p></li>
+<li><p><strong>Network Configuration</strong>: Set default network conditions and shaping</p></li>
+<li><p><strong>Device Interaction</strong>: Configure default device interaction settings</p></li>
+</ul>
+<p><strong>Benefits:</strong></p>
+<ul class="simple">
+<li><p><strong>Consistency</strong>: Ensure uniform test execution settings across all projects</p></li>
+<li><p><strong>Efficiency</strong>: Reduce configuration time for new test sessions</p></li>
+<li><p><strong>Compliance</strong>: Enforce organizational testing standards and policies</p></li>
+<li><p><strong>Quality Assurance</strong>: Maintain consistent data collection for analysis</p></li>
+</ul>
+<p><strong>13. Maintenance</strong></p>
+<p>This section provides tools for performing system maintenance operations and monitoring platform health.</p>
+<p><strong>Maintenance Operations:</strong></p>
+<ul class="simple">
+<li><p><strong>System Health Monitoring</strong>: Monitor overall platform performance and resource utilization</p></li>
+<li><p><strong>Database Maintenance</strong>: Perform database optimization and cleanup operations</p></li>
+<li><p><strong>Log Management</strong>: Configure log retention policies and cleanup procedures</p></li>
+<li><p><strong>Cache Management</strong>: Clear system caches and optimize performance</p></li>
+<li><p><strong>Backup Operations</strong>: Schedule and monitor system backups</p></li>
+</ul>
+<p><strong>Scheduled Maintenance:</strong></p>
+<ul class="simple">
+<li><p><strong>Maintenance Windows</strong>: Schedule planned maintenance activities</p></li>
+<li><p><strong>User Notifications</strong>: Notify users of upcoming maintenance activities</p></li>
+<li><p><strong>Service Status</strong>: Monitor service availability during maintenance</p></li>
+<li><p><strong>Rollback Procedures</strong>: Configure rollback plans for maintenance operations</p></li>
+</ul>
+<p><strong>14. Integrations</strong></p>
+<p>RobusTest enables you to integrate with any API enabled CI tool like JIRA, Asana, etc.</p>
+<p>In order to integrate with such tools, you first need to create a configuration in the ‘Integrations’ section of the Admin Console.</p>
+<p>To integrate with a tool:</p>
+<ol class="loweralpha simple">
+<li><p>click on the ‘Create New Integration’ button</p></li>
+<li><p>select a tool from the drop down provided. A list of fields that enable integration with the tool are now displayed</p></li>
+<li><p>enter relevant values for the fields displayed and click on the ‘Create Configuration’ button</p></li>
+</ol>
+<p>E.g., let’s say you need to integrate with JIRA to log bugs encountered while testing your app. You need to do the following:
+* select JIRA from the tool drop down list
+* provide information such as the JIRA Server URL, JIRA username, JIRA API Token, etc.
+* create the configuration setting
+* now, on the Project Dashboard go to the ‘Settings’ tab and select the name of the configuration you created on the ‘Bug Tracker’ dropdown</p>
+<p><em>In case you do not find the CI tool of your choice on the tool drop down list, please reach out to the RobusTest support team by emailing us at support&#64;robustest.com and our team shall get back to you for further assistance with integration</em></p>
+<p><strong>15. DB Maintenance</strong></p>
+<p>This section provides database administration tools for maintaining optimal database performance and data integrity.</p>
+<p><strong>Database Maintenance Features:</strong></p>
+<ul class="simple">
+<li><p><strong>Database Optimization</strong>: Run database optimization procedures to improve query performance</p></li>
+<li><p><strong>Index Management</strong>: Create, modify, and optimize database indexes</p></li>
+<li><p><strong>Data Cleanup</strong>: Remove obsolete test data and logs based on retention policies</p></li>
+<li><p><strong>Performance Monitoring</strong>: Monitor database performance metrics and identify bottlenecks</p></li>
+<li><p><strong>Backup Management</strong>: Schedule and monitor database backup operations</p></li>
+</ul>
+<p><strong>Database Health Monitoring:</strong></p>
+<ul class="simple">
+<li><p><strong>Query Performance</strong>: Analyze slow-running queries and optimization opportunities</p></li>
+<li><p><strong>Storage Utilization</strong>: Monitor database storage usage and growth trends</p></li>
+<li><p><strong>Connection Monitoring</strong>: Track database connection pools and usage patterns</p></li>
+<li><p><strong>Data Integrity Checks</strong>: Perform regular data consistency and integrity validations</p></li>
+</ul>
+<p><strong>16. Storage</strong></p>
+<p>This section manages storage resources and policies across the RobusTest platform.</p>
+<p><strong>Storage Management Features:</strong></p>
+<ul class="simple">
+<li><p><strong>Storage Allocation</strong>: Monitor and configure storage allocation for different data types</p></li>
+<li><p><strong>File Management</strong>: Manage test artifacts, videos, screenshots, and logs</p></li>
+<li><p><strong>Retention Policies</strong>: Configure data retention policies for automatic cleanup</p></li>
+<li><p><strong>Storage Optimization</strong>: Compress and archive older test data to optimize storage usage</p></li>
+<li><p><strong>Backup Storage</strong>: Manage backup storage locations and replication policies</p></li>
+</ul>
+<p><strong>Storage Categories:</strong></p>
+<ul class="simple">
+<li><p><strong>Test Artifacts</strong>: Screenshots, videos, logs, and test reports</p></li>
+<li><p><strong>Application Builds</strong>: APK, IPA, and other application files</p></li>
+<li><p><strong>System Data</strong>: Configuration files, user data, and platform metadata</p></li>
+<li><p><strong>Backup Data</strong>: System backups and archived test data</p></li>
+</ul>
+<p><strong>17. Deployment Info</strong></p>
+<p>This section provides information about the current RobusTest deployment configuration and environment details.</p>
+<p><strong>Deployment Information Displayed:</strong></p>
+<ul class="simple">
+<li><p><strong>Platform Version</strong>: Current RobusTest platform version and build information</p></li>
+<li><p><strong>Environment Configuration</strong>: Deployment environment details (production, staging, etc.)</p></li>
+<li><p><strong>Service Status</strong>: Status of various RobusTest services and components</p></li>
+<li><p><strong>License Information</strong>: License details, expiration dates, and usage limits</p></li>
+<li><p><strong>System Resources</strong>: Hardware specifications and resource allocation</p></li>
+</ul>
+<p><strong>Deployment Monitoring:</strong></p>
+<ul class="simple">
+<li><p><strong>Service Health</strong>: Monitor the health status of all platform services</p></li>
+<li><p><strong>Resource Utilization</strong>: Track CPU, memory, and storage usage across the deployment</p></li>
+<li><p><strong>Network Configuration</strong>: View network settings and connectivity information</p></li>
+<li><p><strong>Security Configuration</strong>: Review security settings and compliance status</p></li>
+</ul>
+<p><strong>18. Administration</strong></p>
+<p>This section provides high-level administrative controls and platform-wide configuration options.</p>
+<p><strong>Administrative Functions:</strong></p>
+<ul class="simple">
+<li><p><strong>Platform Configuration</strong>: Configure global platform settings and behaviors</p></li>
+<li><p><strong>Security Policies</strong>: Manage authentication, authorization, and security policies</p></li>
+<li><p><strong>User Management</strong>: Bulk user operations and account management tools</p></li>
+<li><p><strong>System Monitoring</strong>: High-level system monitoring and alerting configuration</p></li>
+<li><p><strong>Audit Logging</strong>: Configure audit trails and compliance logging</p></li>
+</ul>
+<p><strong>Administrative Controls:</strong></p>
+<ul class="simple">
+<li><p><strong>Feature Toggles</strong>: Enable or disable platform features across the deployment</p></li>
+<li><p><strong>Resource Limits</strong>: Set platform-wide resource limits and quotas</p></li>
+<li><p><strong>Notification Settings</strong>: Configure system-wide notification policies</p></li>
+<li><p><strong>Compliance Settings</strong>: Configure compliance and regulatory requirements</p></li>
+<li><p><strong>Emergency Controls</strong>: Emergency shutdown and maintenance procedures</p></li>
+</ul>
+<p><strong>19. iOS Models</strong></p>
+<p>This section provides specialized management for iOS device models and their specific configurations.</p>
+<p><strong>iOS Model Management:</strong></p>
+<ul class="simple">
+<li><p><strong>iOS Device Catalog</strong>: Comprehensive catalog of supported iOS devices</p></li>
+<li><p><strong>iOS Version Support</strong>: Track iOS version compatibility across device models</p></li>
+<li><p><strong>Provisioning Profiles</strong>: Manage iOS provisioning profiles and certificates</p></li>
+<li><p><strong>Xcode Integration</strong>: Configure Xcode and development tool integrations</p></li>
+<li><p><strong>iOS-Specific Settings</strong>: Configure iOS-specific testing parameters</p></li>
+</ul>
+<p><strong>iOS Model Configuration:</strong></p>
+<ul class="simple">
+<li><p><strong>Device Specifications</strong>: Configure iOS device hardware specifications</p></li>
+<li><p><strong>Simulator Integration</strong>: Manage iOS Simulator configurations and versions</p></li>
+<li><p><strong>TestFlight Integration</strong>: Configure TestFlight beta testing capabilities</p></li>
+<li><p><strong>App Store Connect</strong>: Integration with App Store Connect for build management</p></li>
+<li><p><strong>iOS Automation Support</strong>: Configure iOS automation frameworks and capabilities</p></li>
+</ul>
+<p><strong>Benefits:</strong></p>
+<ul class="simple">
+<li><p><strong>iOS-Specific Optimization</strong>: Optimized configurations for iOS testing workflows</p></li>
+<li><p><strong>Development Integration</strong>: Seamless integration with iOS development tools</p></li>
+<li><p><strong>Version Management</strong>: Comprehensive iOS version and device compatibility tracking</p></li>
+<li><p><strong>Enterprise Features</strong>: Enterprise iOS deployment and testing capabilities</p></li>
+</ul>
+<p><strong>20. Contacts</strong></p>
+<p>This section enables you to add contact details about one or more persons. These are folks who should be informed in the event of a device or node disconnection.</p>
+<p>Once you have created contacts, you can add these to the contact list on the Device and Node sections of the Admin console so that they receive notification emails.</p>
+<p><strong>21. Settings</strong></p>
+<p>This section enables you to configure various parameters on the RobusTest platform.</p>
+<p>More details are available in the <a class="reference internal" href="settings.html"><span class="doc">Settings &amp; Configuration</span></a> page</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="tunnelClientConfig.html" class="btn btn-neutral float-left" title="Setting Up Tunneling" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="userprofile.html" class="btn btn-neutral float-right" title="User Profile" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, RobusTest.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

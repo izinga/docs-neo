@@ -1,0 +1,157 @@
+/* RobusTest Documentation - Mobile-Responsive Grid Enhancements */
+
+/* =================================================================
+   Sphinx-Design Grid Mobile Optimizations
+   ================================================================= */
+
+/* Mobile-first approach for grid responsiveness */
+@media (max-width: 576px) {
+  /* Single column layout for all grids on mobile */
+  .sd-container-fluid .sd-row .sd-col {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+  }
+  
+  /* Reduce margins and gutters on mobile for better space utilization */
+  .sd-container-fluid {
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+  }
+  
+  /* Adjust card spacing for mobile */
+  .sd-card {
+    margin-bottom: 1rem !important;
+  }
+  
+  /* Reduce excessive padding in card content */
+  .sd-card-body {
+    padding: 1rem !important;
+  }
+  
+  /* Optimize card headers for mobile */
+  .sd-card-header {
+    padding: 0.75rem 1rem !important;
+    font-size: 1rem !important;
+  }
+  
+  /* Better spacing for card text content */
+  .sd-card-text {
+    font-size: 0.9rem !important;
+    line-height: 1.4 !important;
+  }
+}
+
+/* Tablet landscape optimization */
+@media (max-width: 768px) and (min-width: 577px) {
+  /* Two-column layout for tablets */
+  .sd-col-12.sd-col-sm-6.sd-col-md-4.sd-col-lg-3 {
+    flex: 0 0 50% !important;
+    max-width: 50% !important;
+  }
+  
+  /* Reduce gutter spacing on tablets */
+  .sd-container-fluid .sd-row {
+    margin-left: -0.75rem !important;
+    margin-right: -0.75rem !important;
+  }
+  
+  .sd-container-fluid .sd-row .sd-col {
+    padding-left: 0.75rem !important;
+    padding-right: 0.75rem !important;
+  }
+}
+
+/* Desktop small optimization */
+@media (max-width: 992px) and (min-width: 769px) {
+  /* Three-column layout for small desktops */
+  .sd-col-12.sd-col-sm-6.sd-col-md-4.sd-col-lg-3 {
+    flex: 0 0 33.333333% !important;
+    max-width: 33.333333% !important;
+  }
+}
+
+/* =================================================================
+   Card Content Optimizations
+   ================================================================= */
+
+/* Improve readability of card content on all screen sizes */
+.sd-card-body ul {
+  margin-bottom: 0.5rem;
+}
+
+.sd-card-body li {
+  margin-bottom: 0.25rem;
+}
+
+/* Ensure images in cards are responsive */
+.sd-card img {
+  max-width: 100% !important;
+  height: auto !important;
+}
+
+/* =================================================================
+   Navigation Grid Specific Optimizations
+   ================================================================= */
+
+/* Optimize main navigation grids for better mobile experience */
+.sd-card[class*="bg-"] {
+  border: none !important;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
+}
+
+/* Improve contrast and readability for colored headers */
+.sd-card-header.text-white {
+  font-weight: 600 !important;
+}
+
+/* =================================================================
+   Content-Specific Mobile Improvements
+   ================================================================= */
+
+/* Optimize feature comparison grids */
+@media (max-width: 576px) {
+  /* Stack comparison items vertically on mobile */
+  .sd-card-header + .sd-card-body {
+    padding-top: 0.75rem !important;
+  }
+  
+  /* Better spacing for feature lists */
+  .sd-card-body .sd-card-text + hr + ul,
+  .sd-card-body .sd-card-text + .sd-card-text {
+    margin-top: 0.75rem !important;
+  }
+}
+
+/* =================================================================
+   Accessibility Improvements
+   ================================================================= */
+
+/* Ensure adequate contrast for card headers */
+.sd-card-header {
+  text-shadow: 0 1px 2px rgba(0,0,0,0.1) !important;
+}
+
+/* Improve focus states for keyboard navigation */
+.sd-card:focus,
+.sd-card a:focus {
+  outline: 2px solid #0066cc !important;
+  outline-offset: 2px !important;
+}
+
+/* =================================================================
+   Print Optimizations
+   ================================================================= */
+
+@media print {
+  /* Ensure grids print properly */
+  .sd-container-fluid .sd-row .sd-col {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    break-inside: avoid !important;
+  }
+  
+  .sd-card {
+    break-inside: avoid !important;
+    margin-bottom: 1rem !important;
+  }
+}
