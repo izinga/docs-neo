@@ -14,6 +14,7 @@ requests==2.32.3
 snowballstemmer==2.2.0
 Sphinx==7.4.7
 sphinx-rtd-theme==2.0.0
+sphinx-design==0.6.1
 sphinxcontrib-applehelp==2.0.0
 sphinxcontrib-devhelp==2.0.0
 sphinxcontrib-htmlhelp==2.1.0
