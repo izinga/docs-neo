@@ -11,13 +11,13 @@ When running your Espresso tests on RobusTest, you may come across results or be
 
 Following command lists all the test classes in your test package
 
-.. code-block:: JSON
+.. code-block:: bash
 
 	adb shell am instrument -w -e log true  -e class {test class name} {application package name/ID}/{test runner name}	
 
 Following command lists all the test methods in your test package
 
-.. code-block:: JSON
+.. code-block:: bash
 
 	adb shell am instrument -w -r -e log true -e class {test class name} {application package name/ID}/{test runner name}
 
