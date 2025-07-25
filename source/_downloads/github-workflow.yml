@@ -1,0 +1,378 @@
+# RobusTest GitHub Actions Workflow
+# This workflow demonstrates CI/CD integration with RobusTest
+# Customize the environment variables and steps for your project
+
+name: RobusTest Mobile Testing
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+  schedule:
+    # Run nightly tests at 2 AM UTC
+    - cron: '0 2 * * *'
+  workflow_dispatch:
+    inputs:
+      test_suite:
+        description: 'Test suite to run'
+        required: true
+        default: 'smoke'
+        type: choice
+        options:
+        - smoke
+        - regression
+        - full
+      device_group:
+        description: 'Device group'
+        required: true
+        default: 'latest-android'
+        type: choice
+        options:
+        - latest-android
+        - legacy-support
+        - ios-devices
+        - all-devices
+
+env:
+  ROBUSTEST_URL: ${{ secrets.ROBUSTEST_URL }}
+  ROBUSTEST_ACCESS_KEY: ${{ secrets.ROBUSTEST_ACCESS_KEY }}
+  PROJECT_ID: ${{ secrets.ROBUSTEST_PROJECT_ID }}
+  SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    
+    strategy:
+      matrix:
+        platform: [android]  # Add 'ios' when needed
+        include:
+          - platform: android
+            build_command: ./gradlew assembleDebug assembleDebugAndroidTest
+            artifact_path: app/build/outputs/apk/debug/
+            artifact_name: app-debug.apk
+    
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+    
+    - name: Set up JDK 11 (Android)
+      if: matrix.platform == 'android'
+      uses: actions/setup-java@v3
+      with:
+        java-version: '11'
+        distribution: 'temurin'
+    
+    - name: Set up Node.js (if needed)
+      uses: actions/setup-node@v3
+      with:
+        node-version: '16'
+        cache: 'npm'
+    
+    - name: Cache Gradle packages (Android)
+      if: matrix.platform == 'android'
+      uses: actions/cache@v3
+      with:
+        path: |
+          ~/.gradle/caches
+          ~/.gradle/wrapper
+        key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
+        restore-keys: |
+          ${{ runner.os }}-gradle-
+    
+    - name: Grant execute permission for gradlew (Android)
+      if: matrix.platform == 'android'
+      run: chmod +x gradlew
+    
+    - name: Build Application
+      run: |
+        echo "Building for platform: ${{ matrix.platform }}"
+        ${{ matrix.build_command }}
+    
+    - name: Upload Build Artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: ${{ matrix.platform }}-build
+        path: ${{ matrix.artifact_path }}${{ matrix.artifact_name }}
+        retention-days: 30
+    
+    - name: Upload to RobusTest
+      id: upload
+      run: |
+        # Upload build to RobusTest
+        BUILD_NAME="GHA-${GITHUB_RUN_NUMBER}-$(echo ${GITHUB_SHA} | cut -c1-7)"
+        
+        UPLOAD_RESPONSE=$(curl -X POST \
+          "${ROBUSTEST_URL}/v3/project/${PROJECT_ID}/build?accesskey=${ROBUSTEST_ACCESS_KEY}" \
+          -H "Content-Type: multipart/form-data" \
+          -F "file=@${{ matrix.artifact_path }}${{ matrix.artifact_name }}" \
+          -F "buildName=${BUILD_NAME}" \
+          -F "buildDesc=GitHub Actions build from ${GITHUB_REF_NAME}")
+        
+        BUILD_ID=$(echo $UPLOAD_RESPONSE | jq -r '.buildId')
+        echo "BUILD_ID=${BUILD_ID}" >> $GITHUB_OUTPUT
+        echo "BUILD_NAME=${BUILD_NAME}" >> $GITHUB_OUTPUT
+        
+        echo "Build uploaded successfully. Build ID: ${BUILD_ID}"
+    
+    - name: Configure Test Job
+      id: configure
+      run: |
+        # Determine test suite based on trigger
+        if [[ "${{ github.event_name }}" == "workflow_dispatch" ]]; then
+          TEST_SUITE="${{ github.event.inputs.test_suite }}"
+          DEVICE_GROUP="${{ github.event.inputs.device_group }}"
+        elif [[ "${{ github.event_name }}" == "schedule" ]]; then
+          TEST_SUITE="full"
+          DEVICE_GROUP="all-devices"
+        elif [[ "${{ github.event_name }}" == "pull_request" ]]; then
+          TEST_SUITE="smoke"
+          DEVICE_GROUP="latest-android"
+        else
+          TEST_SUITE="regression"
+          DEVICE_GROUP="latest-android"
+        fi
+        
+        echo "TEST_SUITE=${TEST_SUITE}" >> $GITHUB_OUTPUT
+        echo "DEVICE_GROUP=${DEVICE_GROUP}" >> $GITHUB_OUTPUT
+        
+        # Create job payload
+        cat > job-payload.json << EOF
+        {
+          "project": {
+            "id": "${PROJECT_ID}"
+          },
+          "build": {
+            "id": "${{ steps.upload.outputs.BUILD_ID }}"
+          },
+          "runMode": "PARALLEL",
+          "testSuite": "${TEST_SUITE}",
+          "deviceGroup": "${DEVICE_GROUP}",
+          "settings": {
+            "captureScreenshots": true,
+            "captureVideo": true,
+            "capturePerformance": true,
+            "generateReports": true,
+            "maxExecutionTime": 30,
+            "retryFailedTests": true
+          },
+          "notifications": {
+            "webhook": {
+              "enabled": true,
+              "url": "${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}"
+            }
+          }
+        }
+        EOF
+        
+        echo "Test configuration: Suite=${TEST_SUITE}, Devices=${DEVICE_GROUP}"
+    
+    - name: Execute Tests
+      id: test
+      run: |
+        # Submit test job
+        JOB_RESPONSE=$(curl -X POST \
+          "${ROBUSTEST_URL}/v3/job/new?accesskey=${ROBUSTEST_ACCESS_KEY}" \
+          -H "Content-Type: application/json" \
+          -d @job-payload.json)
+        
+        JOB_ID=$(echo $JOB_RESPONSE | jq -r '.jobId')
+        echo "JOB_ID=${JOB_ID}" >> $GITHUB_OUTPUT
+        echo "Test job submitted. Job ID: ${JOB_ID}"
+        
+        # Monitor job progress
+        echo "Monitoring job progress..."
+        timeout 2700 bash -c '
+          while true; do
+            STATUS_RESPONSE=$(curl -X GET \
+              "${ROBUSTEST_URL}/v3/job/${JOB_ID}/status?accesskey=${ROBUSTEST_ACCESS_KEY}")
+            
+            STATUS=$(echo $STATUS_RESPONSE | jq -r ".status")
+            PROGRESS=$(echo $STATUS_RESPONSE | jq -r ".progress // 0")
+            
+            echo "Job status: ${STATUS} - Progress: ${PROGRESS}%"
+            
+            if [[ "$STATUS" == "COMPLETED" ]] || [[ "$STATUS" == "FAILED" ]] || [[ "$STATUS" == "CANCELLED" ]]; then
+              echo "FINAL_STATUS=${STATUS}" >> $GITHUB_OUTPUT
+              break
+            fi
+            
+            sleep 30
+          done
+        '
+    
+    - name: Collect Test Results
+      if: always()
+      run: |
+        # Download test reports
+        mkdir -p test-reports
+        
+        # HTML Report
+        curl -X GET \
+          "${ROBUSTEST_URL}/v3/job/${{ steps.test.outputs.JOB_ID }}/report/html?accesskey=${ROBUSTEST_ACCESS_KEY}" \
+          -o test-reports/robustest-report.html
+        
+        # JUnit XML Report
+        curl -X GET \
+          "${ROBUSTEST_URL}/v3/job/${{ steps.test.outputs.JOB_ID }}/report/junit?accesskey=${ROBUSTEST_ACCESS_KEY}" \
+          -o test-reports/junit-results.xml
+        
+        # Get detailed results
+        RESULTS_RESPONSE=$(curl -X GET \
+          "${ROBUSTEST_URL}/v3/job/${{ steps.test.outputs.JOB_ID }}/results?accesskey=${ROBUSTEST_ACCESS_KEY}")
+        
+        TESTS_TOTAL=$(echo $RESULTS_RESPONSE | jq -r '.testResults.total // 0')
+        TESTS_PASSED=$(echo $RESULTS_RESPONSE | jq -r '.testResults.passed // 0')
+        TESTS_FAILED=$(echo $RESULTS_RESPONSE | jq -r '.testResults.failed // 0')
+        EXECUTION_TIME=$(echo $RESULTS_RESPONSE | jq -r '.executionTime // "N/A"')
+        
+        echo "TESTS_TOTAL=${TESTS_TOTAL}" >> $GITHUB_ENV
+        echo "TESTS_PASSED=${TESTS_PASSED}" >> $GITHUB_ENV
+        echo "TESTS_FAILED=${TESTS_FAILED}" >> $GITHUB_ENV
+        echo "EXECUTION_TIME=${EXECUTION_TIME}" >> $GITHUB_ENV
+        
+        echo "Test Results: ${TESTS_PASSED}/${TESTS_TOTAL} passed, ${TESTS_FAILED} failed"
+    
+    - name: Upload Test Reports
+      if: always()
+      uses: actions/upload-artifact@v3
+      with:
+        name: test-reports-${{ matrix.platform }}
+        path: test-reports/
+        retention-days: 30
+    
+    - name: Publish Test Results
+      if: always()
+      uses: dorny/test-reporter@v1
+      with:
+        name: RobusTest Results (${{ matrix.platform }})
+        path: test-reports/junit-results.xml
+        reporter: java-junit
+        fail-on-error: true
+    
+    - name: Comment PR with Results
+      if: github.event_name == 'pull_request'
+      uses: actions/github-script@v6
+      with:
+        script: |
+          const testResults = `
+          ## 📱 RobusTest Results
+          
+          **Platform:** ${{ matrix.platform }}
+          **Test Suite:** ${{ steps.configure.outputs.TEST_SUITE }}
+          **Device Group:** ${{ steps.configure.outputs.DEVICE_GROUP }}
+          
+          **Results:**
+          - ✅ Passed: ${process.env.TESTS_PASSED}
+          - ❌ Failed: ${process.env.TESTS_FAILED}
+          - 📊 Total: ${process.env.TESTS_TOTAL}
+          - ⏱️ Duration: ${process.env.EXECUTION_TIME}
+          
+          **Build:** ${{ steps.upload.outputs.BUILD_NAME }}
+          **Job ID:** ${{ steps.test.outputs.JOB_ID }}
+          
+          [View detailed report](${process.env.GITHUB_SERVER_URL}/${process.env.GITHUB_REPOSITORY}/actions/runs/${process.env.GITHUB_RUN_ID})
+          `;
+          
+          github.rest.issues.createComment({
+            issue_number: context.issue.number,
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            body: testResults
+          });
+    
+    - name: Notify Slack
+      if: always() && env.SLACK_WEBHOOK_URL
+      run: |
+        if [[ "${{ steps.test.outputs.FINAL_STATUS }}" == "COMPLETED" ]] && [[ "${TESTS_FAILED}" == "0" ]]; then
+          COLOR="good"
+          STATUS_EMOJI="✅"
+          STATUS_TEXT="Success"
+        elif [[ "${TESTS_FAILED}" > "0" ]]; then
+          COLOR="warning"
+          STATUS_EMOJI="⚠️"
+          STATUS_TEXT="Unstable"
+        else
+          COLOR="danger"
+          STATUS_EMOJI="❌"
+          STATUS_TEXT="Failed"
+        fi
+        
+        curl -X POST -H 'Content-type: application/json' \
+          --data '{
+            "attachments": [{
+              "color": "'${COLOR}'",
+              "title": "'${STATUS_EMOJI}' RobusTest Pipeline '${STATUS_TEXT}'",
+              "fields": [
+                {
+                  "title": "Repository",
+                  "value": "${{ github.repository }}",
+                  "short": true
+                },
+                {
+                  "title": "Branch",
+                  "value": "${{ github.ref_name }}",
+                  "short": true
+                },
+                {
+                  "title": "Platform",
+                  "value": "${{ matrix.platform }}",
+                  "short": true
+                },
+                {
+                  "title": "Test Results",
+                  "value": "'${TESTS_PASSED}'/'${TESTS_TOTAL}' passed",
+                  "short": true
+                }
+              ],
+              "actions": [{
+                "type": "button",
+                "text": "View Results",
+                "url": "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+              }]
+            }]
+          }' \
+          $SLACK_WEBHOOK_URL
+    
+    - name: Set Build Status
+      if: always()
+      run: |
+        if [[ "${{ steps.test.outputs.FINAL_STATUS }}" == "FAILED" ]] || [[ "${TESTS_FAILED}" > "0" ]]; then
+          echo "Tests failed or job failed"
+          exit 1
+        else
+          echo "All tests passed successfully"
+        fi
+
+  security-scan:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push' || github.event_name == 'pull_request'
+    
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v4
+    
+    - name: Run Security Scan
+      uses: securecodewarrior/github-action-add-sarif@v1
+      with:
+        sarif-file: 'security-scan-results.sarif'
+    
+    - name: Upload Security Results
+      uses: github/codeql-action/upload-sarif@v2
+      if: always()
+      with:
+        sarif_file: security-scan-results.sarif
+
+  cleanup:
+    runs-on: ubuntu-latest
+    needs: [build-and-test]
+    if: always()
+    
+    steps:
+    - name: Clean up old artifacts
+      run: |
+        echo "Cleaning up old build artifacts and test results"
+        # Add cleanup commands as needed

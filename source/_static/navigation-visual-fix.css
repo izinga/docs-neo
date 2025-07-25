@@ -1,0 +1,476 @@
+/* =================================================================
+   COMPREHENSIVE NAVIGATION VISUAL FIX
+   ================================================================= */
+
+/* FORCE ALL NAVIGATION TO BE VISIBLE */
+.wy-nav-side,
+.wy-menu-vertical,
+.wy-menu-vertical > ul,
+.wy-menu-vertical > ul > li,
+.wy-menu-vertical > ul > li > a {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* =================================================================
+   MODERN NAVIGATION CONTAINER WITH BETTER COLORS
+   ================================================================= */
+
+/* Navigation Sidebar - Professional Dark Theme */
+.wy-nav-side {
+  background: linear-gradient(180deg, #2c3e50 0%, #34495e 100%) !important;
+  border-right: 1px solid #455a75 !important;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.15) !important;
+  width: 300px !important;
+}
+
+/* =================================================================
+   NAVIGATION HEADER - MAKE TITLE VISIBLE
+   ================================================================= */
+
+/* Navigation Header with High Contrast */
+.wy-side-nav-search {
+  background: linear-gradient(135deg, #3498db 0%, #2980b9 100%) !important;
+  padding: 1.2rem 1rem !important;
+  border-bottom: 2px solid #2571a1 !important;
+}
+
+/* Make the title highly visible */
+.wy-side-nav-search .wy-dropdown > a,
+.wy-side-nav-search > a {
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  font-size: 1.1rem !important;
+  text-decoration: none !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* Search Input Styling */
+.wy-side-nav-search input[type="text"] {
+  background: rgba(255, 255, 255, 0.9) !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  border-radius: 6px !important;
+  color: #2c3e50 !important;
+  padding: 0.6rem 0.8rem !important;
+  font-size: 0.9rem !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+.wy-side-nav-search input[type="text"]:focus {
+  background: #ffffff !important;
+  border-color: #ffffff !important;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.3) !important;
+  outline: none !important;
+}
+
+.wy-side-nav-search input[type="text"]::placeholder {
+  color: #7b8794 !important;
+}
+
+/* =================================================================
+   MAIN NAVIGATION MENU STYLING
+   ================================================================= */
+
+/* Main Navigation Container */
+.wy-menu-vertical {
+  background: transparent !important;
+  padding: 0 !important;
+}
+
+/* Top Level Navigation Items */
+.wy-menu-vertical a {
+  color: #ffffff !important;
+  background: transparent !important;
+  border-bottom: 1px solid rgba(69, 90, 117, 0.3) !important;
+  padding: 0.9rem 1.2rem !important;
+  font-weight: 500 !important;
+  font-size: 0.95rem !important;
+  line-height: 1.4 !important;
+  transition: all 0.3s ease !important;
+  position: relative !important;
+  text-decoration: none !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4) !important;
+}
+
+/* Top Level Hover State */
+.wy-menu-vertical a:hover {
+  background: linear-gradient(90deg, rgba(52, 152, 219, 0.2) 0%, rgba(41, 128, 185, 0.2) 100%) !important;
+  color: #ffffff !important;
+  border-left: 3px solid #3498db !important;
+  padding-left: 1.4rem !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Current/Active Top Level Item */
+.wy-menu-vertical a.current {
+  background: linear-gradient(90deg, rgba(52, 152, 219, 0.3) 0%, rgba(41, 128, 185, 0.3) 100%) !important;
+  color: #ffffff !important;
+  border-left: 4px solid #3498db !important;
+  font-weight: 600 !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4) !important;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* =================================================================
+   LEVEL 2 NAVIGATION - IMPROVED READABILITY
+   ================================================================= */
+
+/* Level 2 Items - Remove Grey Background, Use Attractive Colors */
+.wy-menu-vertical li.toctree-l2,
+.wy-menu-vertical ul li.toctree-l2 {
+  background: linear-gradient(90deg, rgba(52, 152, 219, 0.2) 0%, rgba(41, 128, 185, 0.2) 100%) !important;
+  border-left: 3px solid #3498db !important;
+  margin: 2px 0 !important;
+  border-radius: 0 8px 8px 0 !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15) !important;
+}
+
+.wy-menu-vertical li.toctree-l2 a,
+.wy-menu-vertical ul li.toctree-l2 a {
+  padding: 0.9rem 1rem 0.9rem 2.5rem !important;
+  color: #ffffff !important;
+  font-size: 0.9rem !important;
+  background: transparent !important;
+  position: relative !important;
+  font-weight: 500 !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5) !important;
+  border-bottom: 1px solid rgba(52, 152, 219, 0.3) !important;
+  transition: all 0.3s ease !important;
+}
+
+.wy-menu-vertical li.toctree-l2 a::before {
+  content: "▶" !important;
+  position: absolute !important;
+  left: 18px !important;
+  color: #74b9ff !important;
+  font-size: 10px !important;
+  font-weight: bold !important;
+  transition: all 0.2s ease !important;
+}
+
+/* Level 2 Hover State - Attractive Blue */
+.wy-menu-vertical li.toctree-l2 a:hover {
+  background: linear-gradient(90deg, rgba(52, 152, 219, 0.3) 0%, rgba(41, 128, 185, 0.3) 100%) !important;
+  color: #ffffff !important;
+  padding-left: 2.8rem !important;
+  transform: translateX(5px) !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5) !important;
+  border-left-color: #74b9ff !important;
+  box-shadow: 0 2px 6px rgba(52, 152, 219, 0.2) !important;
+}
+
+.wy-menu-vertical li.toctree-l2 a:hover::before {
+  color: #ffffff !important;
+  transform: scale(1.2) !important;
+}
+
+/* Level 2 Current/Active State */
+.wy-menu-vertical li.toctree-l2 a.current {
+  background: linear-gradient(90deg, rgba(52, 152, 219, 0.5) 0%, rgba(41, 128, 185, 0.5) 100%) !important;
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2), 0 2px 8px rgba(52, 152, 219, 0.3) !important;
+  border-left-color: #ffffff !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6) !important;
+}
+
+/* =================================================================
+   LEVEL 3 NAVIGATION - ENHANCED VISIBILITY
+   ================================================================= */
+
+/* Level 3 Items - Remove Grey Background, Use Elegant Teal Theme */
+.wy-menu-vertical li.toctree-l3,
+.wy-menu-vertical ul li.toctree-l3 {
+  background: linear-gradient(90deg, rgba(26, 188, 156, 0.18) 0%, rgba(22, 160, 133, 0.18) 100%) !important;
+  border-left: 2px solid #1abc9c !important;
+  margin: 1px 0 !important;
+  border-radius: 0 8px 8px 0 !important;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15) !important;
+}
+
+.wy-menu-vertical li.toctree-l3 a,
+.wy-menu-vertical ul li.toctree-l3 a {
+  padding: 0.8rem 1rem 0.8rem 3.2rem !important;
+  color: #ffffff !important;
+  font-size: 0.85rem !important;
+  background: transparent !important;
+  position: relative !important;
+  font-weight: 400 !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5) !important;
+  border-bottom: 1px solid rgba(26, 188, 156, 0.3) !important;
+  transition: all 0.3s ease !important;
+}
+
+.wy-menu-vertical li.toctree-l3 a::before {
+  content: "▶" !important;
+  position: absolute !important;
+  left: 22px !important;
+  color: #5dded0 !important;
+  font-size: 8px !important;
+  font-weight: bold !important;
+  transition: all 0.2s ease !important;
+}
+
+/* Level 3 Hover State - Attractive Teal */
+.wy-menu-vertical li.toctree-l3 a:hover {
+  background: linear-gradient(90deg, rgba(26, 188, 156, 0.25) 0%, rgba(22, 160, 133, 0.25) 100%) !important;
+  color: #ffffff !important;
+  padding-left: 3.5rem !important;
+  transform: translateX(5px) !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5) !important;
+  border-left-color: #5dded0 !important;
+  box-shadow: 0 2px 6px rgba(26, 188, 156, 0.2) !important;
+}
+
+.wy-menu-vertical li.toctree-l3 a:hover::before {
+  color: #ffffff !important;
+  transform: scale(1.2) !important;
+}
+
+/* Level 3 Current/Active State */
+.wy-menu-vertical li.toctree-l3 a.current {
+  background: linear-gradient(90deg, rgba(26, 188, 156, 0.4) 0%, rgba(22, 160, 133, 0.4) 100%) !important;
+  color: #ffffff !important;
+  font-weight: 500 !important;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2), 0 2px 8px rgba(26, 188, 156, 0.3) !important;
+  border-left-color: #ffffff !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6) !important;
+}
+
+/* =================================================================
+   EXPAND/COLLAPSE ICONS - BETTER VISIBILITY
+   ================================================================= */
+
+/* Expand Icons Styling */
+.wy-menu-vertical .toctree-expand,
+.nav-expand-icon {
+  display: inline-block !important;
+  float: right !important;
+  width: 20px !important;
+  height: 20px !important;
+  line-height: 20px !important;
+  text-align: center !important;
+  background: rgba(255, 255, 255, 0.15) !important;
+  border-radius: 4px !important;
+  color: #ffffff !important;
+  font-size: 12px !important;
+  font-weight: bold !important;
+  cursor: pointer !important;
+  margin-left: 8px !important;
+  transition: all 0.3s ease !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.wy-menu-vertical .toctree-expand:hover,
+.nav-expand-icon:hover {
+  background: rgba(255, 255, 255, 0.25) !important;
+  color: #ffffff !important;
+  transform: scale(1.1) !important;
+  border-color: rgba(255, 255, 255, 0.3) !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) !important;
+}
+
+.wy-menu-vertical .toctree-expand:focus,
+.nav-expand-icon:focus {
+  outline: none !important;
+  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.5) !important;
+}
+
+/* =================================================================
+   SCROLL PREVENTION AND SMOOTH TRANSITIONS
+   ================================================================= */
+
+/* Prevent focus-based scrolling */
+.wy-menu-vertical a:focus,
+.wy-menu-vertical *:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.wy-menu-vertical {
+  scroll-behavior: auto !important;
+}
+
+.wy-nav-side {
+  scroll-behavior: auto !important;
+}
+
+/* Smooth transitions for all elements */
+.wy-menu-vertical a,
+.wy-menu-vertical li,
+.nav-expand-icon,
+.toctree-expand {
+  transition: all 0.3s ease !important;
+}
+
+/* =================================================================
+   COLLAPSED/EXPANDED STATES
+   ================================================================= */
+
+/* Collapsed state for nested items */
+.wy-menu-vertical li:not(.expanded):not(.nav-expanded) > ul {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  max-height: 0 !important;
+  overflow: hidden !important;
+}
+
+/* Expanded state for nested items */
+.wy-menu-vertical li.expanded > ul,
+.wy-menu-vertical li.nav-expanded > ul {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  max-height: none !important;
+  overflow: visible !important;
+}
+
+/* =================================================================
+   CONTENT AREA ADJUSTMENTS
+   ================================================================= */
+
+/* Adjust content to account for navigation width */
+.wy-nav-content-wrap {
+  margin-left: 300px !important;
+}
+
+/* =================================================================
+   AGGRESSIVE OVERRIDES TO ELIMINATE GREY BACKGROUNDS
+   ================================================================= */
+
+/* Override any grey backgrounds on nested items */
+.wy-menu-vertical ul,
+.wy-menu-vertical ul ul,
+.wy-menu-vertical li ul,
+.wy-menu-vertical li li,
+.wy-menu-vertical .toctree-l1 ul,
+.wy-menu-vertical .toctree-l2 ul,
+.wy-menu-vertical .toctree-l3 ul {
+  background: transparent !important;
+}
+
+/* Ensure all navigation items have proper backgrounds */
+.wy-menu-vertical li {
+  background: transparent !important;
+}
+
+/* Force override for any stubborn grey backgrounds */
+.wy-menu-vertical li.toctree-l1 {
+  background: transparent !important;
+}
+
+.wy-menu-vertical li.toctree-l2 {
+  background: linear-gradient(90deg, rgba(52, 152, 219, 0.2) 0%, rgba(41, 128, 185, 0.2) 100%) !important;
+}
+
+.wy-menu-vertical li.toctree-l3 {
+  background: linear-gradient(90deg, rgba(26, 188, 156, 0.18) 0%, rgba(22, 160, 133, 0.18) 100%) !important;
+}
+
+/* Override any theme-specific grey backgrounds */
+.wy-menu-vertical li.current,
+.wy-menu-vertical li.current > a,
+.wy-menu-vertical li.current ul,
+.wy-menu-vertical li.current li {
+  background: transparent !important;
+}
+
+/* Specific overrides for expanded states */
+.wy-menu-vertical li.expanded,
+.wy-menu-vertical li.nav-expanded {
+  background: transparent !important;
+}
+
+.wy-menu-vertical li.expanded.toctree-l2,
+.wy-menu-vertical li.nav-expanded.toctree-l2 {
+  background: linear-gradient(90deg, rgba(52, 152, 219, 0.2) 0%, rgba(41, 128, 185, 0.2) 100%) !important;
+}
+
+.wy-menu-vertical li.expanded.toctree-l3,
+.wy-menu-vertical li.nav-expanded.toctree-l3 {
+  background: linear-gradient(90deg, rgba(26, 188, 156, 0.18) 0%, rgba(22, 160, 133, 0.18) 100%) !important;
+}
+
+/* Enhanced text visibility for main menu items */
+.wy-menu-vertical > ul > li > a {
+  color: #ffffff !important;
+  font-weight: 500 !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6) !important;
+}
+
+/* Enhanced text visibility when menu items have sub-items - NO GREY OVERLAY */
+.wy-menu-vertical > ul > li.expanded > a,
+.wy-menu-vertical > ul > li.nav-expanded > a {
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8) !important;
+  background: linear-gradient(90deg, rgba(52, 152, 219, 0.25) 0%, rgba(41, 128, 185, 0.25) 100%) !important;
+  border-left: 4px solid #3498db !important;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Override any theme styles that add grey overlays to expanded items */
+.wy-menu-vertical li.toctree-l1.expanded > a,
+.wy-menu-vertical li.toctree-l1.nav-expanded > a,
+.wy-menu-vertical li.toctree-l1.current > a {
+  background: linear-gradient(90deg, rgba(52, 152, 219, 0.25) 0%, rgba(41, 128, 185, 0.25) 100%) !important;
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8) !important;
+}
+
+/* Aggressive override for any grey backgrounds on main menu items */
+.wy-menu-vertical > ul > li > a {
+  background: transparent !important;
+}
+
+.wy-menu-vertical > ul > li.expanded > a,
+.wy-menu-vertical > ul > li.nav-expanded > a,
+.wy-menu-vertical > ul > li.current > a {
+  background: linear-gradient(90deg, rgba(52, 152, 219, 0.25) 0%, rgba(41, 128, 185, 0.25) 100%) !important;
+}
+
+/* Remove any grey overlays from RTD theme */
+.wy-menu-vertical li.current > a,
+.wy-menu-vertical li.current a {
+  background: linear-gradient(90deg, rgba(52, 152, 219, 0.25) 0%, rgba(41, 128, 185, 0.25) 100%) !important;
+  color: #ffffff !important;
+}
+
+/* =================================================================
+   ACCESSIBILITY AND RESPONSIVE DESIGN
+   ================================================================= */
+
+/* Focus states for accessibility */
+.wy-menu-vertical a:focus-visible {
+  outline: 2px solid #3498db !important;
+  outline-offset: -2px !important;
+  box-shadow: inset 0 0 0 2px rgba(52, 152, 219, 0.3) !important;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .wy-nav-side {
+    width: 280px !important;
+  }
+  
+  .wy-nav-content-wrap {
+    margin-left: 280px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .wy-nav-side {
+    width: 260px !important;
+  }
+  
+  .wy-nav-content-wrap {
+    margin-left: 260px !important;
+  }
+}

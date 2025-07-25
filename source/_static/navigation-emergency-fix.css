@@ -1,0 +1,258 @@
+/* =================================================================
+   EMERGENCY NAVIGATION FIX - FORCE VISIBILITY
+   ================================================================= */
+
+/* FORCE ALL NAVIGATION TO BE VISIBLE */
+.wy-nav-side {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 300px !important;
+    height: 100% !important;
+    z-index: 200 !important;
+    background: #343131 !important;
+    overflow-y: auto !important;
+}
+
+.wy-menu-vertical {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+}
+
+.wy-menu-vertical ul {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    list-style: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.wy-menu-vertical li {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.wy-menu-vertical a {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    padding: 12px 20px !important;
+    color: #e0e0e0 !important;
+    text-decoration: none !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+    font-size: 0.9rem !important;
+    font-weight: 500 !important;
+    line-height: 1.4 !important;
+    transition: all 0.3s ease !important;
+    position: relative !important;
+}
+
+.wy-menu-vertical a:hover {
+    background: linear-gradient(90deg, #404040 0%, #505050 100%) !important;
+    color: #ffffff !important;
+    padding-left: 24px !important;
+    border-left: 4px solid #3498db !important;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.5) !important;
+}
+
+.wy-menu-vertical a.current {
+    background: linear-gradient(90deg, #2980b9 0%, #3498db 100%) !important;
+    color: #ffffff !important;
+    border-left: 4px solid #ecf0f1 !important;
+    font-weight: 600 !important;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.5) !important;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.3) !important;
+}
+
+/* Expand/Collapse Icons - Single Icon Only */
+.wy-menu-vertical .toctree-expand {
+    display: inline-block !important;
+    float: right !important;
+    width: 20px !important;
+    height: 20px !important;
+    line-height: 20px !important;
+    text-align: center !important;
+    background: rgba(255, 255, 255, 0.1) !important;
+    border-radius: 3px !important;
+    color: #cccccc !important;
+    font-size: 14px !important;
+    font-weight: bold !important;
+    cursor: pointer !important;
+    margin-left: 8px !important;
+    transition: all 0.3s ease !important;
+}
+
+.wy-menu-vertical .toctree-expand:hover {
+    background: rgba(255, 255, 255, 0.2) !important;
+    color: #ffffff !important;
+    transform: scale(1.1) !important;
+}
+
+.wy-menu-vertical .toctree-expand:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/* Prevent scrolling on expand/collapse */
+.wy-menu-vertical a {
+    scroll-behavior: auto !important;
+}
+
+.wy-menu-vertical a:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/* Hide any duplicate expand icons - aggressive approach */
+.wy-menu-vertical a .toctree-expand + .toctree-expand,
+.wy-menu-vertical a .toctree-expand:nth-of-type(2),
+.wy-menu-vertical a .toctree-expand:nth-of-type(n+2) {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+}
+
+/* Ensure only the first expand icon is visible */
+.wy-menu-vertical a .toctree-expand:first-of-type {
+    display: inline-block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+/* Nested items - improved readability with better colors */
+.wy-menu-vertical li.toctree-l2 {
+    background: linear-gradient(90deg, rgba(52, 152, 219, 0.15) 0%, rgba(46, 125, 194, 0.15) 100%) !important;
+    border-left: 3px solid #3498db !important;
+    margin: 1px 0 !important;
+    border-radius: 0 4px 4px 0 !important;
+}
+
+.wy-menu-vertical li.toctree-l2 a {
+    padding: 10px 15px 10px 2.5rem !important;
+    color: #ffffff !important;
+    font-size: 0.9rem !important;
+    background: transparent !important;
+    position: relative !important;
+    font-weight: 400 !important;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.3) !important;
+}
+
+.wy-menu-vertical li.toctree-l2 a::before {
+    content: "▸" !important;
+    position: absolute !important;
+    left: 18px !important;
+    color: #3498db !important;
+    font-size: 10px !important;
+    font-weight: bold !important;
+}
+
+.wy-menu-vertical li.toctree-l2 a:hover {
+    background: linear-gradient(90deg, rgba(52, 152, 219, 0.4) 0%, rgba(46, 125, 194, 0.4) 100%) !important;
+    color: #ffffff !important;
+    padding-left: 2.8rem !important;
+    transform: translateX(3px) !important;
+    transition: all 0.2s ease !important;
+}
+
+.wy-menu-vertical li.toctree-l2 a.current {
+    background: linear-gradient(90deg, rgba(52, 152, 219, 0.6) 0%, rgba(46, 125, 194, 0.6) 100%) !important;
+    color: #ffffff !important;
+    font-weight: 600 !important;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.2) !important;
+}
+
+.wy-menu-vertical li.toctree-l3 {
+    background: linear-gradient(90deg, rgba(39, 174, 96, 0.15) 0%, rgba(34, 153, 84, 0.15) 100%) !important;
+    border-left: 2px solid #27ae60 !important;
+    margin: 1px 0 !important;
+    border-radius: 0 4px 4px 0 !important;
+}
+
+.wy-menu-vertical li.toctree-l3 a {
+    padding: 8px 15px 8px 3.5rem !important;
+    color: #f8f9fa !important;
+    font-size: 0.85rem !important;
+    background: transparent !important;
+    position: relative !important;
+    font-weight: 300 !important;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.3) !important;
+}
+
+.wy-menu-vertical li.toctree-l3 a::before {
+    content: "▸" !important;
+    position: absolute !important;
+    left: 22px !important;
+    color: #27ae60 !important;
+    font-size: 8px !important;
+    font-weight: bold !important;
+}
+
+.wy-menu-vertical li.toctree-l3 a:hover {
+    background: linear-gradient(90deg, rgba(39, 174, 96, 0.4) 0%, rgba(34, 153, 84, 0.4) 100%) !important;
+    color: #ffffff !important;
+    padding-left: 3.8rem !important;
+    transform: translateX(3px) !important;
+    transition: all 0.2s ease !important;
+}
+
+.wy-menu-vertical li.toctree-l3 a.current {
+    background: linear-gradient(90deg, rgba(39, 174, 96, 0.6) 0%, rgba(34, 153, 84, 0.6) 100%) !important;
+    color: #ffffff !important;
+    font-weight: 500 !important;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.2) !important;
+}
+
+/* Search box */
+.wy-side-nav-search {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    background: #2980b9 !important;
+    padding: 1rem !important;
+}
+
+.wy-side-nav-search input[type="text"] {
+    display: block !important;
+    width: 100% !important;
+    padding: 0.5rem !important;
+    border: none !important;
+    border-radius: 4px !important;
+}
+
+/* Collapsed state for nested items */
+.wy-menu-vertical li:not(.expanded) > ul {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    max-height: 0 !important;
+    overflow: hidden !important;
+}
+
+.wy-menu-vertical li.expanded > ul {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    max-height: none !important;
+    overflow: visible !important;
+}
+
+/* Smooth transitions for expand/collapse */
+.wy-menu-vertical li > ul {
+    transition: opacity 0.3s ease, max-height 0.3s ease !important;
+}
+
+/* Make sure content doesn't overlap */
+.wy-nav-content-wrap {
+    margin-left: 300px !important;
+}

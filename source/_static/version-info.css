@@ -1,0 +1,503 @@
+/* =================================================================
+   RobusTest Documentation - Version Management Styling
+   ================================================================= */
+
+/* =================================================================
+   Version Banner Styling
+   ================================================================= */
+
+.version-banner {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  color: #ffffff !important;
+  padding: 0.75rem 1rem !important;
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  z-index: 9999 !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1) !important;
+  transition: opacity 0.3s ease !important;
+}
+
+.version-content {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  max-width: 1200px !important;
+  margin: 0 auto !important;
+}
+
+.version-info {
+  display: flex !important;
+  align-items: center !important;
+  gap: 1rem !important;
+}
+
+.version-badge {
+  background: rgba(255,255,255,0.2) !important;
+  color: #ffffff !important;
+  padding: 0.25rem 0.75rem !important;
+  border-radius: 20px !important;
+  font-weight: 600 !important;
+  font-size: 0.85rem !important;
+}
+
+.version-date {
+  font-size: 0.9rem !important;
+  opacity: 0.9 !important;
+}
+
+.version-status {
+  background: rgba(16, 185, 129, 0.8) !important;
+  padding: 0.25rem 0.5rem !important;
+  border-radius: 12px !important;
+  font-size: 0.8rem !important;
+  font-weight: 500 !important;
+}
+
+.version-actions {
+  display: flex !important;
+  align-items: center !important;
+  gap: 1rem !important;
+}
+
+.version-link {
+  color: #ffffff !important;
+  text-decoration: none !important;
+  font-weight: 500 !important;
+  padding: 0.5rem 1rem !important;
+  border: 1px solid rgba(255,255,255,0.3) !important;
+  border-radius: 6px !important;
+  transition: all 0.2s ease !important;
+  font-size: 0.9rem !important;
+}
+
+.version-link:hover {
+  background: rgba(255,255,255,0.1) !important;
+  border-color: rgba(255,255,255,0.5) !important;
+  text-decoration: none !important;
+  color: #ffffff !important;
+}
+
+.version-close {
+  background: none !important;
+  border: none !important;
+  color: #ffffff !important;
+  font-size: 1.2rem !important;
+  cursor: pointer !important;
+  padding: 0.25rem !important;
+  border-radius: 4px !important;
+  transition: background-color 0.2s ease !important;
+  line-height: 1 !important;
+}
+
+.version-close:hover {
+  background: rgba(255,255,255,0.1) !important;
+}
+
+/* Adjust main content when banner is visible */
+body:has(.version-banner) .wy-nav-content-wrap {
+  margin-top: 60px !important;
+}
+
+/* =================================================================
+   Version Footer Styling
+   ================================================================= */
+
+.version-footer {
+  margin-top: 2rem !important;
+  padding-top: 1.5rem !important;
+  border-top: 1px solid #e2e8f0 !important;
+  color: #6b7280 !important;
+  font-size: 0.85rem !important;
+}
+
+.version-footer-content {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  flex-wrap: wrap !important;
+  gap: 1rem !important;
+}
+
+.version-current {
+  font-weight: 500 !important;
+}
+
+.version-links {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.5rem !important;
+}
+
+.version-links a {
+  color: #3b82f6 !important;
+  text-decoration: none !important;
+  transition: color 0.2s ease !important;
+}
+
+.version-links a:hover {
+  color: #1d4ed8 !important;
+  text-decoration: underline !important;
+}
+
+.version-separator {
+  color: #d1d5db !important;
+}
+
+.version-updated {
+  font-style: italic !important;
+}
+
+/* =================================================================
+   Version Modal Styling
+   ================================================================= */
+
+.version-modal {
+  display: none !important;
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  z-index: 1001 !important;
+}
+
+.version-modal-overlay {
+  background: rgba(0,0,0,0.6) !important;
+  width: 100% !important;
+  height: 100% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 1rem !important;
+}
+
+.version-modal-content {
+  background: #ffffff !important;
+  border-radius: 12px !important;
+  max-width: 600px !important;
+  width: 100% !important;
+  max-height: 80vh !important;
+  overflow-y: auto !important;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15) !important;
+}
+
+.version-modal-header {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  padding: 1.5rem !important;
+  border-bottom: 1px solid #e2e8f0 !important;
+}
+
+.version-modal-header h3 {
+  margin: 0 !important;
+  color: #1f2937 !important;
+  font-size: 1.5rem !important;
+}
+
+.version-modal-close {
+  background: none !important;
+  border: none !important;
+  font-size: 1.5rem !important;
+  cursor: pointer !important;
+  color: #6b7280 !important;
+  padding: 0.5rem !important;
+  border-radius: 4px !important;
+  transition: all 0.2s ease !important;
+  line-height: 1 !important;
+}
+
+.version-modal-close:hover {
+  background: #f3f4f6 !important;
+  color: #374151 !important;
+}
+
+.version-modal-body {
+  padding: 1.5rem !important;
+}
+
+.version-timeline {
+  position: relative !important;
+}
+
+.version-timeline::before {
+  content: '' !important;
+  position: absolute !important;
+  left: 15px !important;
+  top: 0 !important;
+  bottom: 0 !important;
+  width: 2px !important;
+  background: #e2e8f0 !important;
+}
+
+.version-item {
+  position: relative !important;
+  padding-left: 3rem !important;
+  margin-bottom: 2rem !important;
+}
+
+.version-marker {
+  position: absolute !important;
+  left: 8px !important;
+  top: 8px !important;
+  width: 16px !important;
+  height: 16px !important;
+  border-radius: 50% !important;
+  border: 3px solid #ffffff !important;
+  background: #6b7280 !important;
+}
+
+.version-item.current .version-marker {
+  background: #10b981 !important;
+  box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.2) !important;
+}
+
+.version-item.future .version-marker {
+  background: #3b82f6 !important;
+  border-style: dashed !important;
+}
+
+.version-details h4 {
+  margin: 0 0 0.5rem 0 !important;
+  color: #1f2937 !important;
+  font-size: 1.1rem !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.5rem !important;
+}
+
+.version-current-badge {
+  background: #10b981 !important;
+  color: #ffffff !important;
+  padding: 0.125rem 0.5rem !important;
+  border-radius: 12px !important;
+  font-size: 0.7rem !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+}
+
+.version-description {
+  color: #6b7280 !important;
+  margin-bottom: 0.75rem !important;
+  font-size: 0.9rem !important;
+}
+
+.version-features {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0.75rem 0 !important;
+}
+
+.version-features li {
+  padding: 0.25rem 0 !important;
+  font-size: 0.85rem !important;
+  color: #374151 !important;
+}
+
+.version-released {
+  font-size: 0.8rem !important;
+  color: #9ca3af !important;
+  font-style: italic !important;
+  margin-top: 0.5rem !important;
+}
+
+.version-modal-footer {
+  display: flex !important;
+  gap: 1rem !important;
+  padding: 1.5rem !important;
+  border-top: 1px solid #e2e8f0 !important;
+  justify-content: flex-end !important;
+}
+
+.version-btn-primary {
+  background: #3b82f6 !important;
+  color: #ffffff !important;
+  padding: 0.75rem 1.5rem !important;
+  border: none !important;
+  border-radius: 6px !important;
+  text-decoration: none !important;
+  font-weight: 500 !important;
+  cursor: pointer !important;
+  transition: background-color 0.2s ease !important;
+  font-size: 0.9rem !important;
+}
+
+.version-btn-primary:hover {
+  background: #2563eb !important;
+  color: #ffffff !important;
+  text-decoration: none !important;
+}
+
+.version-btn-secondary {
+  background: transparent !important;
+  color: #6b7280 !important;
+  padding: 0.75rem 1.5rem !important;
+  border: 1px solid #d1d5db !important;
+  border-radius: 6px !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+  font-size: 0.9rem !important;
+}
+
+.version-btn-secondary:hover {
+  background: #f9fafb !important;
+  border-color: #9ca3af !important;
+  color: #374151 !important;
+}
+
+/* =================================================================
+   Version Notification Styling
+   ================================================================= */
+
+.version-notification {
+  position: fixed !important;
+  top: 20px !important;
+  right: 20px !important;
+  background: #ffffff !important;
+  border: 1px solid #e2e8f0 !important;
+  border-radius: 8px !important;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1) !important;
+  padding: 1rem !important;
+  z-index: 1002 !important;
+  max-width: 400px !important;
+  animation: slideInRight 0.3s ease-out !important;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%) !important;
+    opacity: 0 !important;
+  }
+  to {
+    transform: translateX(0) !important;
+    opacity: 1 !important;
+  }
+}
+
+.version-notification-content {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.75rem !important;
+}
+
+.version-notification-icon {
+  font-size: 1.2rem !important;
+  flex-shrink: 0 !important;
+}
+
+.version-notification-text {
+  flex: 1 !important;
+  font-size: 0.9rem !important;
+  color: #374151 !important;
+}
+
+.version-notification-action {
+  background: #3b82f6 !important;
+  color: #ffffff !important;
+  border: none !important;
+  padding: 0.5rem 0.75rem !important;
+  border-radius: 4px !important;
+  font-size: 0.8rem !important;
+  cursor: pointer !important;
+  transition: background-color 0.2s ease !important;
+  white-space: nowrap !important;
+}
+
+.version-notification-action:hover {
+  background: #2563eb !important;
+}
+
+.version-notification-close {
+  background: none !important;
+  border: none !important;
+  color: #9ca3af !important;
+  font-size: 1.1rem !important;
+  cursor: pointer !important;
+  padding: 0.25rem !important;
+  line-height: 1 !important;
+  transition: color 0.2s ease !important;
+  flex-shrink: 0 !important;
+}
+
+.version-notification-close:hover {
+  color: #6b7280 !important;
+}
+
+/* =================================================================
+   Responsive Design
+   ================================================================= */
+
+@media (max-width: 768px) {
+  .version-content {
+    flex-direction: column !important;
+    gap: 0.75rem !important;
+  }
+  
+  .version-info {
+    gap: 0.5rem !important;
+  }
+  
+  .version-badge {
+    font-size: 0.8rem !important;
+  }
+  
+  .version-date,
+  .version-status {
+    font-size: 0.8rem !important;
+  }
+  
+  .version-actions {
+    gap: 0.5rem !important;
+  }
+  
+  .version-link {
+    font-size: 0.85rem !important;
+    padding: 0.5rem 0.75rem !important;
+  }
+  
+  .version-footer-content {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+  
+  .version-modal-overlay {
+    padding: 0.5rem !important;
+  }
+  
+  .version-modal-content {
+    max-height: 90vh !important;
+  }
+  
+  .version-modal-header,
+  .version-modal-body,
+  .version-modal-footer {
+    padding: 1rem !important;
+  }
+  
+  .version-notification {
+    top: 10px !important;
+    right: 10px !important;
+    left: 10px !important;
+    max-width: none !important;
+  }
+}
+
+/* =================================================================
+   Print Styles
+   ================================================================= */
+
+@media print {
+  .version-banner,
+  .version-modal,
+  .version-notification {
+    display: none !important;
+  }
+  
+  .version-footer {
+    border-top: 1px solid #000000 !important;
+    color: #000000 !important;
+  }
+}

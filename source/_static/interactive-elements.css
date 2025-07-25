@@ -1,0 +1,463 @@
+/* =================================================================
+   RobusTest Documentation - Interactive Elements Styling
+   ================================================================= */
+
+/* =================================================================
+   Copy-to-Clipboard Button Styling
+   ================================================================= */
+
+.copy-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: rgba(45, 55, 72, 0.9) !important;
+  color: #ffffff !important;
+  border: none !important;
+  border-radius: 6px !important;
+  padding: 6px 10px !important;
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  cursor: pointer !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 4px !important;
+  opacity: 0 !important;
+  transition: all 0.2s ease !important;
+  z-index: 10 !important;
+  line-height: 1 !important;
+  text-transform: none !important;
+  letter-spacing: normal !important;
+}
+
+.copy-btn svg {
+  width: 14px !important;
+  height: 14px !important;
+  stroke: currentColor !important;
+}
+
+.highlight:hover .copy-btn,
+code:hover .copy-btn {
+  opacity: 1 !important;
+}
+
+.copy-btn:hover {
+  background: rgba(45, 55, 72, 1) !important;
+  transform: scale(1.05) !important;
+}
+
+.copy-btn.copy-success {
+  background: rgba(16, 185, 129, 0.9) !important;
+  opacity: 1 !important;
+}
+
+.copy-btn.copy-error {
+  background: rgba(239, 68, 68, 0.9) !important;
+  opacity: 1 !important;
+}
+
+.copy-btn:focus {
+  outline: 2px solid #3b82f6 !important;
+  outline-offset: 2px !important;
+}
+
+/* Ensure parent containers support relative positioning */
+.highlight {
+  position: relative !important;
+}
+
+/* =================================================================
+   Interactive Configuration Generator Styling
+   ================================================================= */
+
+.interactive-config-generator,
+.interactive-api-generator {
+  background: #f8fafc !important;
+  border: 1px solid #e2e8f0 !important;
+  border-radius: 8px !important;
+  padding: 1.5rem !important;
+  margin: 1.5rem 0 !important;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
+}
+
+.interactive-config-generator h4,
+.interactive-api-generator h4 {
+  margin-top: 0 !important;
+  margin-bottom: 1rem !important;
+  color: #1f2937 !important;
+  font-size: 1.2rem !important;
+  border-bottom: 2px solid #e2e8f0 !important;
+  padding-bottom: 0.5rem !important;
+}
+
+.config-form,
+.api-form {
+  margin-bottom: 1.5rem !important;
+}
+
+.form-row {
+  display: flex !important;
+  gap: 1rem !important;
+  margin-bottom: 1rem !important;
+}
+
+.form-group {
+  flex: 1 !important;
+  margin-bottom: 1rem !important;
+}
+
+.form-group label {
+  display: block !important;
+  margin-bottom: 0.5rem !important;
+  font-weight: 600 !important;
+  color: #374151 !important;
+  font-size: 0.9rem !important;
+}
+
+.form-group input,
+.form-group select {
+  width: 100% !important;
+  padding: 0.75rem !important;
+  border: 1px solid #d1d5db !important;
+  border-radius: 6px !important;
+  font-size: 0.9rem !important;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease !important;
+  background: #ffffff !important;
+  color: #374151 !important;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none !important;
+  border-color: #3b82f6 !important;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1) !important;
+}
+
+.config-output,
+.api-output {
+  background: #ffffff !important;
+  border: 1px solid #e2e8f0 !important;
+  border-radius: 6px !important;
+  padding: 1rem !important;
+}
+
+.config-output h5,
+.api-output h5 {
+  margin-top: 0 !important;
+  margin-bottom: 0.75rem !important;
+  color: #1f2937 !important;
+  font-size: 1rem !important;
+}
+
+.config-preview {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.75rem !important;
+  margin-bottom: 0.75rem !important;
+}
+
+.config-preview code {
+  flex: 1 !important;
+  background: #f3f4f6 !important;
+  color: #1f2937 !important;
+  padding: 0.75rem !important;
+  border-radius: 4px !important;
+  font-family: 'Monaco', 'Menlo', monospace !important;
+  font-size: 0.85rem !important;
+  border: 1px solid #e2e8f0 !important;
+  word-break: break-all !important;
+}
+
+.copy-config-btn,
+.copy-payload-btn {
+  background: #3b82f6 !important;
+  color: #ffffff !important;
+  border: none !important;
+  border-radius: 4px !important;
+  padding: 0.5rem 1rem !important;
+  font-size: 0.85rem !important;
+  font-weight: 500 !important;
+  cursor: pointer !important;
+  transition: background-color 0.2s ease !important;
+  white-space: nowrap !important;
+}
+
+.copy-config-btn:hover,
+.copy-payload-btn:hover {
+  background: #2563eb !important;
+}
+
+.config-validation {
+  font-size: 0.85rem !important;
+  font-weight: 500 !important;
+}
+
+.validation-status {
+  padding: 0.25rem 0.5rem !important;
+  border-radius: 4px !important;
+  background: #fef3c7 !important;
+  color: #92400e !important;
+}
+
+.json-preview {
+  background: #1f2937 !important;
+  color: #f9fafb !important;
+  padding: 1rem !important;
+  border-radius: 6px !important;
+  margin-bottom: 0.75rem !important;
+  overflow-x: auto !important;
+  border: 1px solid #374151 !important;
+}
+
+.json-preview code {
+  background: transparent !important;
+  color: inherit !important;
+  padding: 0 !important;
+  border: none !important;
+  font-family: 'Monaco', 'Menlo', monospace !important;
+  font-size: 0.85rem !important;
+}
+
+/* =================================================================
+   Interactive Checklist Styling
+   ================================================================= */
+
+.interactive-checklist {
+  background: #f8fafc !important;
+  border: 1px solid #e2e8f0 !important;
+  border-radius: 8px !important;
+  padding: 1.5rem !important;
+  margin: 1.5rem 0 !important;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
+}
+
+.checklist-header {
+  margin-bottom: 1.5rem !important;
+}
+
+.checklist-header h4 {
+  margin-top: 0 !important;
+  margin-bottom: 1rem !important;
+  color: #1f2937 !important;
+  font-size: 1.2rem !important;
+}
+
+.progress-bar {
+  width: 100% !important;
+  height: 8px !important;
+  background: #e2e8f0 !important;
+  border-radius: 4px !important;
+  overflow: hidden !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.progress-fill {
+  height: 100% !important;
+  background: linear-gradient(90deg, #10b981, #059669) !important;
+  transition: width 0.3s ease !important;
+  width: 0% !important;
+}
+
+.progress-text {
+  font-size: 0.9rem !important;
+  color: #6b7280 !important;
+  font-weight: 500 !important;
+}
+
+.checklist-items {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 0.75rem !important;
+}
+
+.checklist-item {
+  display: flex !important;
+  align-items: flex-start !important;
+  padding: 0.75rem !important;
+  background: #ffffff !important;
+  border: 1px solid #e2e8f0 !important;
+  border-radius: 6px !important;
+  transition: all 0.2s ease !important;
+}
+
+.checklist-item:hover {
+  border-color: #d1d5db !important;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1) !important;
+}
+
+.checklist-item input[type="checkbox"] {
+  margin-right: 0.75rem !important;
+  margin-top: 0.125rem !important;
+  width: 18px !important;
+  height: 18px !important;
+  cursor: pointer !important;
+}
+
+.checklist-item label {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  width: 100% !important;
+  cursor: pointer !important;
+  margin: 0 !important;
+}
+
+.step-title {
+  font-weight: 500 !important;
+  color: #374151 !important;
+  flex: 1 !important;
+}
+
+.step-badge {
+  font-size: 0.75rem !important;
+  font-weight: 600 !important;
+  padding: 0.25rem 0.5rem !important;
+  border-radius: 12px !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+}
+
+.checklist-item.required .step-badge {
+  background: #fef2f2 !important;
+  color: #dc2626 !important;
+}
+
+.checklist-item.optional .step-badge {
+  background: #f0f9ff !important;
+  color: #0891b2 !important;
+}
+
+.checklist-item input[type="checkbox"]:checked + label .step-title {
+  text-decoration: line-through !important;
+  color: #9ca3af !important;
+}
+
+/* =================================================================
+   Collapsible Sections
+   ================================================================= */
+
+.collapse-toggle {
+  background: #f3f4f6 !important;
+  color: #374151 !important;
+  border: 1px solid #d1d5db !important;
+  border-radius: 4px !important;
+  padding: 0.25rem 0.5rem !important;
+  font-size: 0.75rem !important;
+  font-weight: 500 !important;
+  cursor: pointer !important;
+  margin-left: 1rem !important;
+  transition: all 0.2s ease !important;
+}
+
+.collapse-toggle:hover {
+  background: #e5e7eb !important;
+  border-color: #9ca3af !important;
+}
+
+.collapse-toggle:focus {
+  outline: 2px solid #3b82f6 !important;
+  outline-offset: 2px !important;
+}
+
+/* =================================================================
+   Responsive Design
+   ================================================================= */
+
+@media (max-width: 768px) {
+  .form-row {
+    flex-direction: column !important;
+    gap: 0 !important;
+  }
+  
+  .config-preview {
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+  
+  .config-preview code {
+    margin-bottom: 0.5rem !important;
+    word-break: break-word !important;
+  }
+  
+  .interactive-config-generator,
+  .interactive-api-generator,
+  .interactive-checklist {
+    padding: 1rem !important;
+    margin: 1rem 0 !important;
+  }
+  
+  .copy-btn {
+    position: static !important;
+    opacity: 1 !important;
+    margin-top: 0.5rem !important;
+  }
+}
+
+/* =================================================================
+   Accessibility Enhancements
+   ================================================================= */
+
+/* Focus indicators */
+.interactive-config-generator *:focus,
+.interactive-api-generator *:focus,
+.interactive-checklist *:focus {
+  outline: 2px solid #3b82f6 !important;
+  outline-offset: 2px !important;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .copy-btn {
+    background: #000000 !important;
+    color: #ffffff !important;
+    border: 2px solid #ffffff !important;
+  }
+  
+  .form-group input,
+  .form-group select {
+    border: 2px solid #000000 !important;
+  }
+  
+  .interactive-config-generator,
+  .interactive-api-generator,
+  .interactive-checklist {
+    border: 2px solid #000000 !important;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .copy-btn,
+  .form-group input,
+  .form-group select,
+  .progress-fill,
+  .checklist-item,
+  .collapse-toggle {
+    transition: none !important;
+  }
+}
+
+/* =================================================================
+   Print Styles
+   ================================================================= */
+
+@media print {
+  .copy-btn,
+  .copy-config-btn,
+  .copy-payload-btn,
+  .collapse-toggle {
+    display: none !important;
+  }
+  
+  .interactive-config-generator,
+  .interactive-api-generator,
+  .interactive-checklist {
+    border: 1px solid #000000 !important;
+    break-inside: avoid !important;
+  }
+  
+  .config-preview code,
+  .json-preview code {
+    color: #000000 !important;
+    background: #f5f5f5 !important;
+  }
+}

@@ -1,0 +1,603 @@
+/* =================================================================
+   RobusTest Documentation - Feedback System Styling
+   ================================================================= */
+
+/* =================================================================
+   Page Feedback Widget
+   ================================================================= */
+
+.page-feedback-widget {
+  background: #f8fafc !important;
+  border: 1px solid #e2e8f0 !important;
+  border-radius: 8px !important;
+  padding: 1.5rem !important;
+  margin: 2rem 0 !important;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1) !important;
+}
+
+.feedback-header h4 {
+  margin: 0 0 0.5rem 0 !important;
+  color: #1f2937 !important;
+  font-size: 1.1rem !important;
+}
+
+.feedback-header p {
+  margin: 0 0 1rem 0 !important;
+  color: #6b7280 !important;
+  font-size: 0.9rem !important;
+}
+
+.feedback-options {
+  display: flex !important;
+  gap: 1rem !important;
+  margin-bottom: 1rem !important;
+}
+
+.feedback-btn {
+  background: #ffffff !important;
+  border: 1px solid #d1d5db !important;
+  border-radius: 6px !important;
+  padding: 0.75rem 1rem !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+  font-size: 0.9rem !important;
+  font-weight: 500 !important;
+  color: #374151 !important;
+}
+
+.feedback-btn:hover {
+  border-color: #9ca3af !important;
+  background: #f9fafb !important;
+}
+
+.feedback-yes {
+  border-color: #10b981 !important;
+  color: #10b981 !important;
+}
+
+.feedback-yes:hover {
+  background: #f0fdf4 !important;
+  border-color: #059669 !important;
+}
+
+.feedback-no {
+  border-color: #f59e0b !important;
+  color: #f59e0b !important;
+}
+
+.feedback-no:hover {
+  background: #fffbeb !important;
+  border-color: #d97706 !important;
+}
+
+.feedback-form {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 1rem !important;
+}
+
+.feedback-form label {
+  font-weight: 500 !important;
+  color: #374151 !important;
+  margin-bottom: 0.5rem !important;
+  display: block !important;
+  font-size: 0.9rem !important;
+}
+
+.feedback-form select,
+.feedback-form textarea,
+.feedback-form input {
+  width: 100% !important;
+  padding: 0.75rem !important;
+  border: 1px solid #d1d5db !important;
+  border-radius: 6px !important;
+  font-size: 0.9rem !important;
+  transition: border-color 0.2s ease !important;
+  background: #ffffff !important;
+  color: #374151 !important;
+}
+
+.feedback-form select:focus,
+.feedback-form textarea:focus,
+.feedback-form input:focus {
+  outline: none !important;
+  border-color: #3b82f6 !important;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1) !important;
+}
+
+.feedback-form textarea {
+  resize: vertical !important;
+  min-height: 80px !important;
+}
+
+.feedback-actions {
+  display: flex !important;
+  gap: 0.75rem !important;
+  margin-top: 0.5rem !important;
+}
+
+.feedback-submit {
+  background: #3b82f6 !important;
+  color: #ffffff !important;
+  border: none !important;
+  border-radius: 6px !important;
+  padding: 0.75rem 1.5rem !important;
+  font-weight: 500 !important;
+  cursor: pointer !important;
+  transition: background-color 0.2s ease !important;
+  font-size: 0.9rem !important;
+}
+
+.feedback-submit:hover {
+  background: #2563eb !important;
+}
+
+.feedback-cancel {
+  background: transparent !important;
+  color: #6b7280 !important;
+  border: 1px solid #d1d5db !important;
+  border-radius: 6px !important;
+  padding: 0.75rem 1rem !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+  font-size: 0.9rem !important;
+}
+
+.feedback-cancel:hover {
+  background: #f9fafb !important;
+  border-color: #9ca3af !important;
+}
+
+.feedback-success {
+  text-align: center !important;
+  padding: 1rem !important;
+}
+
+.feedback-success-content {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  gap: 0.5rem !important;
+}
+
+.feedback-success-icon {
+  font-size: 2rem !important;
+}
+
+.feedback-success p {
+  margin: 0 !important;
+  color: #374151 !important;
+}
+
+.feedback-success strong {
+  color: #10b981 !important;
+}
+
+/* =================================================================
+   Quick Feedback Buttons
+   ================================================================= */
+
+.quick-feedback {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 0.5rem !important;
+  margin-left: 1rem !important;
+  opacity: 0.7 !important;
+  transition: opacity 0.2s ease !important;
+}
+
+h2:hover .quick-feedback,
+h3:hover .quick-feedback {
+  opacity: 1 !important;
+}
+
+.quick-feedback-label {
+  font-size: 0.75rem !important;
+  color: #6b7280 !important;
+  font-weight: normal !important;
+}
+
+.quick-feedback-btn {
+  background: none !important;
+  border: none !important;
+  font-size: 0.9rem !important;
+  cursor: pointer !important;
+  padding: 0.25rem !important;
+  border-radius: 4px !important;
+  transition: all 0.2s ease !important;
+  line-height: 1 !important;
+}
+
+.quick-feedback-btn:hover {
+  background: rgba(0,0,0,0.1) !important;
+  transform: scale(1.1) !important;
+}
+
+.feedback-thanks {
+  color: #10b981 !important;
+  font-size: 0.75rem !important;
+  font-weight: 500 !important;
+  transition: opacity 0.3s ease !important;
+}
+
+/* =================================================================
+   Floating Feedback Button
+   ================================================================= */
+
+.floating-feedback-btn {
+  position: fixed !important;
+  bottom: 20px !important;
+  right: 20px !important;
+  z-index: 1000 !important;
+}
+
+.floating-feedback-trigger {
+  background: #3b82f6 !important;
+  color: #ffffff !important;
+  border: none !important;
+  border-radius: 25px !important;
+  padding: 0.75rem 1.25rem !important;
+  font-size: 0.9rem !important;
+  font-weight: 500 !important;
+  cursor: pointer !important;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4) !important;
+  transition: all 0.3s ease !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.5rem !important;
+}
+
+.floating-feedback-trigger:hover {
+  background: #2563eb !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 16px rgba(59, 130, 246, 0.5) !important;
+}
+
+.floating-feedback-trigger span {
+  transition: opacity 0.2s ease !important;
+}
+
+@media (max-width: 768px) {
+  .floating-feedback-trigger span {
+    display: none !important;
+  }
+  
+  .floating-feedback-trigger {
+    padding: 0.75rem !important;
+    border-radius: 50% !important;
+    width: 50px !important;
+    height: 50px !important;
+    justify-content: center !important;
+  }
+}
+
+/* =================================================================
+   Feedback Modal
+   ================================================================= */
+
+.feedback-modal {
+  display: none !important;
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  z-index: 1001 !important;
+}
+
+.feedback-modal-overlay {
+  background: rgba(0,0,0,0.6) !important;
+  width: 100% !important;
+  height: 100% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 1rem !important;
+}
+
+.feedback-modal-content {
+  background: #ffffff !important;
+  border-radius: 12px !important;
+  max-width: 500px !important;
+  width: 100% !important;
+  max-height: 80vh !important;
+  overflow-y: auto !important;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15) !important;
+}
+
+.feedback-modal-header {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  padding: 1.5rem !important;
+  border-bottom: 1px solid #e2e8f0 !important;
+}
+
+.feedback-modal-header h3 {
+  margin: 0 !important;
+  color: #1f2937 !important;
+  font-size: 1.3rem !important;
+}
+
+.feedback-modal-close {
+  background: none !important;
+  border: none !important;
+  font-size: 1.5rem !important;
+  cursor: pointer !important;
+  color: #6b7280 !important;
+  padding: 0.5rem !important;
+  border-radius: 4px !important;
+  transition: all 0.2s ease !important;
+  line-height: 1 !important;
+}
+
+.feedback-modal-close:hover {
+  background: #f3f4f6 !important;
+  color: #374151 !important;
+}
+
+.feedback-modal-body {
+  padding: 1.5rem !important;
+}
+
+.feedback-type-selection p {
+  margin: 0 0 1rem 0 !important;
+  color: #374151 !important;
+  font-weight: 500 !important;
+}
+
+.feedback-type-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 0.75rem !important;
+  margin-bottom: 1.5rem !important;
+}
+
+.feedback-type-btn {
+  background: #ffffff !important;
+  border: 2px solid #e2e8f0 !important;
+  border-radius: 8px !important;
+  padding: 1rem 0.5rem !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+  text-align: center !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  gap: 0.5rem !important;
+}
+
+.feedback-type-btn:hover {
+  border-color: #3b82f6 !important;
+  background: #f0f9ff !important;
+}
+
+.feedback-type-btn.selected {
+  border-color: #3b82f6 !important;
+  background: #eff6ff !important;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1) !important;
+}
+
+.feedback-type-icon {
+  font-size: 1.5rem !important;
+}
+
+.feedback-type-text {
+  font-size: 0.85rem !important;
+  font-weight: 500 !important;
+  color: #374151 !important;
+}
+
+.feedback-form-section {
+  margin-top: 1rem !important;
+}
+
+.detailed-feedback-form {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 1rem !important;
+}
+
+.detailed-feedback-form .form-group {
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.detailed-feedback-form label {
+  font-weight: 500 !important;
+  color: #374151 !important;
+  margin-bottom: 0.5rem !important;
+  font-size: 0.9rem !important;
+}
+
+.checkbox-label {
+  flex-direction: row !important;
+  align-items: center !important;
+  gap: 0.5rem !important;
+  cursor: pointer !important;
+}
+
+.checkbox-label input {
+  margin: 0 !important;
+  width: auto !important;
+}
+
+.detailed-feedback-form input,
+.detailed-feedback-form textarea {
+  width: 100% !important;
+  padding: 0.75rem !important;
+  border: 1px solid #d1d5db !important;
+  border-radius: 6px !important;
+  font-size: 0.9rem !important;
+  transition: border-color 0.2s ease !important;
+  background: #ffffff !important;
+  color: #374151 !important;
+}
+
+.detailed-feedback-form input:focus,
+.detailed-feedback-form textarea:focus {
+  outline: none !important;
+  border-color: #3b82f6 !important;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1) !important;
+}
+
+.feedback-modal-footer {
+  display: flex !important;
+  gap: 1rem !important;
+  padding: 1.5rem !important;
+  border-top: 1px solid #e2e8f0 !important;
+  justify-content: flex-end !important;
+}
+
+.feedback-btn-primary {
+  background: #3b82f6 !important;
+  color: #ffffff !important;
+  padding: 0.75rem 1.5rem !important;
+  border: none !important;
+  border-radius: 6px !important;
+  font-weight: 500 !important;
+  cursor: pointer !important;
+  transition: background-color 0.2s ease !important;
+  font-size: 0.9rem !important;
+}
+
+.feedback-btn-primary:hover {
+  background: #2563eb !important;
+}
+
+.feedback-btn-secondary {
+  background: transparent !important;
+  color: #6b7280 !important;
+  padding: 0.75rem 1rem !important;
+  border: 1px solid #d1d5db !important;
+  border-radius: 6px !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+  font-size: 0.9rem !important;
+}
+
+.feedback-btn-secondary:hover {
+  background: #f9fafb !important;
+  border-color: #9ca3af !important;
+  color: #374151 !important;
+}
+
+.feedback-success-large {
+  text-align: center !important;
+  padding: 2rem 1rem !important;
+}
+
+.feedback-success-icon-large {
+  font-size: 3rem !important;
+  margin-bottom: 1rem !important;
+}
+
+.feedback-success-large h4 {
+  margin: 0 0 1rem 0 !important;
+  color: #10b981 !important;
+  font-size: 1.3rem !important;
+}
+
+.feedback-success-large p {
+  margin: 0 0 1rem 0 !important;
+  color: #6b7280 !important;
+  line-height: 1.5 !important;
+}
+
+/* =================================================================
+   Responsive Design
+   ================================================================= */
+
+@media (max-width: 768px) {
+  .feedback-options {
+    flex-direction: column !important;
+  }
+  
+  .feedback-type-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 0.5rem !important;
+  }
+  
+  .feedback-type-btn {
+    padding: 0.75rem 0.25rem !important;
+  }
+  
+  .feedback-type-text {
+    font-size: 0.8rem !important;
+  }
+  
+  .feedback-modal-overlay {
+    padding: 0.5rem !important;
+  }
+  
+  .feedback-modal-content {
+    max-height: 90vh !important;
+  }
+  
+  .feedback-modal-header,
+  .feedback-modal-body,
+  .feedback-modal-footer {
+    padding: 1rem !important;
+  }
+  
+  .floating-feedback-btn {
+    bottom: 15px !important;
+    right: 15px !important;
+  }
+  
+  .quick-feedback {
+    display: none !important; /* Hide on mobile to save space */
+  }
+}
+
+/* =================================================================
+   Print Styles
+   ================================================================= */
+
+@media print {
+  .page-feedback-widget,
+  .floating-feedback-btn,
+  .feedback-modal,
+  .quick-feedback {
+    display: none !important;
+  }
+}
+
+/* =================================================================
+   Accessibility
+   ================================================================= */
+
+/* Focus indicators */
+.feedback-btn:focus,
+.feedback-type-btn:focus,
+.floating-feedback-trigger:focus,
+.feedback-modal-close:focus,
+.quick-feedback-btn:focus {
+  outline: 2px solid #3b82f6 !important;
+  outline-offset: 2px !important;
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+  .feedback-btn,
+  .feedback-type-btn,
+  .floating-feedback-trigger {
+    border: 2px solid #000000 !important;
+  }
+  
+  .page-feedback-widget,
+  .feedback-modal-content {
+    border: 2px solid #000000 !important;
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .feedback-btn,
+  .feedback-type-btn,
+  .floating-feedback-trigger,
+  .quick-feedback-btn,
+  .quick-feedback {
+    transition: none !important;
+  }
+}
