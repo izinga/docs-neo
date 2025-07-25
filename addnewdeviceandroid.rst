@@ -105,12 +105,15 @@ b. To the 'Allow' list, add *io.appium.uiautomator2.server*
 **Caveats:**
 
 1. On Samsung device models, you might encounter a pop-up mwindow with the message - "Attention - The connected device is unable to access data on this device. Reconnect the USB cable and try again".
+
    * This is a known issue in Samsung models.
    * You can try one or more of the following solutions to resolve this:
+
      1. Disconnected and reconnect the USB cable.
      2. Install 'Android File Transefer' or 'Samsung Smart Switch' applications on your Mac machine.
      3. Reboot the device and reboot the server to which your device is connected.
      4. Update your device Android OS software.
+
    * *Note:* The above solutions do not guarantee that the window does not come up again.
 
 2. Devices running on older Andorid versions tend to be slower in response.

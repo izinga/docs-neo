@@ -35,12 +35,14 @@ RobusTest enables monitoring and viewing of automation test runs of API tests wr
 
 ​
 **3.** Open the file named **reportportal.properties** in edit mode and enter appropriate values for the following fields:
+
    * **rp.endpoint**
 
      * this will point to the robustest hub url
      * it will be of the form: *<RobusTest URL>/v2/hub e.g. http://devicelab.acme.com/v2/hub* 
+
    * **rp.launch** 
-   
+
      * This value will the identifier for your test automation job. You can provide any custom string in this field.
      * All test runs that should be displayed under the same job should have the same value for this field.
    * **rp.project**
